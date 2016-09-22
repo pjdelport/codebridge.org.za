@@ -337,3 +337,7 @@ ul.eventlist li {
         font-size: 3em;
     }
 }
+
+.panel-title {
+    font-family: 'Open Sans', sans-serif;
+}
