@@ -20,10 +20,13 @@ permalink: /:categories/:year-:month-:day/:title.htm
 # EXCLUDE
 exclude: [CNAME, Vagrantfile, README.md]
 
-#RESOURCES USED
+# RESOURCES USED
 ## Header image - https://unsplash.com/
 
 ##my collections
 collections:
   allevents:
     output: true
+
+gems:
+  - jekyll-feed
