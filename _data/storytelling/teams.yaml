@@ -1,0 +1,41 @@
+---
+- name: Child-headed households
+  tagline: What does the future hold for child-headed households?
+  image: households
+
+- name: Communitree
+  tagline: Connecting local greening initiatives with larger, city-wide greening strategies
+  image: communitree
+
+- name: Green camp
+  tagline: How urban farms can rejuvenate communities
+  image: green-camp
+
+- name: Her wheelchair gets her home
+  tagline: A day in the life of a student suffering from colon cancer
+  image: wheelchair
+
+- name: NuDurbanComic
+  tagline: Graphic novel looking at future city planning
+  image: comic
+
+- name: Safer taxi stops
+  tagline: Using GIS and transport data to map safe and dangerous zones for taxis to stop
+  image: taxi-stops
+
+- name: Sanitary dignity conundrum
+  tagline: Bringing to life the predicaments of those unable to afford sanitary towels
+  image: sanitary
+
+- name: Shop local
+  tagline: The simple decision to shop local can make an incredible difference in our communities
+  image: local
+
+- name: Student accommodation
+  tagline: A collaborative approach to solving UKZN's student housing issues
+  image: student-accommodation
+
+- name: Water wars
+  tagline: What will you do with your last drop of water?
+  image: water
+---

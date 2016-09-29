@@ -341,3 +341,79 @@ ul.eventlist li {
 .panel-title {
     font-family: 'Open Sans', sans-serif;
 }
+
+.grid .col-team img {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .team-image {
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+  }
+}
+
+.grid {
+  padding: 0 15px;
+}
+
+.team-text {
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 10px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.team-name {
+  font-size: 1.4em;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.team-description {
+    font-size: 1.0em;
+    display: inline-block;
+}
+
+.team-image {
+  opacity: 0.45;
+}
+
+.team-image:hover {
+  opacity: 0.6;
+}
+
+.team-detail {
+  background-color: #f9f9f9;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+
+.team-photo {
+  padding: 0;
+}
+
+.col-team {
+  padding: 1px;
+  width: 20%;
+}
+
+@media (max-width: 1200px) {
+  .col-team {
+      width: 25%;
+  }
+}
+
+@media (max-width: 770px) {
+  .col-team {
+      width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col-team {
+      width: 100%;
+  }
+}

@@ -1,0 +1,107 @@
+---
+layout: default
+title: Re-imagine Storytelling
+description: "Check out the finalists for the Codebridge Re-Imagine Storytelling Challenge who are competing to win R20k! #CBstorychallenge"
+image: /images/reimagine-storytelling.jpg
+---
+<section class="contact" style="margin-bottom:10px;">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <img style="width:100%; margin-top:-15px; margin-bottom:20px" src="../images/reimagine-storytelling.jpg">
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div>
+        <a style="background-color: #365899; border: 0; color:white;" type="button" class="btn btn-default" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=www.codebridge.org.za/reimagine-storytelling.html"><i class="fa fa-facebook-official" aria-hidden="true"></i> <b>share</b></a>
+        <a style="background-color: #33ccff; border: 0; color:white;" type="button" class="btn btn-default" target="_blank" href="https://twitter.com/intent/tweet?text=www.codebridge.org.za/reimagine-storytelling.html%20%23CBStoryChallenge"><i class="fa fa-twitter" aria-hidden="true"></i> <b>tweet</b></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>What is Re-imagine Storytelling all about?</h2>
+        <p>
+          We have moved into the digital and information age. This means that the way we tell stories has evolved from simply spreading the news to getting the reader involved. This is what Re-imagine Storytelling is all about. It brings together elements of data, tech, journalism and activism. It goes beyond just reporting issues of social justice to actively trying to solve them.
+        </p>
+        <p>
+          We have chosen ten final teams to compete for a cash prize of R20,000. All projects are guaranteed a small budget to work with, Codebridge resources, a cool space where you can plot, plan and create, as well as media coverage. You can find the rules and requirements as well as the FAQ <a href="rules-faq.html">here</a>.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top:20px" class="row">
+      <div class="col-md-2 col-md-offset-2 col-sm-6" style="opacity: 0.5">
+        <img style="width:150px; margin:auto; display: block; " src="../images/rocket.svg">
+        <p style="text-align:center"><b>Competition Launch</b><br>1 September 2016</p>
+      </div>
+      <div class="col-md-2 col-sm-6" style="opacity: 0.5">
+        <img style="width:150px; margin:auto; display: block;" src="../images/calendar.svg">
+        <p style="text-align:center"><b>Submission deadline</b><br>25 September 2016</p>
+      </div>
+      <div class="col-md-2 col-sm-6" style="opacity: 0.5"><br class="hidden-lg hidden-md hidden-xs">
+        <img style="width:150px; margin:auto; display: block;" src="../images/podium.svg">
+        <p style="text-align:center"><b>Finalists announced</b><br>29 September 2016</p>
+      </div>
+      <div class="col-md-2 col-sm-6"><br class="hidden-lg hidden-md hidden-xs">
+        <img style="width:150px; margin:auto; display: block" src="../images/trophy.svg">
+        <p style="text-align:center"><b>Winner announced</b><br>25 November 2016</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>The ten finalists</h2>
+      </div>
+    </div>
+
+    <div class="row grid">
+      <div class="col-md-10 col-md-offset-1" style="padding: 0">
+        {% for team in site.data.storytelling.teams %}
+        <div class="col-md-2 col-xs-6 col-team">
+          <div class="team-text">
+            <h5 class="team-name">{{ team.name }}</h5>
+            <p class="team-description">{{ team.tagline }}</p>
+          </div>
+          <div class="team-image">
+            <a href=""><img src="img/{{ team.image }}.jpg"></a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h3>With support from:</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2 col-xs-6 col-md-offset-1">
+        <a href="http://code4sa.org/" target="_blank"><img src="/images/code4sa_logo.png" style="width:100%"></a>
+      </div>
+      <div class="col-md-2 col-xs-6">
+        <a href="https://www.facebook.com/HacksHackersAfrica" target="_blank"><img src="/images/hh.png" style="width:100%"></a>
+      </div>
+      <div class="col-md-2 col-xs-6">
+      <a href="http://www.makingallvoicescount.org/" target="_blank"><img src="/images/mavc.png" style="width:100%"></a>
+      </div>
+      <div class="col-md-2 col-xs-6">
+      <a href="http://opendata.durban/" target="_blank"><img src="/images/opendatadurban.jpg" style="width:100%"></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h3><small>We thank our donors for making this storytelling challenge possible</small></h3>
+        <p style="font-size: 12px; color: #777">Icons by Pixel Buddha, Madebyoliver, Roundicons, and Freepik from <a href="http://www.flaticon.com" target="_blank">flaticon.com</a></p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+

@@ -1,0 +1,10 @@
+---
+layout: default
+title: Re-imagine Storytelling
+description: "Check out the finalists for the Codebridge Re-Imagine Storytelling Challenge who are competing to win R20k! #CBstorychallenge"
+image: /images/reimagine-storytelling.jpg
+---
+{% for update in site.data.storytelling.communitree %}
+<h5 class="team-name">{{ update.update1 }}</h5>
+<p class="team-description">{{ update.update2 }}</p>
+{% endfor %}
