@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Re-imagine Storytelling
+title: Communitree - Re-imagine Storytelling
 description: "Check out the finalists for the Codebridge Re-Imagine Storytelling Challenge who are competing to win R20k! #CBstorychallenge"
 image: /images/reimagine-storytelling.jpg
 ---
@@ -9,7 +9,7 @@ image: /images/reimagine-storytelling.jpg
 
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
-        <img style="width:100%; margin-top:-15px; margin-bottom:20px" src="/images/reimagine-storytelling.jpg">
+        <img style="width:100%; margin-top:-15px; margin-bottom:20px" src="../images/reimagine-storytelling.jpg">
       </div>
     </div>
 
@@ -20,13 +20,9 @@ image: /images/reimagine-storytelling.jpg
       </div>
     </div>
 
-	{% for update in site.data.storytelling.communitree %}
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1 well">
-	      <h4 class="update">{{ update.title }} <small>{{ update.date | date_to_long_string }}</small></h4>
-	      <p class="update">{{ update.content }}</p>
-      </div>
-    </div>
+
+    {% for team in site.data.storytelling.communitree %}
+    <p class="update">{{ team.update }}</p>
     {% endfor %}
 
     <div class="row">
@@ -36,16 +32,16 @@ image: /images/reimagine-storytelling.jpg
     </div>
 
     <div class="row">
-      <div class="col-xs-3 col-md-2 col-donor col-md-offset-1">
+      <div class="col-md-2 col-xs-6 col-md-offset-1">
         <a href="http://code4sa.org/" target="_blank"><img src="/images/code4sa_logo.png" style="width:100%"></a>
       </div>
-      <div class="col-xs-3 col-md-2 col-donor">
+      <div class="col-md-2 col-xs-6">
         <a href="https://www.facebook.com/HacksHackersAfrica" target="_blank"><img src="/images/hh.png" style="width:100%"></a>
       </div>
-      <div class="col-xs-3 col-md-2 col-donor">
+      <div class="col-md-2 col-xs-6">
       <a href="http://www.makingallvoicescount.org/" target="_blank"><img src="/images/mavc.png" style="width:100%"></a>
       </div>
-      <div class="col-xs-3 col-md-2 col-donor">
+      <div class="col-md-2 col-xs-6">
       <a href="http://opendata.durban/" target="_blank"><img src="/images/opendatadurban.jpg" style="width:100%"></a>
       </div>
     </div>
@@ -53,6 +49,7 @@ image: /images/reimagine-storytelling.jpg
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <h3><small>We thank our donors for making this storytelling challenge possible</small></h3>
+        <p style="font-size: 12px; color: #777">Icons by Pixel Buddha, Madebyoliver, Roundicons, and Freepik from <a href="http://www.flaticon.com" target="_blank">flaticon.com</a></p>
       </div>
     </div>
 

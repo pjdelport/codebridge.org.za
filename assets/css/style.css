@@ -402,18 +402,22 @@ ul.eventlist li {
 
 @media (max-width: 1200px) {
   .col-team {
-      width: 25%;
+    width: 25%;
   }
 }
 
 @media (max-width: 770px) {
   .col-team {
-      width: 50%;
+    width: 50%;
   }
 }
 
 @media (max-width: 480px) {
   .col-team {
-      width: 100%;
+    width: 100%;
+  }
+
+  .col-donor {
+    width: 50%;
   }
 }
