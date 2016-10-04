@@ -370,11 +370,13 @@ ul.eventlist li {
   font-size: 1.4em;
   font-weight: bold;
   display: inline-block;
+  margin-right: 10px;
 }
 
 .team-description {
-    font-size: 1.0em;
-    display: inline-block;
+  font-size: 1.0em;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .team-image {
@@ -420,4 +422,22 @@ ul.eventlist li {
   .col-donor {
     width: 50%;
   }
+
+  .team-image-page, .team-detail-page {
+  width: 100%; 
+  }
+
+  .team-update-well {
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+
+.team-image-page {
+  padding: 0; 
+}
+
+.team-infobox {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

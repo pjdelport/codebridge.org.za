@@ -4,6 +4,7 @@ title: Re-imagine Storytelling
 description: "Check out the finalists for the Codebridge Re-Imagine Storytelling Challenge who are competing to win R20k! #CBstorychallenge"
 image: /images/reimagine-storytelling.jpg
 ---
+
 <section class="contact" style="margin-bottom:10px;">
   <div class="container">
 
@@ -59,21 +60,21 @@ image: /images/reimagine-storytelling.jpg
 
     <div class="row grid">
       <div class="col-md-10 col-md-offset-1" style="padding: 0">
-        {% for team in site.data.storytelling.teams %}
+        {% for team in site.storytelling %}
         <div class="col-md-2 col-xs-6 col-team">
           <div class="team-text">
             <h5 class="team-name">{{ team.name }}</h5>
             <p class="team-description">{{ team.tagline }}</p>
           </div>
           <div class="team-image">
-            <a href=""><img src="img/{{ team.image }}.jpg"></a>
+            <a href="{{ team.icon }}.html"><img src="img/{{ team.icon }}.jpg"></a>
           </div>
         </div>
         {% endfor %}
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" style="margin-top: 50px;">
       <div class="col-md-10 col-md-offset-1">
         <h3>With support from:</h3>
       </div>
@@ -97,11 +98,8 @@ image: /images/reimagine-storytelling.jpg
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <h3><small>We thank our donors for making this storytelling challenge possible</small></h3>
-        <p style="font-size: 12px; color: #777">Icons by Pixel Buddha, Madebyoliver, Roundicons, and Freepik from <a href="http://www.flaticon.com" target="_blank">flaticon.com</a></p>
       </div>
     </div>
 
-
   </div>
 </section>
-
