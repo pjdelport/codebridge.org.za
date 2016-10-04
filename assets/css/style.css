@@ -364,6 +364,7 @@ ul.eventlist li {
   padding-top: 10px;
   z-index: 1;
   pointer-events: none;
+  font-weight: bold;
 }
 
 .team-name {
@@ -380,11 +381,11 @@ ul.eventlist li {
 }
 
 .team-image {
-  opacity: 0.45;
+  opacity: 0.3;
 }
 
 .team-image:hover {
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
 .team-detail {
@@ -431,6 +432,10 @@ ul.eventlist li {
     border-left-width: 0;
     border-right-width: 0;
   }
+
+  .team-detail-page {
+    padding: 0;
+  }
 }
 
 .team-image-page {
@@ -438,6 +443,5 @@ ul.eventlist li {
 }
 
 .team-infobox {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }

@@ -10,11 +10,4 @@ tagline: Connecting local greening initiatives with larger, city-wide greening s
 description: This team aims to demonstrate the concept of 'city greening', through their work in Delft, Cape Town.
 summary: Frances, Nomaphelo and Paul plan to work together with local government, other organisations and the public to integrate the their vision for the community of Delft with a citywide strategy of urban greening and gardening.
 discuss: 42
-updates:
-  - date: 2016-02-02
-    title: foo
-    body: some stuff <b>html</b>
-  - date: 2016-02-02
-    title: foo
-    body: some stuff <b>html</b>
 ---
