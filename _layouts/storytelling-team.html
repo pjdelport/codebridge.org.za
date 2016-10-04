@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %} 
+
+    <section class="contact" style="margin-bottom:10px;">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <img style="width:100%; margin-top:-15px; margin-bottom:20px" src="/images/reimagine-storytelling.jpg">
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div>
+            <a type="button" class="btn btn-default" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i> back to teams</a>
+            <a style="background-color: #365899; border: 0; color:white;" type="button" class="btn btn-default" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=www.codebridge.org.za/storytelling/{{ page.icon }}.html"><i class="fa fa-facebook-official" aria-hidden="true"></i> <b>share</b></a>
+            <a style="background-color: #33ccff; border: 0; color:white;" type="button" class="btn btn-default" target="_blank" href="https://twitter.com/intent/tweet?text=www.codebridge.org.za/storytelling/{{ page.icon }}.html%20%23CBStoryChallenge"><i class="fa fa-twitter" aria-hidden="true"></i> <b>tweet</b></a>
+          </div>
+        </div>
+
+	    <div class="row team-infobox">
+	    <div class="col-xs-4 col-md-3 col-md-offset-1 team-image-page">
+		    {% if page.iconalt %}
+			<img src="img/{{ page.iconalt }}" style="width:100%;">
+		    {% else %}
+		    <img src="img/{{ page.icon }}.jpg" style="width:100%;">
+		    {% endif %}
+	    </div>
+	    <div class="col-xs-8 col-md-7 team-detail-page">
+	    	<h2>
+		    	{{ page.name }}
+	    	</h2>
+	    	<p>
+		    	<i class="fa fa-fw fa-users" aria-hidden="true"></i> {{ page.members }}
+	    	</p>
+	    	<p>
+		    	<i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ page.location }}
+	    	</p>
+	    	<p>
+	    		{{ page.summary }}
+    		</p>
+	    </div>
+	    </div>
+
+	    {% for update in page.updates %}
+	    <div class="row">
+	      <div class="col-md-10 col-md-offset-1 well team-update-well">
+	        <h4 class="update">{{ update.title }} <small>{{ update.date | date_to_long_string }}</small></h4>
+	        <p class="update">{{ update.body }}</p>
+	      </div>
+	    </div>
+	    {% endfor %}
+
+	    <div class="row" style="margin-bottom: 25px;">
+	      <div class="col-md-10 col-md-offset-1">
+		      <p>Sound interesting? If you'd like to be a part of this project, join the discussion</p>
+	      </div>
+	    </div>
+
+
+	    <div class="row" style="margin-bottom: 60px;">
+	      <div class="col-md-10 col-md-offset-1">
+		      <div id='discourse-comments'></div>
+  		  </div>
+  		</div>
+
+    
+        <script type="text/javascript">
+          DiscourseEmbed = { discourseUrl: 'http://discuss.codebridge.org.za/',
+                   topicId: {{ page.discuss }} };
+
+          (function() {
+            var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+            d.src = DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+          })();
+        </script>
+
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h3>With support from:</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-3 col-md-2 col-donor col-md-offset-1">
+            <a href="http://code4sa.org/" target="_blank"><img src="/images/code4sa_logo.png" style="width:100%"></a>
+          </div>
+          <div class="col-xs-3 col-md-2 col-donor">
+            <a href="https://www.facebook.com/HacksHackersAfrica" target="_blank"><img src="/images/hh.png" style="width:100%"></a>
+          </div>
+          <div class="col-xs-3 col-md-2 col-donor">
+          <a href="http://www.makingallvoicescount.org/" target="_blank"><img src="/images/mavc.png" style="width:100%"></a>
+          </div>
+          <div class="col-xs-3 col-md-2 col-donor">
+          <a href="http://opendata.durban/" target="_blank"><img src="/images/opendatadurban.jpg" style="width:100%"></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <h3><small>We thank our donors for making this storytelling challenge possible</small></h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+   	{% include footer.html %}
+
+</body>
+
+</html>

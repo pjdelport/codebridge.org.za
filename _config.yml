@@ -27,6 +27,8 @@ exclude: [CNAME, Vagrantfile, README.md]
 collections:
   allevents:
     output: true
+  storytelling:
+    output: true
 
 gems:
   - jekyll-feed
