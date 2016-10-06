@@ -19,12 +19,12 @@ h6 {
 }
 footer {
     width: 100%;
-    height: 60px;
+    height: 45px;
     background-color: #212121;
 }
 footer span {
     color: #FFF;
-    line-height: 60px;
+    line-height: 45px;
     text-align: center;
 }
 footer a {
