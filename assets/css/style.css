@@ -445,3 +445,8 @@ ul.eventlist li {
 .team-infobox {
   margin: 20px 0;
 }
+
+.single-update {
+  border-left: 2px solid #AAA;
+  margin-bottom: 15px;
+}
