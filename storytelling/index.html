@@ -74,6 +74,25 @@ image: /images/reimagine-storytelling.jpg
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>Latest updates</h2>
+      </div>
+    </div>
+
+    {% for team in site.storytelling %}
+      {% for update in team.updates limit:1 %}
+        <div class="row">  
+          <div class="col-md-10 col-md-offset-1 single-update"> 
+            <h3 style="margin-top: 10px;"><a href="{{ team.icon }}.html">{{ team.name }}</a></h3> 
+            <h4>{{ update.title }} <small>{{ update.date | date_to_long_string }}</small></h4>
+            <p>{{ update.excerpt }}</p>
+            <a href="{{ team.icon }}.html#updates">Read more...</a>
+          </div>
+        </div>
+      {% endfor %}
+    {% endfor %}
+
     <div class="row" style="margin-top: 50px;">
       <div class="col-md-10 col-md-offset-1">
         <h3>With support from:</h3>

@@ -436,6 +436,11 @@ ul.eventlist li {
   .team-detail-page {
     padding: 0;
   }
+
+  .sdcu1-left, .sdcu1-right {
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .team-image-page {
@@ -444,4 +449,72 @@ ul.eventlist li {
 
 .team-infobox {
   margin: 20px 0;
+}
+
+.single-update {
+  border-left: 2px solid #AAA;
+  margin-bottom: 15px;
+}
+
+.stupdate-image {
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.ctupdate-image {
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.tsupdate-image {
+  float: right;
+  max-height: 170px;
+  padding: 10px;
+}
+
+.col-story-noleftpadding {
+  padding-left: 0;
+}
+
+.col-story-norightpadding {
+  padding-right: 0;
+}
+
+.sdcu1-left {
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.sdcu1-right {
+  padding-right: 0;
+  margin-bottom: 10px;
+}
+
+.call-join {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px 10px;
+  background-color: #eee;
+  color: #333;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-left: add 15px;
+  margin-right: add 15px;
+}
+
+.call-join p {
+  margin: 0;
+}
+
+.cgiframe {
+  float: right;
+  display: inline-block;
+} 
+
+.piframe {
+  display: inline;
+}
+
+.float-left {
+  float: left;
 }
