@@ -86,7 +86,8 @@ image: /images/reimagine-storytelling.jpg
           <div class="col-md-10 col-md-offset-1 single-update"> 
             <h3 style="margin-top: 10px;"><a href="{{ team.icon }}.html">{{ team.name }}</a></h3> 
             <h4>{{ update.title }} <small>{{ update.date | date_to_long_string }}</small></h4>
-            <p>{{ update.body }}</p>
+            <p>{{ update.excerpt }}</p>
+            <a href="{{ team.icon }}.html#updates">Read more...</a>
           </div>
         </div>
       {% endfor %}
