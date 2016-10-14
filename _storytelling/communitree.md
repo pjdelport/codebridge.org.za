@@ -1,7 +1,7 @@
 ---
 layout: storytelling-team
 image: /images/reimagine-storytelling.jpg
-name: isiXhamo and Communitree
+name: isiQhamo & Communitree
 icon: communitree
 iconalt: communitree-logo.png
 members: Frances Taylor, Nomaphelo Mzimba, Paul Hoekman, Ntombentle Mcasa and Paulos Ngowana
