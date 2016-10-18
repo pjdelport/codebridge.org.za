@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/sanitary-dignity-conundrum.jpg
 name: Sanitary Dignity Conundrum
 icon: sanitary-dignity-conundrum
 members: Chani Macauley and Tim Flack

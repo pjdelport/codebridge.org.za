@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/overcoming-the-odds.jpg
 name: Overcoming the Odds
 icon: overcoming-the-odds
 members: Mildred Ngcobo, Jed Kenny and Bradley Downs

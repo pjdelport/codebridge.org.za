@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/water-wars.jpg
 name: Water Wars
 icon: water-wars
 members: Tunicia Phillips, Mpho Raphata and Nhanhla Sehume

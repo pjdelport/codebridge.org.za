@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/nudurbancomic.jpg
 name: NuDurbanComic
 icon: nudurbancomic
 members: Angus Joseph

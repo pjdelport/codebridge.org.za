@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/green-camp.jpg
 name: Green Camp
 icon: green-camp
 members: Qudsia Mall and Vanessa Meintjes

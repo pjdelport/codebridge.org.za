@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/safer-taxi-stops.jpg
 name: Safer Taxi Stops
 icon: safer-taxi-stops
 members: Abigail Kemper, Lyse Comins, Maria Schuld and Mark Fingerhuth

@@ -491,19 +491,33 @@ ul.eventlist li {
 }
 
 .call-join {
-  border: 1px solid #ddd;
-  border-radius: 3px;
-  padding: 5px 10px;
+  border-top: 3px solid #ddd;
+  padding: 7px 10px;
   background-color: #eee;
   color: #333;
   font-weight: 400;
   margin-top: 20px;
-  margin-left: add 15px;
-  margin-right: add 15px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0,0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0,0.05);
+  font-size: 16px;
 }
 
-.call-join p {
-  margin: 0;
+.call-join a {
+  color: #333;
+}
+
+.panel-group .panel-heading {
+  border: 0px solid #ddd;
+  border-top: 3px solid #ddd;
+  border-radius: 0px;
+  padding: 10px;
+  background-color: #eee;
+  color: #333;
+}
+
+.panel-body-storytelling {
+  border-top: 0 solid #ddd !important;
+  padding: 10px 0;
 }
 
 .cgiframe {

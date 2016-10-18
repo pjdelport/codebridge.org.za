@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/communitree-logo.png
 name: isiQhamo & Communitree
 icon: communitree
 iconalt: communitree-logo.png
