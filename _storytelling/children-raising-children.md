@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/children-raising-children.jpg
 name: Children Raising Children
 icon: children-raising-children
 members: Adele Schormann, Dale Hes and Beatrice Shongwe

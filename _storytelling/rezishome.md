@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/rezishome-logo.png
 name: RezIsHome
 icon: rezishome
 iconalt: rezishome-logo.png

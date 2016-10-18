@@ -1,6 +1,6 @@
 ---
 layout: storytelling-team
-image: /images/reimagine-storytelling.jpg
+image: /storytelling/img/shop-local.jpg
 name: Shop Local
 icon: shop-local
 members: Lisa Higginson and Chris Bova
