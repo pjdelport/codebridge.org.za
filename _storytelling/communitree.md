@@ -11,6 +11,9 @@ description: This team aims to demonstrate the concept of 'city greening', throu
 summary: Frances, Nomaphelo, Paul, Ntombentle and Paulos plan to work together with local government, other organisations and the public to integrate the their vision for the community of Delft with a citywide strategy of urban greening and gardening.
 discuss: 42
 updates:
+- date: 2016-10-19
+  title: People
+  body: Here we present the people behind both IsiQhamo and Communitree. Listen to each of them describing their inspiration for working together to garden and green in Cape Town. Please note that some videos are in isiXhosa, and others in English. We hope to subtitle each video in the near future.<br><br><iframe class="communitree-iframe" src="http://communitree.in/delft/people/iframe"></iframe>
 - date: 2016-10-13
   title: Who are we?
   excerpt: isiQhamo, a local vegetable garden collective and Communitree, an organisation focused on greening Cape Town, are working together for the &#35;CBStoryChallenge to create improve public space and environmental conservation for areas such as Delft, a township on the outskirts of the city.
