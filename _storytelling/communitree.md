@@ -12,6 +12,7 @@ summary: Frances, Nomaphelo, Paul, Ntombentle and Paulos plan to work together w
 discuss: 42
 updates:
 - date: 2016-10-19
+  title: People
   body: Here we present the people behind both IsiQhamo and Communitree. Listen to each of them describing their inspiration for working together to garden and green in Cape Town. Please note that some videos are in isiXhosa, and others in English. We hope to subtitle each video in the near future.<br><br><iframe class="communitree-iframe" src="http://communitree.in/delft/people/iframe"></iframe>
 - date: 2016-10-13
   title: Who are we?
