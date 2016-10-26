@@ -11,8 +11,13 @@ description: This team aims to demonstrate the concept of 'city greening', throu
 summary: Frances, Nomaphelo, Paul, Ntombentle and Paulos plan to work together with local government, other organisations and the public to integrate the their vision for the community of Delft with a citywide strategy of urban greening and gardening.
 discuss: 42
 updates:
+- date: 2016-10-24
+  title: The story of isiQhamo
+  excerpt: A timeline presenting the history of isiQhamo - an urban farming cooperative located in Delft, Cape Town
+  body: <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1KCTEMsA0eydYnJ-2ynjv7BRFS4XGUvejubo6g2GLKC8&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' frameborder='0'></iframe>
 - date: 2016-10-19
   title: People
+  excerpt: The people behind both IsiQhamo and Communitree. Listen to each of them describing their inspiration for working together to garden and green in Cape Town
   body: Here we present the people behind both IsiQhamo and Communitree. Listen to each of them describing their inspiration for working together to garden and green in Cape Town. Please note that some videos are in isiXhosa, and others in English. We hope to subtitle each video in the near future.<br><br><iframe class="communitree-iframe" src="http://communitree.in/delft/people/iframe"></iframe>
 - date: 2016-10-13
   title: Who are we?

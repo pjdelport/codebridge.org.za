@@ -10,6 +10,10 @@ description: This team will use transport data to map safe and dangerous zones f
 summary: Abigail, Lyse, Maria and Mark plan to develop a web-based dashboard that looks at a 'day in the life of a taxi driver', and can be used by anyone to help raise awareness about some of the issues surrounding public transport
 discuss: 44
 updates:
+- date: 2016-10-24
+  title: En route with Safer Taxi Stops
+  excerpt: "Our public transport enthusiasts spent some time with a taxi driver who works for the taxi company Brown Brothers. They spent the day collecting data and chatting to the driver and various passengers about the public transport system and safer taxi stops."
+  body: <iframe width="100%" height="315" src="https://www.youtube.com/embed/RSBuB-6KUdo" frameborder="0" allowfullscreen></iframe>
 - date: 2016-10-20
   title: Photo gallery&#58; 40 metres up in the air
   excerpt: This week, team Safer Taxi Stops decided to conquer their fear of heights and go 40m up in the air to get photos of the Inanda Taxi Rank, situated in the Durban CBD.
