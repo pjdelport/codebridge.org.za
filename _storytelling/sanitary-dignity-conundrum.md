@@ -10,6 +10,10 @@ description: This team aims to dig deep in addressing and telling the story of d
 summary: Chani and Tim plan to create awareness and deepen community-wide understand of the provision of sanitary care, among adolescent girls and women who are not able to afford sanitary towels. 
 discuss: 45
 updates:
+- date: 2016-10-25
+  title: Sanitary dignity is a right, not a luxury
+  excerpt: Chani and Tim asked ordinary South Africans to tell us how they felt about sanitary dignity.
+  body: <p> Chani and Tim asked ordinary South Africans to tell us how they felt about sanitary dignity. Here’s how they responded:</p><iframe src="https://drive.google.com/file/d/0B9HnzHxwGnfhVGtGdmtXRk1IUVE/preview" frameborder="0" width="100%" height="480"></iframe>
 - date: 2016-10-12
   title: Conversation catalysts for the preservation of sanitary dignity
   excerpt: Chani and Tim, who refer to themselves as “conversation catalysts” are going to use the &#35;CBStoryChallenge as an opportunity to tackle the very complex issue of sanitary dignity for women and girls throughout South Africa.
