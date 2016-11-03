@@ -11,6 +11,10 @@ description: This team aims to demonstrate the concept of 'city greening', throu
 summary: Frances, Nomaphelo, Paul, Ntombentle and Paulos plan to work together with local government, other organisations and the public to integrate the their vision for the community of Delft with a citywide strategy of urban greening and gardening.
 discuss: 42
 updates:
+- date: 2016-11-02
+  title: isiQhamo and Communitree explore Cape Town
+  excerpt: This week we set out to explore relevant projects that take place in the surrounding areas. After all, many people are doing great work and the best way to improve our own projects is by learning from and connecting with others. So, early last Friday morning we set out to explore what else is out there! 
+  body: <iframe src='https://uploads.knightlab.com/storymapjs/e6621524b288bbbf59c98cd6ae653a39/inspirational-field-trip/index.html' width='100%' height='800' frameborder='0'></iframe>
 - date: 2016-10-24
   title: The story of isiQhamo
   excerpt: A timeline presenting the history of isiQhamo - an urban farming cooperative located in Delft, Cape Town
