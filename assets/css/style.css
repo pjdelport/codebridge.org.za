@@ -538,3 +538,34 @@ ul.eventlist li {
   width: 100%;
   height: 100vh;
 }
+
+.gc-gallery {
+  width: 100%;
+}
+
+.gc-gallery-half {
+  width: 50%;
+}
+
+.gc-left {
+  padding-right: 5px;
+}
+
+.gc-right {
+  padding-left: 5px;
+}
+
+.gc-p {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.gc-top {
+  padding-top: 10px;
+}
+
+.gc-bottom {
+  padding-bottom: 10px;
+}
