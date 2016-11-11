@@ -569,3 +569,7 @@ ul.eventlist li {
 .gc-bottom {
   padding-bottom: 10px;
 }
+
+.sdc-iframe {
+  border-top: 1px solid #ccc;
+}

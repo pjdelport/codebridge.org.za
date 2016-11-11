@@ -11,6 +11,10 @@ description: This team aims to demonstrate the concept of 'city greening', throu
 summary: Frances, Nomaphelo, Paul, Ntombentle and Paulos plan to work together with local government, other organisations and the public to integrate the their vision for the community of Delft with a citywide strategy of urban greening and gardening.
 discuss: 42
 updates:
+- date: 2016-11-07
+  title: A cleaning day
+  excerpt: Until now, the team members from Communitree have been putting together the weekly content pieces. This week isiQhamo decided to give it a try! 
+  body: <iframe src='http://communitree.in/delft/cleaning/iframe' width='100%' height='700' frameborder='0'></iframe>
 - date: 2016-11-02
   title: isiQhamo and Communitree explore Cape Town
   excerpt: This week we set out to explore relevant projects that take place in the surrounding areas. After all, many people are doing great work and the best way to improve our own projects is by learning from and connecting with others. So, early last Friday morning we set out to explore what else is out there! 
