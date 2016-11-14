@@ -10,6 +10,10 @@ description: This team will, through the eyes of a disabled student, highlight h
 summary: Mildred and Bradley hope that changing one person’s life will inspire the public to do more for the disabled community throughout South Africa, and plan to do this by telling an in-depth story of life as a disabled student in South Africa.
 discuss: 41
 updates:
+- date: 2016-11-07
+  title: Thabile, on a journey to overcome the odds
+  excerpt: "As the focus of their story, the team wanted Thabile to tell us a little bit about herself. Here's her story."
+  body: <p>Thabile is a student at Mangusuthu University in Umlazi, where she is studying marketing. Alongside her studies, Thabile also interns at a bank nearby and everyday, makes the journey from her university res room to the bank, before returning to study. As you will know from reading a little bit about Thabile in our previous posts, she is completely reliant on a battery-operated wheelchair and makes her daily commute alone, all the while hoping that the batteries don’t run out. She is extremely ambitious and when she graduates, wants to start her own catering business with a friend. Unfortunately Thabile faces opposition from her mother, who does not support her decision to study and work, and has asked her not to return home. This means that she is unsure about where she’ll live once she finished university and is also reluctant to accept the surgery offered to her by her doctor. Despite her waning health and lack of support, she is determined to pursue her dreams.</p><iframe src="https://drive.google.com/file/d/0B9HnzHxwGnfhdzZ5T0Yxamhvdms/preview" frameborder='0' width="100%" height="380"></iframe>
 - date: 2016-10-13
   title: The story of a girl overcoming all odds to succeed
   excerpt: "Thabile has, in the past few years, been confined to a wheelchair after being diagnosed with colon cancer. For the &#35;CBStoryChallenge we hope to tell the story of people with disabilities who have, despite their situations, overcoming the odds to succeed."
