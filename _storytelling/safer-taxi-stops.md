@@ -10,6 +10,10 @@ description: This team will use transport data to map safe and dangerous zones f
 summary: Abigail, Lyse, Maria and Mark plan to tell the stories of taxi drivers by mapping three taxi routes in Durban with GIS and visualize the lack of safe and legal taxi stops in the city. With this project they want to help raise awareness about some of the issues surrounding public transport in South Africa.
 discuss: 44
 updates:
+- date: 2016-11-09
+  title: Nowhere to Stop gets their own blog!
+  excerpt: "This week our team of public transport activists got a name change from 'Safer Taxi Stops' to 'Nowhere to go' and created their own website!"
+  body: <img class="ctupdate-image" src="/storytelling/img/safer-taxi-stops-3.1.jpg"><p>This week we finally registered our web domain and until the final product is ready we will keep you all updated via our blog on the website <a href="http://www.nowheretostop.co.za">nowheretostop.co.za</a>! Check it out, subscribe to our mailing list and watch the space!</p>
 - date: 2016-11-03
   title: Driving on the road with nowhere to stop - taxi drivers in the danger zone
   excerpt: "This week the team spent some time with Zwelithini Mncwabe, a Durban taxi driver. They followed him as he went about his daily routine of a before sunrise wake up and eleven rounds of dangerous and often illegal commuting."
