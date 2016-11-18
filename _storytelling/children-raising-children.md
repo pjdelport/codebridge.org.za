@@ -10,7 +10,7 @@ description: This team will tell the stories of Mpumalanga families who live in 
 summary: Adele, Dale and Beatrice will focus on child-headed households in Mpumalanga, which make up 10% of the country, despite the small size of the province. They will produce a piece that puts names and faces to the continuously growing crisis.
 discuss: 37
 updates:
-- date: 2016-11-09
+- date: 2016-11-16
   title: "Government grants for child-headed households"
   excerpt: "This week the team interviewed one of the most important stakeholders in the child-headed households phenomenon: local government. Freddy Ngobe of the Department of Human Settlement discussed the scope of assistance that government is meant to be providing to these young and vulnerable families." 
   body: <p>The Department of Human Settlement in Mpumalanga is mandated to provide assistance to all vulnerable groups including child-headed homes, orphans, elderly people and people with disabilities by prioritising them in its programmes. According to departmental spokesperson Freddy Ngobe, the Department ensures that allocations of houses are biased towards vulnerable groups.</p><p>Watch the full interview here&#58;</p><iframe src="https://drive.google.com/file/d/0B0b0Gx5S-jiybTFKTDBPVmFpWnM/preview" frameborder="0" width="100%" height="480"></iframe>
