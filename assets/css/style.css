@@ -45,6 +45,8 @@ a.anchor {
 
 .panel{
    border: 0;
+   box-shadow: none;
+   -webkit-box-shadow: none;
 }
 
 .thumbnail{

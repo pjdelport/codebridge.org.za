@@ -11,6 +11,10 @@ description: This team aims to demonstrate the concept of 'city greening', throu
 summary: Frances, Nomaphelo, Paul, Ntombentle and Paulos plan to work together with local government, other organisations and the public to integrate the their vision for the community of Delft with a citywide strategy of urban greening and gardening.
 discuss: 42
 updates:
+- date: 2016-11-14
+  title: The struggle for land and nature
+  excerpt: This past week team members from both isiQhamo and Communitree attended Ndifuna Ukwazi’s Urban Land Justice Gathering 2016, where, among other things, they went on guided tours of the social housing and eviction issues in Woodstock and Seapoint. This week’s submission deals with the concept or urban land justice in Cape Town.
+  body: <p>Urban land justice deals with the different competing demand for the same land, including housing, agriculture and conservation. Because there is always a thirsty commercial motivation driving the threat of development of land, agriculture and conservation are often zoned with a 'hard' edge, resulting in conservation and agriculture being planned for as completely separate from housing. This poster challenges the notion of humans as separate from their indigenous and agricultural environment and critiques the practice of making development decisions without local contextual understanding and a sense of what land zoning means for the people and nature that already live in and interact with that place.</p><img class="ctupdate-image" src="/storytelling/img/communitree-2.1.png">
 - date: 2016-11-07
   title: A cleaning day
   excerpt: Until now, the team members from Communitree have been putting together the weekly content pieces. This week isiQhamo decided to give it a try! 
