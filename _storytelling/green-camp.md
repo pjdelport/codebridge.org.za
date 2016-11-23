@@ -11,6 +11,10 @@ description: This team will highlight how urban degeneration can lead to crime a
 summary: Through telling the story of the Green Camp Project, Qudsia and Vanessa hope to inspire and empower other people and communities to transform their own, transformed urban spaces.
 discuss: 39
 updates:
+- date: 2016-11-21
+  title: Green Camp Gallery Documentary
+  excerpt: "In their short documentary, Vanessa and Qudisa tell the story of how the Green Camp Gallery Project came to be, and hope to empower other communities to transform crime-ridden spaces in their areas to ones of creativity."
+  body: <img class="ctupdate-image" src="/storytelling/img/green-camp-alt.jpg"><p>The Green Camp Gallery Project on Umbilo Road used to be a derelict site in a crime-ridden area. However, three years ago Xolani Hlongwa, with the help of a few friends took initiative, cleaned up, recycled and reused the trash, and created a hub of creativity and urban farming, proving that a handful of dedicated individuals can positively transform a neighbourhood previously plagued by crime, urban decay and social disintegration.</p><p>With this short documentary we hope to inspire and empower other communities to take it upon themselves to 'fix more broken windows' and transform similar places into spaces of creativity, hope and abundance by following in the Green Camp Gallery Project’s footsteps.</p><p><a class="btn btn-primary btn-lg" href="http://www.greencampgallerydocumentary.co.za">Watch the full documentary on our website <i class="fa fa-external-link" aria-hidden="true"></i></a> and like us on <a href="https://www.facebook.com/greencampgallerydocumentary">Facebook</a></p>
 - date: 2016-11-16
   title: Green Excursion Part 1
   excerpt: "This past week, Vanessa took the Green Camp Gallery crew to check out some of Durban’s other inspirational sustainable green spots that she’s come across."
