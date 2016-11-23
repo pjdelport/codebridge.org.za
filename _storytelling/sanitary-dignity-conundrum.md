@@ -10,6 +10,10 @@ description: This team aims to dig deep in addressing and telling the story of d
 summary: Chani, Earl, Nyameka and Cecile-Ann plan to create awareness and deepen community-wide understand of the provision of sanitary care, among adolescent girls and women who are not able to afford sanitary towels. 
 discuss: 45
 updates:
+- date: 2016-11-23
+  title: "Menstruation Dignity for SA:  the plight, the flight, the way forward"
+  excerpt: "The sanitary dignity conundrum team have attempted to create awareness and deepen community-wide understanding of the provision of sanitary care, among adolescent girls and women who are not able to afford sanitary products."
+  body: <img class="ctupdate-image" src="/storytelling/img/sanitary-dignity-conundrum-3.1.jpg"><p>An undelivered promise for menstruation dignity made President Jacob Zuma in 2011 has left the indigent to rely on community leaders and NGOs who are driving short-term solutions to preserve menstruation dignity.  Collecting menstruation products for those in need have been anything from hosting a “party with a purpose” to knocking on corporate doors that often leads to once-off collection campaigns to fundraising events that can cost up to R1,450.00 per ticket.  All these efforts create short-term impact - it is not sustainable.</p><p>The Sanitary Dignity Conundrum story explores, through Femme Friends, the issues and challenges that are faced by those in need, those who have taken action to preserve dignity and those who are speaking up for the cause.</p><p><a class="btn btn-primary btn-lg" href="http://www.femmefriends.co.za">View project <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
 - date: 2016-11-15
   title: "Learners on the Cape Flats need holistic health education"
   excerpt: "This past week, the team met with learners at Mountview High, where they discussed perceptions of menstruation dignity. What they found was a group of children eager to learn, despite a vast gap in the integrated education system."

@@ -11,6 +11,10 @@ description: This team aims to demonstrate the concept of 'city greening', throu
 summary: Frances, Nomaphelo, Paul, Ntombentle and Paulos plan to work together with local government, other organisations and the public to integrate the their vision for the community of Delft with a citywide strategy of urban greening and gardening.
 discuss: 42
 updates:
+- date: 2016-11-22
+  title: "Urban farming meets urban greening: IsiQhamo meets Communitree"
+  excerpt: "Over this storytelling competition we have learned a key lesson that we will take with us into our future work: If we don’t take care of people, nature suffers. If we don’t take care of nature, people suffer. This is a big challenge to take on, but, you will see from our story that we have already got the train moving. Start running now if you would like jump on and join us on our adventure together"
+  body: <img class="ctupdate-image" src="/storytelling/img/communitree-3.1.jpg"><p><i>IsiQhamo&#58; Nomaphelo Mzimba, Paulos Ngowana, Ntombentle Mcasa (and 12 other members)<br>Communitree&#58; Paul Hoekman, Frances Taylor</i></p><p>In 2015 Nomaphelo meets Frances at a Popular Education workshop. A year later they started working together on a project combining urban farming (Nomaphelo’s passion) and urban greening (Frances’ passion). We have grown to 17 people now and have since created veg gardens and wetlands together. We have big plans for the future&#58; growing a veg garden business and greening Cape Town, starting with Delft. The urgency of food security and urban biodiversity loss drives us. These are one and the same issue.</p><a class="btn btn-primary btn-lg" href="http://communitree.in/delft">isiQhamo & Communitree's story <i class="fa fa-external-link" aria-hidden="true"></i></a>
 - date: 2016-11-14
   title: The struggle for land and nature
   excerpt: This past week team members from both isiQhamo and Communitree attended Ndifuna Ukwazi’s Urban Land Justice Gathering 2016, where, among other things, they went on guided tours of the social housing and eviction issues in Woodstock and Seapoint. This week’s submission deals with the concept or urban land justice in Cape Town.
