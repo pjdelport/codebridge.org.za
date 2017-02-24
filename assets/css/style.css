@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700';
 @import 'https://fonts.googleapis.com/css?family=Droid+Serif:400';
 html,
 body {
@@ -603,4 +603,39 @@ ul.eventlist li {
     .btn-winner {
       font-size: 1.1em;
     }
+}
+
+
+.odd2017 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.odd17-banner {
+  background-image: url(/images/ODD2017banner.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+}
+
+.odd17-caller {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 55px;
+  text-align: center;
+}
+
+.odd17-title {
+  margin-top: 50px;
+  color: #0086ff;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.odd17-subtitle {
+    color: #ff4900;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
 }
