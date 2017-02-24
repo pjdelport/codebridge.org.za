@@ -609,6 +609,7 @@ ul.eventlist li {
 .odd2017 {
   margin-top: 50px;
   margin-bottom:50px;
+  line-height: 1.7em;
 }
 
 .odd17-nav {
@@ -628,6 +629,7 @@ ul.eventlist li {
 
 .odd17-nav div ul {
   display: inline;
+  margin-left: -40px;
 }
 
 .odd17-nav div ul li {
@@ -637,23 +639,23 @@ ul.eventlist li {
 }
 
 .odd17-lead {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .challenge {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .getinvolved {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .rules {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .resources {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .odd17-banner {
@@ -661,6 +663,21 @@ ul.eventlist li {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px;
+}
+
+.event-form-buttons {
+  margin-top:30px;
+  margin-bottom:30px;
+  text-align: center;
+}
+
+.event-form-buttons p a.btn {
+  margin:0px 10px;
+  background-color: #0086ff;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .odd17-caller {
@@ -675,6 +692,7 @@ ul.eventlist li {
   color: #0086ff;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
+  padding-bottom: 20px;
 }
 
 .odd17-subtitle {
@@ -686,6 +704,7 @@ ul.eventlist li {
 .tools-play {
   margin-top: 20px;
   text-align: center;
+  margin-left: -40px;
 }
 
 .tools-play li {
@@ -697,3 +716,22 @@ ul.eventlist li {
 .tools-play li img {
   width: 150px;
 }
+
+.icons-section { 
+  text-align: center; 
+}
+
+.icons-section p {
+  margin-top: 20px;
+  text-align: left; 
+}
+
+.icons-cta { 
+  text-align: center;
+  width: 64px; 
+}
+
+.resources-highlight {
+  font-weight: 700;
+}
+
