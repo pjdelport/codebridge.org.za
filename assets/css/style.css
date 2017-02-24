@@ -608,6 +608,7 @@ ul.eventlist li {
 
 .odd2017 {
   margin-top: 50px;
+  margin-bottom:50px;
 }
 
 .odd17-nav {
@@ -635,24 +636,24 @@ ul.eventlist li {
   padding: 0px 20px;
 }
 
-
+.odd17-lead {
+  padding-top: 50px;
+}
 
 .challenge {
-  padding: 50px 0px;
+  padding-top: 50px;
 }
 
 .getinvolved {
-  padding: 50px 0px;
-  background-color:#ffb900;
+  padding-top: 50px;
 }
 
 .rules {
-  padding: 50px 0px;
+  padding-top: 50px;
 }
 
 .resources {
-  padding: 50px 0px;
-  background-color:#ff4900;
+  padding-top: 50px;
 }
 
 .odd17-banner {
@@ -666,7 +667,7 @@ ul.eventlist li {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   color: #fff;
-  font-size: 55px;
+  font-size: 65px;
   text-align: center;
 }
 
@@ -680,19 +681,4 @@ ul.eventlist li {
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     font-size: 21px;
-}
-
-.boxes {
-  margin-top:50px;
-  margin-bottom:50px;
-}
-
-.infobox {
-  background-color: #9b20dc;
-  height:300px;
-}
-
-.infoboxset {
-  background-color:#333;
-  height:150px;
 }
