@@ -608,7 +608,24 @@ ul.eventlist li {
 
 .odd2017 {
   margin-top: 50px;
-  margin-bottom: 50px;
+}
+
+.challenge {
+  padding: 50px 0px;
+}
+
+.getinvolved {
+  padding: 50px 0px;
+  background-color:#ffb900;
+}
+
+.rules {
+  padding: 50px 0px;
+}
+
+.resources {
+  padding: 50px 0px;
+  background-color:#ff4900;
 }
 
 .odd17-banner {
@@ -627,15 +644,28 @@ ul.eventlist li {
 }
 
 .odd17-title {
-  margin-top: 50px;
   color: #0086ff;
   font-weight: 700;
   font-family: 'Open Sans', sans-serif;
 }
 
 .odd17-subtitle {
-    color: #ff4900;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     font-size: 21px;
+}
+
+.boxes {
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.infobox {
+  background-color: #9b20dc;
+  height:300px;
+}
+
+.infoboxset {
+  background-color:#333;
+  height:150px;
 }
