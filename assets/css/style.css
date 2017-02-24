@@ -610,6 +610,33 @@ ul.eventlist li {
   margin-top: 50px;
 }
 
+.odd17-nav {
+  background-color: #f7f7f7;
+  padding:20px 0px;
+  text-align: center;
+  font-weight:700;
+}
+
+.odd2017 a {
+  color: #0086ff;
+}
+
+.odd2017 a:hover {
+  color: #004cff;
+}
+
+.odd17-nav div ul {
+  display: inline;
+}
+
+.odd17-nav div ul li {
+  display: inline;
+  list-style-type: none;
+  padding: 0px 20px;
+}
+
+
+
 .challenge {
   padding: 50px 0px;
 }
