@@ -676,8 +676,12 @@ ul.eventlist li {
   background-color: #0086ff;
   border: none;
   color: #fff;
-  font-weight: 400;
+  font-weight: 700;
   text-transform: uppercase;
+}
+
+.event-form-buttons p a.btn:hover {
+  background-color: #004cff;
 }
 
 .odd17-caller {
