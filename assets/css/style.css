@@ -760,10 +760,16 @@ ul.eventlist li {
 .odd17-host-title {
     font-weight: 700;
     color: #333;
+    font-size:21px;
+    line-height:2em;
 }
 
 .odd17-host-details {
 
+}
+
+.odd17-city {
+  background-color: #9b20dc;
 }
 
 .btn-odd17-join {
