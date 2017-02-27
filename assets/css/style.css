@@ -665,6 +665,7 @@ ul.eventlist li {
 }
 
 .odd17-banner {
+  background-color: #9b20dc;
   background-image: url(/images/ODD2017banner.svg);
   background-repeat: no-repeat;
   background-size: cover;
