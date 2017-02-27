@@ -772,6 +772,13 @@ ul.eventlist li {
   background-color: #9b20dc;
 }
 
+.odd17-host-details {
+  margin-left: -40px;
+}
+.odd17-host-details li {
+  list-style-type: none;
+}
+
 .btn-odd17-join {
   border: none;
   background-color: #0086ff;
