@@ -752,10 +752,15 @@ ul.eventlist li {
   width: 150px;
 }
 
+.odd17-host-event {
+  margin-top: 20px;
+}
+
 .odd17-well {
   background-color: #ffd900;
   padding: 20px;
   border: none;
+  margin-top:20px;
 }
 
 .odd17-host-title {
@@ -785,4 +790,9 @@ ul.eventlist li {
   background-color: #0086ff;
   color: #f7f7f7!important;
   margin-top: 10px;
+}
+
+.btn-odd17-join:hover {
+  background-color: #004cff;
+  color: #ffd900!important;
 }
