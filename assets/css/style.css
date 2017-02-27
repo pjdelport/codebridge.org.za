@@ -621,6 +621,7 @@ ul.eventlist li {
 
 .odd2017 a {
   color: #0086ff;
+  font-weight:700;
 }
 
 .odd2017 a:hover {
@@ -708,6 +709,7 @@ ul.eventlist li {
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     font-size: 21px;
+    color: #ff8500;
 }
 
 .tools-play {
@@ -749,3 +751,24 @@ ul.eventlist li {
   width: 150px;
 }
 
+.odd17-well {
+  background-color: #ffd900;
+  padding: 20px;
+  border: none;
+}
+
+.odd17-host-title {
+    font-weight: 700;
+    color: #333;
+}
+
+.odd17-host-details {
+
+}
+
+.btn-odd17-join {
+  border: none;
+  background-color: #0086ff;
+  color: #f7f7f7!important;
+  margin-top: 10px;
+}
