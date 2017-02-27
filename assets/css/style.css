@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700';
 @import 'https://fonts.googleapis.com/css?family=Droid+Serif:400';
 html,
 body {
@@ -603,4 +603,196 @@ ul.eventlist li {
     .btn-winner {
       font-size: 1.1em;
     }
+}
+
+
+.odd2017 {
+  margin-top: 50px;
+  margin-bottom:50px;
+  line-height: 1.7em;
+}
+
+.odd17-nav {
+  background-color: #f7f7f7;
+  padding:20px 0px;
+  text-align: center;
+  font-weight:700;
+}
+
+.odd2017 a {
+  color: #0086ff;
+  font-weight:700;
+}
+
+.odd2017 a:hover {
+  color: #004cff;
+  text-decoration: none;
+}
+
+.odd17-nav div ul {
+  display: inline;
+  margin-left: -40px;
+}
+
+.odd17-nav div ul li {
+  display: inline;
+  list-style-type: none;
+  padding: 0px 20px;
+}
+
+.odd17-lead {
+  padding-top: 30px;
+}
+
+.challenge {
+  padding-top: 30px;
+}
+
+.getinvolved {
+  padding-top: 30px;
+}
+
+.rules {
+  padding-top: 30px;
+}
+
+.resources {
+  padding-top: 30px;
+}
+
+.support {
+  padding-top: 30px;
+}
+
+.odd17-banner {
+  background-image: url(/images/ODD2017banner.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+}
+
+.event-form-buttons {
+  margin-top:30px;
+  margin-bottom:30px;
+  text-align: center;
+}
+
+.event-form-buttons p a.btn {
+  margin:0px 10px;
+  background-color: #0086ff;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.event-form-buttons p a.btn:hover {
+  background-color: #004cff;
+  color: #ffd900;
+}
+
+.odd17-caller {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  font-size: 65px;
+  text-align: center;
+}
+
+.odd17-title {
+  color: #0086ff;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  padding-bottom: 20px;
+}
+
+.odd17-subtitle {
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    color: #777777;
+}
+
+.tools-play {
+  margin-top: 20px;
+  text-align: center;
+  margin-left: -40px;
+}
+
+.tools-play li {
+  display: inline;
+  list-style-type: none;
+  padding: 0px 10px;
+}
+
+.tools-play li img {
+  width: 150px;
+}
+
+.icons-section { 
+  text-align: center; 
+}
+
+.icons-section p {
+  margin-top: 20px;
+  text-align: left; 
+}
+
+.icons-cta { 
+  text-align: center;
+  width: 64px; 
+}
+
+.resources-highlight {
+  font-weight: 700;
+}
+
+.supporter-logo {
+  text-align: center;
+  width: 150px;
+}
+
+.odd17-host-event {
+  margin-top: 20px;
+}
+
+.odd17-well {
+  background-color: #ffd900;
+  padding: 20px;
+  border: none;
+  margin-top:20px;
+}
+
+.odd17-host-title {
+    font-weight: 700;
+    color: #333;
+    font-size:21px;
+    line-height:2em;
+}
+
+.odd17-host-details {
+
+}
+
+.odd17-city {
+  background-color: #9b20dc;
+}
+
+.odd17-host-details {
+  margin-left: -40px;
+}
+.odd17-host-details li {
+  list-style-type: none;
+}
+
+.btn-odd17-join {
+  border: none;
+  background-color: #0086ff;
+  color: #f7f7f7!important;
+  margin-top: 10px;
+}
+
+.btn-odd17-join:hover {
+  background-color: #004cff;
+  color: #ffd900!important;
 }
