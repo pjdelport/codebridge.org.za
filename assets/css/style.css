@@ -658,6 +658,10 @@ ul.eventlist li {
   padding-top: 30px;
 }
 
+.support {
+  padding-top: 30px;
+}
+
 .odd17-banner {
   background-image: url(/images/ODD2017banner.svg);
   background-repeat: no-repeat;
@@ -738,5 +742,10 @@ ul.eventlist li {
 
 .resources-highlight {
   font-weight: 700;
+}
+
+.supporter-logo {
+  text-align: center;
+  width: 150px;
 }
 
