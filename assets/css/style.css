@@ -626,6 +626,7 @@ ul.eventlist li {
 
 .odd2017 a:hover {
   color: #004cff;
+  text-decoration: none;
 }
 
 .odd17-nav div ul {
