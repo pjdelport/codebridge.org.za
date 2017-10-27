@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
   <title>Codebridge</title>
   <meta name="description" content="Civic technology in South Africa" />
@@ -37,38 +37,38 @@
   <script src="js/tabletop.min.js"></script>
   <script src="js/handlebars-v4.0.11.js"></script> 
 
-  <div id="content"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 filter">
+        <ul id="filters">
+          <li><input type="checkbox" value="easterncape">easterncape</li>
+          <li><input type="checkbox" value="freestate">freestate</li>
+          <li><input type="checkbox" value="gauteng">gauteng</li>
+          <li><input type="checkbox" value="kwazulu-natal">kwazulu-natal</li>
+          <li><input type="checkbox" value="limpopo">limpopo</li>
+          <li><input type="checkbox" value="mpumalanga">mpumalanga</li>
+          <li><input type="checkbox" value="northwest">northwest</li>
+          <li><input type="checkbox" value="northerncape">northerncape</li>
+          <li><input type="checkbox" value="westerncape">westerncape</li>
+        </ul>
+      </div>
+      <div class="col-md-9">
+        <div id="content"></div>
+      </div>
+    </div>
+  </div>
 
   <script id="details" type="text/x-handlebars-template">
-    <div class="container">
-      <div class="single well">
-        <div>{{ name }}</div>
-        <div>{{ email }}</div>
-        <div>{{ url }}</div>
-        <div>{{ phone }}</div>
-        <div>{{ province }}</div>
-      </div>
+    <div class="single well {{ provinceid }}">
+      <div>{{ name }}</div>
+      <div>{{ email }}</div>
+      <div>{{ url }}</div>
+      <div>{{ phone }}</div>
+      <div>{{ province }}</div>
     </div>
   </script>
 
-  <script type="text/javascript">
-    var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1sN95ta5lfqeznMRJxx6F8Uub5BB-03t5W6VsIgS_9j0/pubhtml';
+  <script src="js/functions.js"></script>
 
-    $(document).ready( function() {
-      Tabletop.init( { key: public_spreadsheet_url,
-                       callback: showInfo,
-                       parseNumbers: true } );
-    });
-      
-    function showInfo(data, tabletop) {
-      var source   = $("#details").html();
-      var template = Handlebars.compile(source);
-
-      $.each( tabletop.sheets("Details").all(), function(i, detail) {
-        var html = template(detail);
-        $("#content").append(html);
-      });
-    }
-  </script>
 </body>
 </html>
