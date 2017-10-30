@@ -41,7 +41,7 @@
     <div class="row">
       <div class="col-md-3 filter">
         <ul id="filters">
-          <li><input type="checkbox" value="single">all</li>
+          <li><input type="checkbox" value="single" id="showAll">all</li>
           <li><input type="checkbox" value="easterncape">easterncape</li>
           <li><input type="checkbox" value="freestate">freestate</li>
           <li><input type="checkbox" value="gauteng">gauteng</li>
@@ -54,7 +54,9 @@
         </ul>
       </div>
       <div class="col-md-9">
-        <div id="content"></div>
+        <div id="content">
+          <div class="loading">Loading...</div>
+        </div>
       </div>
     </div>
   </div>

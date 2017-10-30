@@ -14,9 +14,19 @@ function showInfo(data, tabletop) {
     var html = template(detail);
     $("#content").append(html);
   });
+
+  $(".loading").hide();
 }
 
 $(document).ready( function() {
+  $("#filters :checkbox").prop("checked", false);
+  $("#showAll").prop("checked", true);
+  $("#filters :checkbox").not("#showAll").click(function() {
+    $("#showAll").prop("checked", false);
+  });
+  $("#filters #showAll").click(function() {
+    $("#filters :checkbox").not("#showAll").prop("checked", false);
+  });
   $("#filters :checkbox").click(function() {
     $(".well").hide();
     $("#filters :checkbox:checked").each(function() {
