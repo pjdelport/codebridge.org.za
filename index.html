@@ -27,7 +27,7 @@
 
   <link rel="canonical" href="https://codebridge.org.za/">
 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -39,35 +39,63 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-3 filter">
-        <ul id="filters">
-          <li><input type="checkbox" value="single" id="showAll">all</li>
-          <li><input type="checkbox" value="easterncape">easterncape</li>
-          <li><input type="checkbox" value="freestate">freestate</li>
-          <li><input type="checkbox" value="gauteng">gauteng</li>
-          <li><input type="checkbox" value="kwazulu-natal">kwazulu-natal</li>
-          <li><input type="checkbox" value="limpopo">limpopo</li>
-          <li><input type="checkbox" value="mpumalanga">mpumalanga</li>
-          <li><input type="checkbox" value="northwest">northwest</li>
-          <li><input type="checkbox" value="northerncape">northerncape</li>
-          <li><input type="checkbox" value="westerncape">westerncape</li>
+      <div class="col-md-3" id="filter">
+        <ul id="province-filter">
+          <li><input type="checkbox" value="single-item" class="show-all">All</li>
+          <li><input type="checkbox" value="easterncape">Eastern Cape</li>
+          <li><input type="checkbox" value="freestate">Free State</li>
+          <li><input type="checkbox" value="gauteng">Gauteng</li>
+          <li><input type="checkbox" value="kwazulu-natal">KwaZulu-Natal</li>
+          <li><input type="checkbox" value="limpopo">Limpopo</li>
+          <li><input type="checkbox" value="mpumalanga">Mpumalanga</li>
+          <li><input type="checkbox" value="northwest">North West</li>
+          <li><input type="checkbox" value="northerncape">Northern Cape</li>
+          <li><input type="checkbox" value="westerncape">Western Cape</li>
+        </ul>
+        <ul id="collaboration-filter">
+          <li><input type="radio" name="collaboration" value="open">Open for collaboration</li>
+          <li><input type="radio" name="collaboration" value="closed">Not open for collaboration</li>
+        </ul>
+        <ul id="theme-filter">
+          <li><input type="checkbox" value="infrastructure">Infrastructure</li>
+          <li><input type="checkbox" value="opendata">Open data</li>
+          <li><input type="checkbox" value="water">Water</li>
         </ul>
       </div>
       <div class="col-md-9">
         <div id="content">
+          <div class="well single-item westerncape open water">
+            Western Cape, Open for collaboration, Water
+          </div>
+
+          <div class="well single-item limpopo closed water">
+            Limpopo, Not open for collaboration, Water
+          </div>
+
+          <div class="well single-item westerncape open infrastructure">
+            Western Cape, Open for collaboration, Infrastructure
+          </div>
+
+          <div class="well single-item gauteng closed opendata">
+            Gauteng, Not open for collaboration, Open data
+          </div>
           <div class="loading">Loading...</div>
         </div>
       </div>
     </div>
   </div>
 
+
   <script id="details" type="text/x-handlebars-template">
-    <div class="single well {{ provinceid }}">
-      <div>{{ name }}</div>
-      <div>{{ email }}</div>
-      <div>{{ url }}</div>
-      <div>{{ phone }}</div>
-      <div>{{ province }}</div>
+    <div class="single-item well {{ provinceid }} collaboration-{{ cb_collaboration_icon }} ">
+      <div>{{ cb_name }}</div>
+      <div>{{ cb_email }}</div>
+      <div>{{ cb_url }}</div>
+      <div>{{ cb_phone }}</div>
+      <div>{{ cb_province }}</div>
+      <div>{{ cb_city }}</div>
+      <div><span class="glyphicon glyphicon-{{ cb_collaboration_icon }}" aria-hidden="true"></span>{{ cb_collaboration }}</div>
+      <div>{{ cb_theme }}</div>
     </div>
   </script>
 
