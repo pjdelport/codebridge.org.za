@@ -41,18 +41,19 @@
     <div class="row">
       <div class="col-md-3" id="filter">
         <ul id="province-filter">
-          <li><input type="checkbox" value="single-item" class="show-all">All</li>
-          <li><input type="checkbox" value="easterncape">Eastern Cape</li>
-          <li><input type="checkbox" value="freestate">Free State</li>
-          <li><input type="checkbox" value="gauteng">Gauteng</li>
-          <li><input type="checkbox" value="kwazulu-natal">KwaZulu-Natal</li>
-          <li><input type="checkbox" value="limpopo">Limpopo</li>
-          <li><input type="checkbox" value="mpumalanga">Mpumalanga</li>
-          <li><input type="checkbox" value="northwest">North West</li>
-          <li><input type="checkbox" value="northerncape">Northern Cape</li>
-          <li><input type="checkbox" value="westerncape">Western Cape</li>
+          <li><input type="radio" name="province" value="single-item" class="show-all">All</li>
+          <li><input type="radio" name="province" value="easterncape">Eastern Cape</li>
+          <li><input type="radio" name="province" value="freestate">Free State</li>
+          <li><input type="radio" name="province" value="gauteng">Gauteng</li>
+          <li><input type="radio" name="province" value="kwazulu-natal">KwaZulu-Natal</li>
+          <li><input type="radio" name="province" value="limpopo">Limpopo</li>
+          <li><input type="radio" name="province" value="mpumalanga">Mpumalanga</li>
+          <li><input type="radio" name="province" value="northwest">North West</li>
+          <li><input type="radio" name="province" value="northerncape">Northern Cape</li>
+          <li><input type="radio" name="province" value="westerncape">Western Cape</li>
         </ul>
         <ul id="collaboration-filter">
+          <li><input type="radio" name="collaboration" value="single-item" class="show-all">No preference</li>
           <li><input type="radio" name="collaboration" value="open">Open for collaboration</li>
           <li><input type="radio" name="collaboration" value="closed">Not open for collaboration</li>
         </ul>
@@ -64,21 +65,6 @@
       </div>
       <div class="col-md-9">
         <div id="content">
-          <div class="well single-item westerncape open water">
-            Western Cape, Open for collaboration, Water
-          </div>
-
-          <div class="well single-item limpopo closed water">
-            Limpopo, Not open for collaboration, Water
-          </div>
-
-          <div class="well single-item westerncape open infrastructure">
-            Western Cape, Open for collaboration, Infrastructure
-          </div>
-
-          <div class="well single-item gauteng closed opendata">
-            Gauteng, Not open for collaboration, Open data
-          </div>
           <div class="loading">Loading...</div>
         </div>
       </div>
@@ -87,14 +73,14 @@
 
 
   <script id="details" type="text/x-handlebars-template">
-    <div class="single-item well {{ provinceid }} collaboration-{{ cb_collaboration_icon }} ">
+    <div class="well single-item {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_theme_class }}">
       <div>{{ cb_name }}</div>
       <div>{{ cb_email }}</div>
       <div>{{ cb_url }}</div>
       <div>{{ cb_phone }}</div>
       <div>{{ cb_province }}</div>
       <div>{{ cb_city }}</div>
-      <div><span class="glyphicon glyphicon-{{ cb_collaboration_icon }}" aria-hidden="true"></span>{{ cb_collaboration }}</div>
+      <div>{{ cb_collaboration }}</div>
       <div>{{ cb_theme }}</div>
     </div>
   </script>

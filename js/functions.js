@@ -21,13 +21,10 @@ function showInfo(data, tabletop) {
 $(document).ready(function() {
   var visibleItems = [];
   $("#filter input").prop("checked", false);
+
   $("#province-filter .show-all").prop("checked", true);
-  $("#province-filter :checkbox").not(".show-all").click(function() {
-    $(".show-all").prop("checked", false);
-  });
-  $("#province-filter .show-all").click(function() {
-    $("#province-filter :checkbox").not(".show-all").prop("checked", false);
-  });
+  $("#collaboration-filter .show-all").prop("checked", true);
+
   $("#filter input").change(function () {
     visibleItems = $("#filter input:checked").map(function (i) {
       return $(this).val();
@@ -35,7 +32,7 @@ $(document).ready(function() {
     if (visibleItems.length > 0) {
       $(".single-item").hide();
       $("." + visibleItems.join('.')).show();
-      console.log(visibleItems.length);
+      console.log("." + visibleItems.join('.'));
     }
     else {
       $(".single-item").hide();
