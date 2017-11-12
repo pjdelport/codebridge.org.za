@@ -41,7 +41,7 @@
     <div class="row">
       <div class="col-md-3" id="filter">
         <ul id="province-filter">
-          <li><input type="radio" name="province" value="single-item" class="show-all">All</li>
+          <li><input type="radio" name="province" value="all-provinces" class="show-all">All</li>
           <li><input type="radio" name="province" value="easterncape">Eastern Cape</li>
           <li><input type="radio" name="province" value="freestate">Free State</li>
           <li><input type="radio" name="province" value="gauteng">Gauteng</li>
@@ -53,7 +53,7 @@
           <li><input type="radio" name="province" value="westerncape">Western Cape</li>
         </ul>
         <ul id="collaboration-filter">
-          <li><input type="radio" name="collaboration" value="single-item" class="show-all">No preference</li>
+          <li><input type="radio" name="collaboration" value="all-collaboration" class="show-all">No preference</li>
           <li><input type="radio" name="collaboration" value="open">Open for collaboration</li>
           <li><input type="radio" name="collaboration" value="closed">Not open for collaboration</li>
         </ul>
@@ -73,7 +73,7 @@
 
 
   <script id="details" type="text/x-handlebars-template">
-    <div class="well single-item {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_theme_class }}">
+    <div class="well {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_theme_class }}">
       <div>{{ cb_name }}</div>
       <div>{{ cb_email }}</div>
       <div>{{ cb_url }}</div>

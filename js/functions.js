@@ -16,26 +16,61 @@ function showInfo(data, tabletop) {
   });
 
   $(".loading").hide();
+  $(".well").addClass("active");
 }
 
 $(document).ready(function() {
   var visibleItems = [];
-  $("#filter input").prop("checked", false);
+  $("#filter input" ).prop("checked", false);
 
   $("#province-filter .show-all").prop("checked", true);
   $("#collaboration-filter .show-all").prop("checked", true);
 
   $("#filter input").change(function () {
-    visibleItems = $("#filter input:checked").map(function (i) {
-      return $(this).val();
-    }).get();
-    if (visibleItems.length > 0) {
-      $(".single-item").hide();
-      $("." + visibleItems.join('.')).show();
-      console.log("." + visibleItems.join('.'));
+    $(".well").removeClass("active");
+    if ( $("#theme-filter input:checked").length == 0) {
+      $(".well").addClass("active");
+    } else {
+      $("#theme-filter input:checked").each(function() {
+        $(".well." + $(this).val()).addClass("active");
+      });
     }
-    else {
-      $(".single-item").hide();
+
+    var provinces = ["easterncape","freestate","gauteng","kwazulu","limpopo","mpumalanga","northwest","northerncape","westerncape"];
+    var collaboration = ["open", "closed"];
+
+    console.log(provinces);
+    console.log(collaboration);
+
+    var selectedProvince = $("#province-filter input:checked").val();
+    console.log("selected province: " + selectedProvince);
+    var indexProvince = provinces.indexOf(selectedProvince);
+    if (indexProvince >= 0 && selectedProvince != "all-collaboration") {
+      provinces.splice(indexProvince, 1);
+    }
+
+    console.log(selectedProvince);
+
+    if (selectedProvince != "all-provinces") {
+      $(provinces).each(function() {
+        $(".well." + this).removeClass("active");
+      });
+    }
+
+    var selectedCollaboration = $("#collaboration-filter input:checked").val();
+    console.log("selected collaboration: " + selectedCollaboration);
+
+    var indexCollaboration = collaboration.indexOf(selectedCollaboration);
+    if (indexCollaboration >= 0 && selectedCollaboration != "all-collaboration") {
+      collaboration.splice(indexCollaboration, 1);
+    }
+
+    console.log(collaboration);
+
+    if (selectedCollaboration != "all-collaboration") {
+      $(collaboration).each(function() {
+        $(".well." + this).removeClass("active");
+      });
     }
   });
 });
