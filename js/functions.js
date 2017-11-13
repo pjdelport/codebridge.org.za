@@ -17,14 +17,6 @@ function showInfo(data, tabletop) {
 
   $(".loading").hide();
   $(".well").addClass("active");
-
-  $("#filter label").each(function() {
-    if ( $("input", this).hasClass("show-all") ) {
-      $(this).find(".count").text( $(".well").length );
-    } else {
-      $(this).find(".count").text( $(".well." + $("input", this).val()).length );
-    }
-  });
 }
 
 $(document).ready(function() {
