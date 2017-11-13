@@ -25,6 +25,10 @@ ul {
   display: none;
 }
 
-.filter-used .badge {
+.filter-used div {
   cursor: pointer;
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
 }

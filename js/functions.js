@@ -70,22 +70,29 @@ $(document).ready(function() {
       });
     }
 
+
+    // number of visible iteams
     $(".visible-count").show();
     $(".visible-count .number-active").text( $(".well.active").length );
 
+
+    // indication of which filters are used
     $(".filter-used").html("");
     $("#filter label").each(function() {
       if ( $("input", this).is(":checked") ) {
-        $("<div class='badge " + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used");
+        $("<div class='" + $("input", this).val() + "'>" + $(this).text() + "<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></div>").appendTo(".filter-used");
       }
     });
 
-    $(".filter-used .badge").click( function() {
-      // if ( $("class", this).hasClass("all-provinces") || $("class", this).hasClass("all-collaboration") ) {
-
-      // } else {
-        $("input").val($("class", this)).prop("checked", false);
-      // }
+    $(".filter-used div").click( function() {
+      var selectedFilter = $(this).attr("class");
+      if ( $(this).hasClass("all-provinces") ) {
+        $("#province-filter .show-all").prop("checked", true)
+      } else if ( $(this).hasClass("all-collaboration") ) {
+        $("#province-filter .show-all").prop("checked", true)
+      } else {
+        $('#filter :input[value="' + selectedFilter + '"]').click();
+      }
     });
   });
 });
