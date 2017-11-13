@@ -17,11 +17,19 @@ function showInfo(data, tabletop) {
 
   $(".loading").hide();
   $(".well").addClass("active");
+
+  $("#filter label").each(function() {
+    if ( $("input", this).hasClass("show-all") ) {
+      $(this).find(".count").text( $(".well").length );
+    } else {
+      $(this).find(".count").text( $(".well." + $("input", this).val()).length );
+    }
+  });
 }
 
 $(document).ready(function() {
   var visibleItems = [];
-  $("#filter input" ).prop("checked", false);
+  $("#filter input").prop("checked", false);
 
   $("#province-filter .show-all").prop("checked", true);
   $("#collaboration-filter .show-all").prop("checked", true);
@@ -36,20 +44,14 @@ $(document).ready(function() {
       });
     }
 
-    var provinces = ["easterncape","freestate","gauteng","kwazulu","limpopo","mpumalanga","northwest","northerncape","westerncape"];
+    var provinces = ["easterncape","freestate","gauteng","kwazulu-natal","limpopo","mpumalanga","northwest","northerncape","westerncape"];
     var collaboration = ["open", "closed"];
 
-    console.log(provinces);
-    console.log(collaboration);
-
     var selectedProvince = $("#province-filter input:checked").val();
-    console.log("selected province: " + selectedProvince);
     var indexProvince = provinces.indexOf(selectedProvince);
     if (indexProvince >= 0 && selectedProvince != "all-collaboration") {
       provinces.splice(indexProvince, 1);
     }
-
-    console.log(selectedProvince);
 
     if (selectedProvince != "all-provinces") {
       $(provinces).each(function() {
@@ -58,19 +60,26 @@ $(document).ready(function() {
     }
 
     var selectedCollaboration = $("#collaboration-filter input:checked").val();
-    console.log("selected collaboration: " + selectedCollaboration);
 
     var indexCollaboration = collaboration.indexOf(selectedCollaboration);
     if (indexCollaboration >= 0 && selectedCollaboration != "all-collaboration") {
       collaboration.splice(indexCollaboration, 1);
     }
 
-    console.log(collaboration);
-
     if (selectedCollaboration != "all-collaboration") {
       $(collaboration).each(function() {
         $(".well." + this).removeClass("active");
       });
     }
+
+    $(".visible-count").show();
+    $(".visible-count .number-active").text( $(".well.active").length );
+
+    $(".filter-used").html("");
+    $("#filter label").each(function() {
+      if ( $("input", this).is(":checked") ) {
+        $("<div class='badge " + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used");
+      }
+    });
   });
 });

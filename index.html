@@ -41,31 +41,35 @@
     <div class="row">
       <div class="col-md-3" id="filter">
         <ul id="province-filter">
-          <li><input type="radio" name="province" value="all-provinces" class="show-all">All</li>
-          <li><input type="radio" name="province" value="easterncape">Eastern Cape</li>
-          <li><input type="radio" name="province" value="freestate">Free State</li>
-          <li><input type="radio" name="province" value="gauteng">Gauteng</li>
-          <li><input type="radio" name="province" value="kwazulu-natal">KwaZulu-Natal</li>
-          <li><input type="radio" name="province" value="limpopo">Limpopo</li>
-          <li><input type="radio" name="province" value="mpumalanga">Mpumalanga</li>
-          <li><input type="radio" name="province" value="northwest">North West</li>
-          <li><input type="radio" name="province" value="northerncape">Northern Cape</li>
-          <li><input type="radio" name="province" value="westerncape">Western Cape</li>
+          <label><input type="radio" name="province" value="all-provinces" class="show-all">All <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="easterncape">Eastern Cape <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="freestate">Free State <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="gauteng">Gauteng <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="kwazulu-natal">KwaZulu-Natal <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="limpopo">Limpopo <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="mpumalanga">Mpumalang <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="northwest">North West <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="northerncape">Northern Cape <span class="count badge"></span></label>
+          <label><input type="radio" name="province" value="westerncape">Western Cape <span class="count badge"></span></label>
         </ul>
         <ul id="collaboration-filter">
-          <li><input type="radio" name="collaboration" value="all-collaboration" class="show-all">No preference</li>
-          <li><input type="radio" name="collaboration" value="open">Open for collaboration</li>
-          <li><input type="radio" name="collaboration" value="closed">Not open for collaboration</li>
+          <label><input type="radio" name="collaboration" value="all-collaboration" class="show-all">No preference <span class="count badge"></span></label>
+          <label><input type="radio" name="collaboration" value="open">Open for collaboration <span class="count badge"></span></label>
+          <label><input type="radio" name="collaboration" value="closed">Not open for collaboration <span class="count badge"></span></label>
         </ul>
         <ul id="theme-filter">
-          <li><input type="checkbox" value="infrastructure">Infrastructure</li>
-          <li><input type="checkbox" value="opendata">Open data</li>
-          <li><input type="checkbox" value="water">Water</li>
+          <label><input type="checkbox" value="infrastructure">Infrastructure <span class="count badge"></span></label>
+          <label><input type="checkbox" value="opendata">Open data <span class="count badge"></span></label>
+          <label><input type="checkbox" value="water">Water <span class="count badge"></span></label>
+          <label><input type="checkbox" value="environment">Environment <span class="count badge"></span></label>
+          <label><input type="checkbox" value="housing">Housing <span class="count badge"></span></label>
         </ul>
       </div>
       <div class="col-md-9">
         <div id="content">
           <div class="loading">Loading...</div>
+          <div class="filter-used"></div>
+          <div class="visible-count alert alert-info"><span class="number-active"></span> entries found</div>
         </div>
       </div>
     </div>
