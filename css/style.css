@@ -24,3 +24,7 @@ ul {
 .visible-count {
   display: none;
 }
+
+.filter-used .badge {
+  cursor: pointer;
+}

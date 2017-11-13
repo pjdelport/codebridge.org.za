@@ -17,6 +17,12 @@ function showInfo(data, tabletop) {
 
   $(".loading").hide();
   $(".well").addClass("active");
+
+  $("#filter label").each(function() {
+    if ( $("input", this).is(":checked") ) {
+      $("<div class='badge " + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used");
+    }
+  });
 }
 
 $(document).ready(function() {
@@ -72,6 +78,14 @@ $(document).ready(function() {
       if ( $("input", this).is(":checked") ) {
         $("<div class='badge " + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used");
       }
+    });
+
+    $(".filter-used .badge").click( function() {
+      // if ( $("class", this).hasClass("all-provinces") || $("class", this).hasClass("all-collaboration") ) {
+
+      // } else {
+        $("input").val($("class", this)).prop("checked", false);
+      // }
     });
   });
 });
