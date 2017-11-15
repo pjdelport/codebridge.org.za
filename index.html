@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en" dir="ltr">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Codebridge</title>
-  <meta name="description" content="Civic technology in South Africa" />
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary">
@@ -27,69 +25,247 @@
 
   <link rel="canonical" href="https://codebridge.org.za/">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-own.css" rel="stylesheet">
 </head>
 <body>
 
+  <div id="wrapper">
+
+    <div class="header">
+      <nav class="navbar navbar-site navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+              <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand logo logo-title">Codebridge</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+              <li><a href="/">Directory</a></li>
+              <li><a href="/">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/">Something</a></li>
+              <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/">Add yourself</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="main-container">
+      <div class="container">
+        <div class="row">
+          <!-- this (.mobile-filter-sidebar) part will be position fixed in mobile version -->
+          <div id="filter" class="col-sm-3 page-sidebar mobile-filter-sidebar">
+            <aside>
+              <div class="inner-box">
+                <div id="province-filter" class="list-filter">
+                  <h5 class="list-title"><strong><a href="#"> Location </a></strong></h5>
+                  <div class="filter-date filter-content">
+                    <ul>
+                      <li><label><input type="radio" name="province" value="all-provinces" class="show-all">South Africa <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="easterncape">Eastern Cape <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="freestate">Free State <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="gauteng">Gauteng <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="kwazulu-natal">KwaZulu-Natal <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="limpopo">Limpopo <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="mpumalanga">Mpumalang <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="northwest">North West <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="northerncape">Northern Cape <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="westerncape">Western Cape <span class="count badge"></span></label></li>
+                    </ul>
+                  </div>
+                </div>
+                  <!--/.categories-list-->
+
+                <div id="collaboration-filter" class="list-filter">
+                  <h5 class="list-title"><strong><a href="#"> Collaboration </a></strong></h5>
+
+                  <div class="filter-date filter-content">
+                    <ul>
+                      <li><label><input type="radio" name="collaboration" value="all-collaboration" class="show-all">No collaboration preference <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="collaboration" value="open">Open for collaboration <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="collaboration" value="closed">Not open for collaboration <span class="count badge"></span></label></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="theme-filter" class="list-filter">
+                  <h5 class="list-title"><strong><a href="#">Theme</a></strong></h5>
+
+                  <div class="filter-content filter-employment-type">
+                    <ul class="browse-list list-unstyled">
+                      <li><label><input type="checkbox" value="infrastructure">Infrastructure <span class="count badge"></span></label></li>
+                      <li><label><input type="checkbox" value="opendata">Open data <span class="count badge"></span></label></li>
+                      <li><label><input type="checkbox" value="water">Water <span class="count badge"></span></label></li>
+                      <li><label><input type="checkbox" value="environment">Environment <span class="count badge"></span></label></li>
+                      <li><label><input type="checkbox" value="housing">Housing <span class="count badge"></span></label></li>
+                    </ul>
+                  </div>
+                </div>
+                <!--/.locations-list-->
+              </div>
+              <!--/.categories-list-->
+            </aside>
+          </div>
+
+          <!--/.page-side-bar-->
+          <div class="col-sm-9 page-content col-thin-left">
+
+            <div class="category-list">
+              <div class="tab-box clearfix">
+                <!-- Nav tabs -->
+                <div class="col-lg-12 box-title no-border">
+                  <div class="inner">
+                    <h2>Codebridge directory</h2>
+                  </div>
+                </div>
+
+                <!-- Mobile Filter bar -->
+                <div class="mobile-filter-bar col-lg-12">
+                  <ul class="list-unstyled list-inline no-margin no-padding">
+                    <li class="filter-toggle">
+                      <a class="">
+                        <i class="icon-th-list"></i>Filters
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="menu-overly-mask"></div>
+                <!-- Mobile Filter bar End-->
+              </div>
+              <!--/.tab-box-->
+
+              <div class="listing-filter hidden-xs">
+                <div class="pull-left col-sm-9 col-xs-12">
+                  <div class="breadcrumb-list text-center-xs filter-used">
+                    <div class="collaboration"><span class="single-filter">Open for collaboration</span></div>
+                    <div class="province"><span class="single-filter">South Africa</span></div>
+                    <div class="theme"></div>
+                  </div>
+                </div>
+                <div class="pull-right col-sm-3 col-xs-12 text-right text-center-xs listing-view-action">
+                  <div class="visible-count"><span class="number-active"></span> results</div>
+                  <a class="clear-all-button text-muted">Clear all</a>
+                </div>
+                <div style="clear:both"></div>
+              </div>
+              <!--/.listing-filter-->
+              <div class="adds-wrapper jobs-list">
+                <div id="content">
+                  <div class="loading">Loading...</div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination-bar text-center">
+              <ul class="pagination">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#"> ...</a></li>
+                <li><a class="pagination-btn" href="#">Next &raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="container">
+          <div class="row">
+            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+              <div class="footer-col">
+                <h4 class="footer-title">About us</h4>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="#">Something</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+              <div class="footer-col">
+                <h4 class="footer-title">Help & Contact</h4>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="#">Something</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+              <div class="footer-col">
+                <h4 class="footer-title">More From Us</h4>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="#">Something</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class=" col-lg-2 col-md-2 col-sm-2 col-xs-6 ">
+              <div class="footer-col">
+                <h4 class="footer-title">Account</h4>
+                <ul class="list-unstyled footer-nav">
+                  <li><a href="#">Something</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- javascript -->
   <script src="js/jquery-3.2.1.min.js"></script> 
   <script src="js/tabletop.min.js"></script>
   <script src="js/handlebars-v4.0.11.js"></script> 
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3" id="filter">
-        <ul id="province-filter">
-          <label><input type="radio" name="province" value="all-provinces" class="show-all">All provinces <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="easterncape">Eastern Cape <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="freestate">Free State <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="gauteng">Gauteng <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="kwazulu-natal">KwaZulu-Natal <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="limpopo">Limpopo <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="mpumalanga">Mpumalang <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="northwest">North West <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="northerncape">Northern Cape <span class="count badge"></span></label>
-          <label><input type="radio" name="province" value="westerncape">Western Cape <span class="count badge"></span></label>
-        </ul>
-        <ul id="collaboration-filter">
-          <label><input type="radio" name="collaboration" value="all-collaboration" class="show-all">No collaboration preference <span class="count badge"></span></label>
-          <label><input type="radio" name="collaboration" value="open">Open for collaboration <span class="count badge"></span></label>
-          <label><input type="radio" name="collaboration" value="closed">Not open for collaboration <span class="count badge"></span></label>
-        </ul>
-        <ul id="theme-filter">
-          <label><input type="checkbox" value="infrastructure">Infrastructure <span class="count badge"></span></label>
-          <label><input type="checkbox" value="opendata">Open data <span class="count badge"></span></label>
-          <label><input type="checkbox" value="water">Water <span class="count badge"></span></label>
-          <label><input type="checkbox" value="environment">Environment <span class="count badge"></span></label>
-          <label><input type="checkbox" value="housing">Housing <span class="count badge"></span></label>
-        </ul>
-      </div>
-      <div class="col-md-9">
-        <div id="content">
-          <div class="loading">Loading...</div>
-          <div class="filter-used"></div>
-          <div class="visible-count alert alert-info"><span class="number-active"></span> entries found</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <script src="js/vendors.min.js"></script>
 
+  <!-- include custom script for site  -->
+  <script src="js/script.js"></script>
+  <script src="js/functions.js"></script>
 
   <script id="details" type="text/x-handlebars-template">
-    <div class="well {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_theme_class }}">
-      <div>{{ cb_name }}</div>
-      <div>{{ cb_email }}</div>
-      <div>{{ cb_url }}</div>
-      <div>{{ cb_phone }}</div>
-      <div>{{ cb_province }}</div>
-      <div>{{ cb_city }}</div>
-      <div>{{ cb_collaboration }}</div>
-      <div>{{ cb_theme }}</div>
-    </div>
-  </script>
+    <div class="item-list job-item single-entry {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_theme_class }}">
+      <div class="col-sm-1  col-xs-2 no-padding photobox">
+        <div class="add-image">
+          <a href=""><img class="thumbnail no-margin" src="images/jobs/company-logos/1.jpg" alt="company logo"></a>
+        </div>
+      </div>
+      <div class="col-sm-10 col-xs-10 add-desc-box">
+        <h5 class="company-title "><a href="">{{ cb_name }}</a></h5>
+        <h4 class="job-title"><a href="#"> {{ cb_email }} </a></h4>
+        <div class="add-details jobs-item">
+          <span class="info-row">
+            <span class="item-location"><i class="fa fa-map-marker"></i> {{ cb_url }} </span>
+            <span class="date"><i class=" icon-clock"> </i>{{ cb_province }}</span>
+            <span class=" salary"><i class=" icon-money"> </i>{{ cb_city }}</span>
+          </span>
+          <div class="jobs-desc">
+            {{ cb_collaboration }}, {{ cb_theme }}, {{ cb_phone }}
+          </div>
 
-  <script src="js/functions.js"></script>
+          <div class="job-actions">
+            <ul class="list-unstyled list-inline">
+              <li><a class="email-job" href="#"><i class="fa fa-envelope"></i>Email Job</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+     </div>
+  </script>
 
 </body>
 </html>

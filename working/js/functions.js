@@ -17,6 +17,12 @@ function showInfo(data, tabletop) {
 
   $(".loading").hide();
   $(".single-entry").addClass("active");
+
+  $("#filter label").each(function() {
+    if ( $("input", this).is(":checked") ) {
+      $("<div class='badge " + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used");
+    }
+  });
 }
 
 $(document).ready(function() {
@@ -71,41 +77,22 @@ $(document).ready(function() {
 
 
     // indication of which filters are used
-    $(".filter-used .province").html("");
-    $(".filter-used .collaboration").html("");
-    $(".filter-used .theme").html("");
-    
-    $("#province-filter label").each(function() {
+    $(".filter-used").html("");
+    $("#filter label").each(function() {
       if ( $("input", this).is(":checked") ) {
-        $("<div class='single-filter' province='" + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used .province");
+        $("<div class='" + $("input", this).val() + "'>" + $(this).text() + "<span class='glyphicon glyphicon-remove' aria-hidden='true'></span></div>").appendTo(".filter-used");
       }
     });
 
-    $("#collaboration-filter label").each(function() {
-      if ( $("input", this).is(":checked") ) {
-        $("<div class='single-filter' collaboration='" + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used .collaboration");
+    $(".filter-used div").click( function() {
+      var selectedFilter = $(this).attr("class");
+      if ( $(this).hasClass("all-provinces") ) {
+        $("#province-filter .show-all").prop("checked", true)
+      } else if ( $(this).hasClass("all-collaboration") ) {
+        $("#province-filter .show-all").prop("checked", true)
+      } else {
+        $('#filter :input[value="' + selectedFilter + '"]').click();
       }
-    });
-
-    $("#theme-filter label").each(function() {
-      if ( $("input", this).is(":checked") ) {
-        $("<div class='single-filter' theme='" + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used .theme");
-      }
-    });
-
-
-
-    $(".filter-used .province .single-filter").click( function() {
-      $("#province-filter input.show-all").click();
-    });
-
-    $(".filter-used .collaboration .single-filter").click( function() {
-      $("#collaboration-filter input.show-all").click();
-    });
-
-    $(".filter-used .theme .single-filter").click( function() {
-      var selectedFilter = $(this).attr("theme");
-      $('#filter :input[value="' + selectedFilter + '"]').click();
     });
   });
 });

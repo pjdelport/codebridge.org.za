@@ -1,0 +1,32 @@
+.wrap {
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.well {
+  display: none;
+}
+
+.well.active {
+  display: block;
+}
+
+label {
+  display: block;
+}
+
+ul {
+  margin-bottom: 30px;
+}
+
+.visible-count {
+  display: none;
+}
+
+.filter-used div {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+}

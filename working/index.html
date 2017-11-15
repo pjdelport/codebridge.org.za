@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <title>Codebridge</title>
+  <meta name="description" content="Civic technology in South Africa" />
+
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@codebridge">
+  <meta name="twitter:title" content="Codebridge">
+  <meta name="twitter:description" content="Civic technology in South Africa">
+  <meta name="twitter:creator" content="@codebridge">
+  <meta name="twitter:image" content="https://codebridge.org.za/img/logo.png">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Codebridge" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://codebridge.org.za/" />
+  <meta property="og:image" content="https://codebridge.org.za/img/logo.png" />
+  <meta property="og:description" content="Civic technology in South Africa" />
+  <meta property="og:site_name" content="Codebridge" />
+
+  <link rel="canonical" href="https://codebridge.org.za/">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+  <script src="js/jquery-3.2.1.min.js"></script> 
+  <script src="js/tabletop.min.js"></script>
+  <script src="js/handlebars-v4.0.11.js"></script> 
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3" id="filter">
+        <ul id="province-filter">
+          <li><label><input type="radio" name="province" value="all-provinces" class="show-all">All provinces <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="easterncape">Eastern Cape <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="freestate">Free State <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="gauteng">Gauteng <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="kwazulu-natal">KwaZulu-Natal <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="limpopo">Limpopo <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="mpumalanga">Mpumalang <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="northwest">North West <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="northerncape">Northern Cape <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="province" value="westerncape">Western Cape <span class="count badge"></span></label></li>
+        </ul>
+        <ul id="collaboration-filter">
+          <li><label><input type="radio" name="collaboration" value="all-collaboration" class="show-all">No collaboration preference <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="collaboration" value="open">Open for collaboration <span class="count badge"></span></label></li>
+          <li><label><input type="radio" name="collaboration" value="closed">Not open for collaboration <span class="count badge"></span></label></li>
+        </ul>
+        <ul id="theme-filter">
+          <li><label><input type="checkbox" value="infrastructure">Infrastructure <span class="count badge"></span></label></li>
+          <li><label><input type="checkbox" value="opendata">Open data <span class="count badge"></span></label></li>
+          <li><label><input type="checkbox" value="water">Water <span class="count badge"></span></label></li>
+          <li><label><input type="checkbox" value="environment">Environment <span class="count badge"></span></label></li>
+          <li><label><input type="checkbox" value="housing">Housing <span class="count badge"></span></label></li>
+        </ul>
+      </div>
+      <div class="col-md-9">
+        <div id="content">
+          <div class="loading">Loading...</div>
+          <div class="filter-used"></div>
+          <div class="visible-count alert alert-info"><span class="number-active"></span> entries found</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script id="details" type="text/x-handlebars-template">
+    <div class="well {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_theme_class }}">
+      <div>{{ cb_name }}</div>
+      <div>{{ cb_email }}</div>
+      <div>{{ cb_url }}</div>
+      <div>{{ cb_phone }}</div>
+      <div>{{ cb_province }}</div>
+      <div>{{ cb_city }}</div>
+      <div>{{ cb_collaboration }}</div>
+      <div>{{ cb_theme }}</div>
+    </div>
+  </script>
+
+  <script src="js/functions.js"></script>
+
+</body>
+</html>
