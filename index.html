@@ -26,6 +26,7 @@
   <link rel="canonical" href="https://codebridge.org.za/">
 
   <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-own.css" rel="stylesheet">
 </head>
@@ -42,16 +43,16 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a href="/" class="navbar-brand logo logo-title">Codebridge</a>
+            <a href="#" class="navbar-brand logo logo-title">Codebridge</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
-              <li><a href="/">Directory</a></li>
-              <li><a href="/">About</a></li>
+              <li><a href="#">Directory</a></li>
+              <li><a href="#">About</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="/">Something</a></li>
-              <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="/">Add yourself</a></li>
+              <li><a href="#">Something</a></li>
+              <li class="postadd"><a class="btn btn-block btn-border btn-post btn-danger" href="#">Add yourself</a></li>
             </ul>
           </div>
         </div>
@@ -96,8 +97,8 @@
                   </div>
                 </div>
 
-                <div id="theme-filter" class="list-filter">
-                  <h5 class="list-title"><strong><a href="#">Theme</a></strong></h5>
+                <div id="topic-filter" class="list-filter">
+                  <h5 class="list-title"><strong><a href="#">topic</a></strong></h5>
 
                   <div class="filter-content filter-employment-type">
                     <ul class="browse-list list-unstyled">
@@ -146,9 +147,9 @@
               <div class="listing-filter hidden-xs">
                 <div class="pull-left col-sm-9 col-xs-12">
                   <div class="breadcrumb-list text-center-xs filter-used">
-                    <div class="collaboration"><span class="single-filter">Open for collaboration</span></div>
-                    <div class="province"><span class="single-filter">South Africa</span></div>
-                    <div class="theme"></div>
+                    <div class="collaboration"><span class="single-filter all">No collaboration preference</span></div>
+                    in <div class="province"><span class="single-filter all">South Africa</span></div>
+                    interested in <div class="topic"><span class="single-filter all">Any topic</span></div>
                   </div>
                 </div>
                 <div class="pull-right col-sm-3 col-xs-12 text-right text-center-xs listing-view-action">
@@ -237,14 +238,14 @@
   <script src="js/functions.js"></script>
 
   <script id="details" type="text/x-handlebars-template">
-    <div class="item-list job-item single-entry {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_theme_class }}">
+    <div class="item-list job-item single-entry {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_topic_class }}">
       <div class="col-sm-1  col-xs-2 no-padding photobox">
         <div class="add-image">
-          <a href=""><img class="thumbnail no-margin" src="images/jobs/company-logos/1.jpg" alt="company logo"></a>
+          <a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/1.jpg" alt="company logo"></a>
         </div>
       </div>
       <div class="col-sm-10 col-xs-10 add-desc-box">
-        <h5 class="company-title "><a href="">{{ cb_name }}</a></h5>
+        <h5 class="company-title "><a href="#">{{ cb_name }}</a></h5>
         <h4 class="job-title"><a href="#"> {{ cb_email }} </a></h4>
         <div class="add-details jobs-item">
           <span class="info-row">
@@ -253,7 +254,7 @@
             <span class=" salary"><i class=" icon-money"> </i>{{ cb_city }}</span>
           </span>
           <div class="jobs-desc">
-            {{ cb_collaboration }}, {{ cb_theme }}, {{ cb_phone }}
+            {{ cb_collaboration }}, {{ cb_topic }}, {{ cb_phone }}
           </div>
 
           <div class="job-actions">

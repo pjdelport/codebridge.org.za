@@ -23,12 +23,12 @@ ul {
   display: none;
 }
 
-.filter-used div {
-  cursor: pointer;
+.filter-used .province, .filter-used .collaboration, .filter-used .topic {
   display: inline-block;
 }
 
 .filter-used .single-filter {
+  cursor: pointer;
   background: #f1f1f1;
   border-radius: 4px;
   box-sizing: border-box;
@@ -42,11 +42,25 @@ ul {
   color: #16A085;
 }
 
-.filter-used .single-filter:first-child {
-  margin-left: 0;
-}
-
 .filter-used .single-filter:hover {
   background: #eee;
   color: #0d5d4d;
+}
+
+.filter-used .single-filter.all {
+  cursor: auto;
+}
+
+.filter-used .single-filter.all:hover {
+  background: #f1f1f1;
+  color: #16A085;
+}
+
+#filter input[type="radio"], #filter input[type="checkbox"] {
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+
+.filter-content label {
+  padding-left: 0;
 }

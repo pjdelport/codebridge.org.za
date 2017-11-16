@@ -28,10 +28,10 @@ $(document).ready(function() {
 
   $("#filter input").change(function () {
     $(".single-entry").removeClass("active");
-    if ( $("#theme-filter input:checked").length == 0) {
+    if ( $("#topic-filter input:checked").length == 0) {
       $(".single-entry").addClass("active");
     } else {
-      $("#theme-filter input:checked").each(function() {
+      $("#topic-filter input:checked").each(function() {
         $(".single-entry." + $(this).val()).addClass("active");
       });
     }
@@ -64,36 +64,36 @@ $(document).ready(function() {
       });
     }
 
-
     // number of visible iteams
     $(".visible-count").show();
     $(".visible-count .number-active").text( $(".single-entry.active").length );
 
-
     // indication of which filters are used
     $(".filter-used .province").html("");
     $(".filter-used .collaboration").html("");
-    $(".filter-used .theme").html("");
+    $(".filter-used .topic").html("");
     
     $("#province-filter label").each(function() {
       if ( $("input", this).is(":checked") ) {
-        $("<div class='single-filter' province='" + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used .province");
+        $("<div class='single-filter' province='" + $("input", this).val() + "'>" + $(this).text() + "<i class='fa fa-times' aria-hidden='true'></i></div>").appendTo(".filter-used .province");
       }
     });
 
     $("#collaboration-filter label").each(function() {
       if ( $("input", this).is(":checked") ) {
-        $("<div class='single-filter' collaboration='" + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used .collaboration");
+        $("<div class='single-filter' collaboration='" + $("input", this).val() + "'>" + $(this).text() + "<i class='fa fa-times' aria-hidden='true'></i></div>").appendTo(".filter-used .collaboration");
       }
     });
 
-    $("#theme-filter label").each(function() {
+    $("#topic-filter label").each(function() {
       if ( $("input", this).is(":checked") ) {
-        $("<div class='single-filter' theme='" + $("input", this).val() + "'>" + $(this).text() + "</div>").appendTo(".filter-used .theme");
+        $("<div class='single-filter' topic='" + $("input", this).val() + "'>" + $(this).text() + "<i class='fa fa-times' aria-hidden='true'></i></div>").appendTo(".filter-used .topic");
       }
     });
 
-
+    if ( $("#topic-filter input:checked").length == 0 ) {
+      $("<div class='single-filter all' topic='all-topics'>Any topic</div>").appendTo(".filter-used .topic");
+    };
 
     $(".filter-used .province .single-filter").click( function() {
       $("#province-filter input.show-all").click();
@@ -103,9 +103,16 @@ $(document).ready(function() {
       $("#collaboration-filter input.show-all").click();
     });
 
-    $(".filter-used .theme .single-filter").click( function() {
-      var selectedFilter = $(this).attr("theme");
+    $(".filter-used .topic .single-filter").click( function() {
+      var selectedFilter = $(this).attr("topic");
       $('#filter :input[value="' + selectedFilter + '"]').click();
     });
+
+    $(".single-filter").each(function(){
+      if ( $(this).attr("province") == "all-provinces" || $(this).attr("collaboration") == "all-collaboration" ) {
+        $("i", this).remove();
+        $(this).addClass("all");
+      }
+    });  
   });
 });
