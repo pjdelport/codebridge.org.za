@@ -66,6 +66,18 @@
           <div id="filter" class="col-sm-3 page-sidebar mobile-filter-sidebar">
             <aside>
               <div class="inner-box">
+                <div id="type-filter" class="list-filter">
+                  <h5 class="list-title"><strong>Type</h5>
+
+                  <div class="filter-date filter-content">
+                    <ul>
+                      <li><label><input type="radio" name="type" value="all-type" class="show-all">All</label></li>
+                      <li><label><input type="radio" name="type" value="organisation">Organisations</label></li>
+                      <li><label><input type="radio" name="type" value="individual">Individuals</label></li>
+                    </ul>
+                  </div>
+                </div>
+
                 <div id="province-filter" class="list-filter">
                   <h5 class="list-title"><strong><a href="#"> Location </a></strong></h5>
                   <div class="filter-date filter-content">
@@ -84,28 +96,6 @@
                   </div>
                 </div>
 
-                <div id="type-filter" class="list-filter">
-                  <h5 class="list-title"><strong>Type</h5>
-
-                  <div class="filter-date filter-content">
-                    <ul>
-                      <li><label><input type="radio" name="type" value="all-type" class="show-all">Any</label></li>
-                      <li><label><input type="radio" name="type" value="organisation">Organisations</label></li>
-                      <li><label><input type="radio" name="type" value="individual">Individuals</label></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div id="collaboration-filter" class="list-filter">
-                  <h5 class="list-title"><strong>Collaboration</strong></h5>
-
-                  <div class="filter-date filter-content">
-                    <ul>
-                      <li><label><input class="only-open" type="checkbox" value="collaboration">Only open for collaboration</label></li>
-                    </ul>
-                  </div>
-                </div>
-
                 <div id="topic-filter" class="list-filter">
                   <h5 class="list-title"><strong>Topic</strong></h5>
 
@@ -116,6 +106,16 @@
                       <li><label><input type="checkbox" value="water">Water</label></li>
                       <li><label><input type="checkbox" value="environment">Environment</label></li>
                       <li><label><input type="checkbox" value="housing">Housing</label></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="collaboration-filter" class="list-filter">
+                  <h5 class="list-title"><strong>Collaboration</strong></h5>
+
+                  <div class="filter-date filter-content">
+                    <ul>
+                      <li><label><input class="only-open" type="checkbox" value="collaboration">Must be open for collaboration</label></li>
                     </ul>
                   </div>
                 </div>
@@ -149,37 +149,27 @@
               </div>
               <!--/.tab-box-->
 
-              <div class="listing-filter hidden-xs">
-                <div class="pull-left col-sm-9 col-xs-12">
+              <div class="listing-filter hidden-xs hidden">
+                <div class="pull-left">
                   <div class="breadcrumb-list text-center-xs filter-used">
-                    <div class="type"><span class="single-filter all">No type preference</span></div>
+                    <div class="type"><span class="single-filter all">All</span></div>
                     in <div class="province"><span class="single-filter all">South Africa</span></div>
                     interested in <div class="topic"><span class="single-filter all">Any topic</span></div>
                   </div>
                 </div>
-                <div class="pull-right col-sm-3 col-xs-12 text-right text-center-xs listing-view-action">
-                  <div class="visible-count"><span class="number-active"></span> results</div>
-                  <a class="clear-all-button text-muted">Clear all</a>
+                <div class="pull-right">
+                  <span class="visible-count"><span class="number-active"></span> results | </span>
+                  <a class="clear-all-button">Show all</a>
                 </div>
                 <div style="clear:both"></div>
               </div>
               <!--/.listing-filter-->
               <div class="adds-wrapper jobs-list">
                 <div id="content">
-                  <div class="loading">Loading...</div>
+                  <div class="loading"><i class="fa fa-refresh fa-spin fa-fw" aria-hidden="true"></i> Loading...</div>
+                  <div class="zero-results">Unfortunately, there are no results matching your filter.<br>Please expand your search or <a class="clear-all-button">show all listings</a>.</div>
                 </div>
               </div>
-            </div>
-            <div class="pagination-bar text-center">
-              <ul class="pagination">
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#"> ...</a></li>
-                <li><a class="pagination-btn" href="#">Next &raquo;</a></li>
-              </ul>
             </div>
           </div>
         </div>

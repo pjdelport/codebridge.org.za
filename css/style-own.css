@@ -19,11 +19,7 @@ ul {
   margin-bottom: 30px;
 }
 
-.visible-count {
-  display: none;
-}
-
-.filter-used .province, .filter-used .collaboration, .filter-used .topic {
+.filter-used .province, .filter-used .collaboration, .filter-used .topic, .filter-used .type {
   display: inline-block;
 }
 
@@ -69,10 +65,21 @@ ul {
   font-size: 30px;
 }
 
-.open .fa-handshake-o {
-  color: #16A085;
+.loading, .zero-results {
+  padding: 15px;
+  font-size: 24px;
+  text-align: center;
 }
 
-.closed .fa-handshake-o {
-  color: #c9302c;
+.zero-results {
+  display: none;
+}
+
+.single-filter i {
+  margin-left: 3px;
+}
+
+.listing-filter {
+  padding: 15px;
+  line-height: 30px;
 }

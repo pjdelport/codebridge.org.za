@@ -16,7 +16,10 @@ function showInfo(data, tabletop) {
   });
 
   $(".loading").hide();
+  $(".listing-filter").removeClass("hidden");
   $(".single-entry").addClass("active");
+
+  $(".visible-count .number-active").text( $(".single-entry.active").length );
 
   $(".single-entry").each(function() {
     if ( $(this).hasClass("organisation") ) {
@@ -45,7 +48,8 @@ $(document).ready(function() {
 
   $("#filter input").change(function () {
     $(".single-entry").removeClass("active");
-
+    $(".zero-results").hide();
+    
     if ($(".only-open:checked") ) {
       $(".single-entry.closed").removeClass("active");
     }
@@ -85,8 +89,11 @@ $(document).ready(function() {
       });
     }
 
+    if ($("input.only-open").is(":checked") ) {
+      $(".single-entry.closed").removeClass("active");
+    }
+
     // number of visible iteams
-    $(".visible-count").show();
     $(".visible-count .number-active").text( $(".single-entry.active").length );
 
     // indication of which filters are used
@@ -136,8 +143,8 @@ $(document).ready(function() {
       }
     });
 
-    if ($("input.only-open").is(":checked") ) {
-      $(".single-entry.closed").removeClass("active");
-    }
+    if ( $(".single-entry.active").length == 0 ) {
+      $(".zero-results").show();
+    };
   });
 });
