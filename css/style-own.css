@@ -64,3 +64,15 @@ ul {
 .filter-content label {
   padding-left: 0;
 }
+
+.single-entry .type i {
+  font-size: 30px;
+}
+
+.open .fa-handshake-o {
+  color: #16A085;
+}
+
+.closed .fa-handshake-o {
+  color: #c9302c;
+}

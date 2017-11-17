@@ -70,49 +70,56 @@
                   <h5 class="list-title"><strong><a href="#"> Location </a></strong></h5>
                   <div class="filter-date filter-content">
                     <ul>
-                      <li><label><input type="radio" name="province" value="all-provinces" class="show-all">South Africa <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="easterncape">Eastern Cape <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="freestate">Free State <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="gauteng">Gauteng <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="kwazulu-natal">KwaZulu-Natal <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="limpopo">Limpopo <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="mpumalanga">Mpumalang <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="northwest">North West <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="northerncape">Northern Cape <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="province" value="westerncape">Western Cape <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="province" value="all-provinces" class="show-all">South Africa</label></li>
+                      <li><label><input type="radio" name="province" value="easterncape">Eastern Cape</label></li>
+                      <li><label><input type="radio" name="province" value="freestate">Free State</label></li>
+                      <li><label><input type="radio" name="province" value="gauteng">Gauteng</label></li>
+                      <li><label><input type="radio" name="province" value="kwazulu-natal">KwaZulu-Natal</label></li>
+                      <li><label><input type="radio" name="province" value="limpopo">Limpopo</label></li>
+                      <li><label><input type="radio" name="province" value="mpumalanga">Mpumalang</label></li>
+                      <li><label><input type="radio" name="province" value="northwest">North West</label></li>
+                      <li><label><input type="radio" name="province" value="northerncape">Northern Cape</label></li>
+                      <li><label><input type="radio" name="province" value="westerncape">Western Cape</label></li>
                     </ul>
                   </div>
                 </div>
-                  <!--/.categories-list-->
 
-                <div id="collaboration-filter" class="list-filter">
-                  <h5 class="list-title"><strong><a href="#"> Collaboration </a></strong></h5>
+                <div id="type-filter" class="list-filter">
+                  <h5 class="list-title"><strong>Type</h5>
 
                   <div class="filter-date filter-content">
                     <ul>
-                      <li><label><input type="radio" name="collaboration" value="all-collaboration" class="show-all">No collaboration preference <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="collaboration" value="open">Open for collaboration <span class="count badge"></span></label></li>
-                      <li><label><input type="radio" name="collaboration" value="closed">Not open for collaboration <span class="count badge"></span></label></li>
+                      <li><label><input type="radio" name="type" value="all-type" class="show-all">Any</label></li>
+                      <li><label><input type="radio" name="type" value="organisation">Organisations</label></li>
+                      <li><label><input type="radio" name="type" value="individual">Individuals</label></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div id="collaboration-filter" class="list-filter">
+                  <h5 class="list-title"><strong>Collaboration</strong></h5>
+
+                  <div class="filter-date filter-content">
+                    <ul>
+                      <li><label><input class="only-open" type="checkbox" value="collaboration">Only open for collaboration</label></li>
                     </ul>
                   </div>
                 </div>
 
                 <div id="topic-filter" class="list-filter">
-                  <h5 class="list-title"><strong><a href="#">topic</a></strong></h5>
+                  <h5 class="list-title"><strong>Topic</strong></h5>
 
                   <div class="filter-content filter-employment-type">
                     <ul class="browse-list list-unstyled">
-                      <li><label><input type="checkbox" value="infrastructure">Infrastructure <span class="count badge"></span></label></li>
-                      <li><label><input type="checkbox" value="opendata">Open data <span class="count badge"></span></label></li>
-                      <li><label><input type="checkbox" value="water">Water <span class="count badge"></span></label></li>
-                      <li><label><input type="checkbox" value="environment">Environment <span class="count badge"></span></label></li>
-                      <li><label><input type="checkbox" value="housing">Housing <span class="count badge"></span></label></li>
+                      <li><label><input type="checkbox" value="infrastructure">Infrastructure</label></li>
+                      <li><label><input type="checkbox" value="opendata">Open data</label></li>
+                      <li><label><input type="checkbox" value="water">Water</label></li>
+                      <li><label><input type="checkbox" value="environment">Environment</label></li>
+                      <li><label><input type="checkbox" value="housing">Housing</label></li>
                     </ul>
                   </div>
                 </div>
-                <!--/.locations-list-->
               </div>
-              <!--/.categories-list-->
             </aside>
           </div>
 
@@ -132,9 +139,7 @@
                 <div class="mobile-filter-bar col-lg-12">
                   <ul class="list-unstyled list-inline no-margin no-padding">
                     <li class="filter-toggle">
-                      <a class="">
-                        <i class="icon-th-list"></i>Filters
-                      </a>
+                      <a><i class="fa fa-filter" aria-hidden="true"></i>Filters</a>
                     </li>
                   </ul>
                 </div>
@@ -147,7 +152,7 @@
               <div class="listing-filter hidden-xs">
                 <div class="pull-left col-sm-9 col-xs-12">
                   <div class="breadcrumb-list text-center-xs filter-used">
-                    <div class="collaboration"><span class="single-filter all">No collaboration preference</span></div>
+                    <div class="type"><span class="single-filter all">No type preference</span></div>
                     in <div class="province"><span class="single-filter all">South Africa</span></div>
                     interested in <div class="topic"><span class="single-filter all">Any topic</span></div>
                   </div>
@@ -238,32 +243,26 @@
   <script src="js/functions.js"></script>
 
   <script id="details" type="text/x-handlebars-template">
-    <div class="item-list job-item single-entry {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_topic_class }}">
-      <div class="col-sm-1  col-xs-2 no-padding photobox">
-        <div class="add-image">
-          <a href="#"><img class="thumbnail no-margin" src="images/jobs/company-logos/1.jpg" alt="company logo"></a>
-        </div>
+    <div class="item-list job-item single-entry {{ cb_type }} {{ cb_province_class }} {{ cb_collaboration_class }} {{ cb_topic_class }}">
+      <div class="col-sm-1 col-xs-2 type">
+        <i class="fa"></i>
       </div>
       <div class="col-sm-10 col-xs-10 add-desc-box">
-        <h5 class="company-title "><a href="#">{{ cb_name }}</a></h5>
-        <h4 class="job-title"><a href="#"> {{ cb_email }} </a></h4>
-        <div class="add-details jobs-item">
-          <span class="info-row">
-            <span class="item-location"><i class="fa fa-map-marker"></i> {{ cb_url }} </span>
-            <span class="date"><i class=" icon-clock"> </i>{{ cb_province }}</span>
-            <span class=" salary"><i class=" icon-money"> </i>{{ cb_city }}</span>
-          </span>
-          <div class="jobs-desc">
-            {{ cb_collaboration }}, {{ cb_topic }}, {{ cb_phone }}
+        <h2>{{ cb_name }}</h2>
+        <div class="details">
+          <div class="row">
+            <div class="col-xs-6">
+              <div class="location"><i class="fa fa-fw fa-map-marker"></i> {{ cb_city }}, {{ cb_province }}</div>
+              <div class="website"><i class="fa fa-fw fa-link"></i> <a href="{{ cb_url }}">{{ cb_url }}</a></div>
+            </div>
+            <div class="col-xs-6">
+              <div class="email"><i class="fa fa-fw fa-envelope-o"></i> <a href="mailto:{{ cb_email }}">{{ cb_email }}</a></div>
+              <div class="phone"><i class="fa fa-fw fa-phone"></i> <a href="tel:{{ cb_phone }}">{{ cb_phone }}</a></div>
+            </div>
           </div>
-
-          <div class="job-actions">
-            <ul class="list-unstyled list-inline">
-              <li><a class="email-job" href="#"><i class="fa fa-envelope"></i>Email Job</a></li>
-            </ul>
-          </div>
-
+          <div class="collaboration"><i class="fa fa-fw fa-handshake-o" aria-hidden="true"></i> {{ cb_collaboration }}</div>
         </div>
+        <p>{{ cb_description }}</p>
       </div>
      </div>
   </script>
