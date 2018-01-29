@@ -1,0 +1,36 @@
+---
+---
+.home {
+  .main-image {
+    background-image: url(../img/main-image.png);
+    background-size: cover;
+  }
+}
+
+nav {
+  .navbar-brand {
+    padding-right: 20px;
+    width: 250px;
+    max-width: 75%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.btn {
+  border-radius: 0;
+  &.btn-skew {
+    -webkit-transform: skew(-20deg);
+       -moz-transform: skew(-20deg);
+         -o-transform: skew(-20deg);
+    .unskew {
+      -webkit-transform: skew(20deg);
+         -moz-transform: skew(20deg);
+           -o-transform: skew(20deg);
+    }
+  }
+}
+
+.slash {
+}

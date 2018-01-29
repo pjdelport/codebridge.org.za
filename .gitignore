@@ -1,4 +1,6 @@
 _site
-.idea/
-.vagrant/
-serve/
+.sass-cache
+.jekyll-metadata
+docs/
+assets/
+wireframes/
