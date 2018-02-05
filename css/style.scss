@@ -1,9 +1,28 @@
 ---
 ---
+$black: #000;
+$light-black: #191919;
+$orange: #e88b09;
+
 .home {
-  .main-image {
+  .hero {
     background-image: url(../img/main-image.png);
     background-size: cover;
+    margin-bottom: 0;
+  }
+  .sub-hero {
+    .col-image {
+      background-image: url(../img/outside.jpg);
+      background-size: cover;
+      border-right: 30px solid $orange;
+      margin-left: -30px;
+      -webkit-transform: skew(-15deg);
+         -moz-transform: skew(-15deg);
+           -o-transform: skew(-15deg);
+    }
+    .col-text {
+      padding: 60px;
+    }
   }
 }
 
@@ -20,17 +39,27 @@ nav {
 
 .btn {
   border-radius: 0;
-  &.btn-skew {
-    -webkit-transform: skew(-20deg);
-       -moz-transform: skew(-20deg);
-         -o-transform: skew(-20deg);
-    .unskew {
-      -webkit-transform: skew(20deg);
-         -moz-transform: skew(20deg);
-           -o-transform: skew(20deg);
+  &.btn-black {
+    color: #fff;
+    background-color: $light-black;
+    border-color: $light-black;
+    &:hover {
+      background-color: $black;
+      border-color: $black;
+    }
+    &:active {
+      background-color: $black;
+      border-color: $black;
     }
   }
-}
-
-.slash {
+  &.btn-skew {
+    -webkit-transform: skew(-15deg);
+       -moz-transform: skew(-15deg);
+         -o-transform: skew(-15deg);
+    .unskew {
+      -webkit-transform: skew(15deg);
+         -moz-transform: skew(15deg);
+           -o-transform: skew(15deg);
+    }
+  }
 }
