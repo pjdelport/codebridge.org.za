@@ -4,11 +4,51 @@ $black: #000;
 $light-black: #191919;
 $orange: #e88b09;
 
+@font-face {
+    font-family: "DejaVu Sans";
+    src: url("fonts/DejaVuSans.ttf");
+}
+@font-face {
+    font-family: "DejaVu Sans";
+    src: url("fonts/DejaVuSans-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src: url('../fonts/Kollektif.ttf')
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src:url("../fonts/Kollektif-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src:url("../fonts/Kollektif-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Kollektif";
+  src:url("../fonts/Kollektif-Italic.ttf");
+  font-style: italic;
+}
+
+body {
+  font-family: "Kollektif", sans-serif;
+}
+
 .home {
   .hero {
     background-image: url(../img/main-image.png);
     background-size: cover;
     margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: bold;
   }
   .sub-hero {
     .col-image {
@@ -24,9 +64,75 @@ $orange: #e88b09;
       padding: 60px;
     }
   }
+  .list {
+    margin-top: -1px;
+    .list-title {
+      text-transform: uppercase;
+      font-weight: bold;
+      .slash {
+        display: inline-block;
+        margin-right: 10px;
+        -webkit-transform: skew(-15deg);
+           -moz-transform: skew(-15deg);
+             -o-transform: skew(-15deg);
+      }
+    }
+    &:nth-of-type(odd) {
+      background-color: $orange;
+      color: #fff;
+      .list-title {
+        .slash {
+          color: black;
+        }
+      }
+      .single-item {
+        .image {
+          border: 3px solid black;
+        }
+      }
+    }
+    &:nth-of-type(even) {
+      background-color: #fff;
+      color: black;
+      .list-title {
+        .slash {
+          color: $orange;
+        }
+      }
+      .single-item {
+        .image {
+          border: 3px solid $orange;
+        }
+      }
+    }
+    .single-item {
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+      .name {
+        display: inline-block;
+        font-size: 2rem;
+      }
+      .divider {
+        font-size: 2rem;
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+      .location {
+        display: inline-block;
+        font-size: 2rem;
+      }
+      .description {
+
+      }
+    }
+  }
 }
 
 nav {
+  font-family: "Kollektif", sans-serif;
   .navbar-brand {
     padding-right: 20px;
     width: 250px;
