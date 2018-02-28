@@ -1,5 +1,11 @@
 ---
 layout: base
+extra_js:
+- tabletop.min.js
+- handlebars-v4.0.11.js
+- vendors.min.js
+- script.js
+- content.js
 ---
 <article class="home">
   <div class="jumbotron jumbotron-fluid hero">
@@ -7,7 +13,7 @@ layout: base
       <div class="row">
         <div class="col-md-10 col-lg-6">
           <h3 class="display-4">A community of people who want to do good things with data and technology</h3>
-          <a class="btn btn-dark btn-black btn-skew" href=""><div class="unskew">Read more</div></a>
+          <a class="btn btn-dark btn-black btn-skew" href="#"><div class="unskew">Read more</div></a>
         </div>
       </div>
     </div>
@@ -19,33 +25,14 @@ layout: base
     </div>
     <div class="col-lg-6 col-text">
       <h3 class="display-6">We are a civic tech organisation that brings together activists, journalists, data analysts, designers, programmers, and the creative community to develope innovations and alternate ways to address some of society's problems</h3>
-      <a class="btn btn-dark btn-black btn-skew" href=""><div class="unskew">Read more</div></a>
     </div>
   </div>
 
   <div class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Events</h2>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="single-item">
-            <a href="">
-              <div class="image">
-                <img src="img/generic-logo.png">
-              </div>
-            </a>
-            <div class="name">
-              Hack4Water
-            </div>
-            <span class="divider">|</span>
-            <div class="location">
-              Durban
-            </div>
-            <div class="description">
-              A description about this event
-            </div>
-          </div>
-        </div>
+      <div id="events" class="row">
+
       </div>
     </div>
   </div>
@@ -53,27 +40,56 @@ layout: base
   <div class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Projects</h2>
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="single-item">
-            <a href="">
-              <div class="image">
-                <img src="img/generic-logo.png">
-              </div>
-            </a>
-            <div class="name">
-              Hack4Water
-            </div>
-            <span class="divider">|</span>
-            <div class="location">
-              Durban
-            </div>
-            <div class="description">
-              A description about this project
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="projects" class="row"></div>
     </div>
   </div>
 </article>
+
+<script id="events-template" type="text/x-handlebars-template">
+  <div class="col-lg-4">
+    <div class="single-item">
+      <a target="_blank" href="#">
+        <div class="image">
+          <img src="{% raw %}{{ Image-URL }}{% endraw %}">
+        </div>
+      </a>
+      <div class="name">
+        {% raw %}{{ Title }}{% endraw %}
+      </div>
+      <div class="location">
+        {% raw %}{{ Venue }}{% endraw %}, {% raw %}{{ City }}{% endraw %}
+      </div>
+      <time class="date" datetime="{% raw %}{{ Date }}{% endraw %}">
+        {% raw %}{{ Date }}{% endraw %}
+      </time>
+      <div class="divider">|</div>
+      <time class="time" datetime="{% raw %}{{ Time }}{% endraw %}">
+        {% raw %}{{ Time }}{% endraw %}
+      </time>
+      <div class="description">
+        {% raw %}{{ Description }}{% endraw %}
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="projects-template" type="text/x-handlebars-template">
+  <div class="col-lg-4">
+    <div class="single-item single-project">
+      <a target="_blank" href="{% raw %}{{ Project-URL }}{% endraw %}">
+        <div class="image">
+          <img src="{% raw %}{{ Screenshot-URL }}{% endraw %}">
+        </div>
+      </a>
+      <div class="name">
+        {% raw %}{{ Title }}{% endraw %}
+      </div>
+      <div class="creator">
+        Made by <a target="_blank" href="{% raw %}{{ Creator-URL }}{% endraw %}">{% raw %}{{ Creator }}{% endraw %}</a>
+      </div>
+      <div class="description">
+        {% raw %}{{ Description }}{% endraw %}
+      </div>
+    </div>
+  </div>
+</script>

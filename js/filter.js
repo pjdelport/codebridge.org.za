@@ -1,35 +1,3 @@
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1sN95ta5lfqeznMRJxx6F8Uub5BB-03t5W6VsIgS_9j0/pubhtml';
-
-$(document).ready(function() {
-  Tabletop.init( { key: public_spreadsheet_url,
-                   callback: showInfo,
-                   parseNumbers: true } );
-});
-  
-function showInfo(data, tabletop) {
-  var source = $("#details").html();
-  var template = Handlebars.compile(source);
-
-  $.each( tabletop.sheets("Details").all(), function(i, detail) {
-    var html = template(detail);
-    $("#content").append(html);
-  });
-
-  $(".loading").hide();
-  $(".listing-filter").removeClass("hidden");
-  $(".single-entry").addClass("active");
-
-  $(".visible-count .number-active").text( $(".single-entry.active").length );
-
-  $(".single-entry").each(function() {
-    if ( $(this).hasClass("organisation") ) {
-      $(".type i", this).addClass("fa-building-o")
-    } else {
-      $(".type i", this).addClass("fa-user-circle")
-    }
-  });
-}
-
 $(document).ready(function() {
   var visibleItems = [];
   $("#filter input").prop("checked", false);
@@ -148,3 +116,19 @@ $(document).ready(function() {
     };
   });
 });
+
+
+// part of the filter when content has loaded
+
+// $(".listing-filter").removeClass("hidden");
+//   $(".single-entry").addClass("active");
+// 
+//   $(".visible-count .number-active").text( $(".single-entry.active").length );
+// 
+//   $(".single-entry").each(function() {
+//     if ( $(this).hasClass("organisation") ) {
+//       $(".type i", this).addClass("fa-building-o")
+//     } else {
+//       $(".type i", this).addClass("fa-user-circle")
+//     }
+//   });
