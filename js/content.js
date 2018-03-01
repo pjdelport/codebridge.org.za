@@ -1,10 +1,3 @@
-// Smooth scroll to something
-function scrollToSomething(id){
-  $('html,body').animate({
-   scrollTop: $("#" + id).offset().top},
-   'slow');
-};
-
 // Events
 function loadEvents() {
   var eventsDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1pKqTjHASAlj92vz6Qz5zs/pubhtml';
@@ -24,7 +17,13 @@ function loadEvents() {
       $("#events").append(html);
     });
 
-    $(".loading-events").hide();
+    $("time.time").each(function() {
+      var time = $(this).text();
+      cleanTime = time.trim().slice(0, -3);
+      $(this).text(cleanTime);
+    });
+
+    var str = "12345.00";
   };
 };
 
