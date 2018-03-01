@@ -1,3 +1,10 @@
+// Smooth scroll to something
+function scrollToSomething(id){
+  $('html,body').animate({
+   scrollTop: $("#" + id).offset().top},
+   'slow');
+};
+
 // Events
 function loadEvents() {
   var eventsDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1pKqTjHASAlj92vz6Qz5zs/pubhtml';
@@ -12,7 +19,7 @@ function loadEvents() {
     var source = $("#events-template").html();
     var template = Handlebars.compile(source);
 
-    $.each( tabletop.sheets("Form").all(), function(i, detail) {
+    $.each( tabletop.sheets("Events").all(), function(i, detail) {
       var html = template(detail);
       $("#events").append(html);
     });
@@ -35,7 +42,7 @@ function loadProjects() {
     var source = $("#projects-template").html();
     var template = Handlebars.compile(source);
 
-    $.each( tabletop.sheets("Form").all(), function(i, detail) {
+    $.each( tabletop.sheets("Projects").all(), function(i, detail) {
       var html = template(detail);
       $("#projects").append(html);
     });

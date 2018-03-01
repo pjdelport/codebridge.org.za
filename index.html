@@ -1,4 +1,5 @@
 ---
+title: Home
 layout: base
 extra_js:
 - tabletop.min.js
@@ -28,7 +29,7 @@ extra_js:
     </div>
   </div>
 
-  <div class="jumbotron jumbotron-fluid list">
+  <div id="events-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Events</h2>
       <div id="events" class="row">
@@ -37,7 +38,7 @@ extra_js:
     </div>
   </div>
 
-  <div class="jumbotron jumbotron-fluid list">
+  <div id="projects-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Projects</h2>
       <div id="projects" class="row"></div>
@@ -46,9 +47,9 @@ extra_js:
 </article>
 
 <script id="events-template" type="text/x-handlebars-template">
-  <div class="col-lg-4">
+  <div class="col-sm-6 col-lg-4 col-item {% raw %}{{ Approved }}{% endraw %}">
     <div class="single-item">
-      <a target="_blank" href="#">
+      <a target="_blank" href="{% raw %}{{ Event-URL }}{% endraw %}">
         <div class="image">
           <img src="{% raw %}{{ Image-URL }}{% endraw %}">
         </div>
@@ -63,18 +64,23 @@ extra_js:
         {% raw %}{{ Date }}{% endraw %}
       </time>
       <div class="divider">|</div>
-      <time class="time" datetime="{% raw %}{{ Time }}{% endraw %}">
-        {% raw %}{{ Time }}{% endraw %}
+      <time class="time" datetime="{% raw %}{{ Start-time }}{% endraw %}">
+        {% raw %}{{ Start-time }}{% endraw %}
+      </time>
+      -
+      <time class="time" datetime="{% raw %}{{ End-time }}{% endraw %}">
+        {% raw %}{{ End-time }}{% endraw %}
       </time>
       <div class="description">
         {% raw %}{{ Description }}{% endraw %}
       </div>
+      <a class="btn btn-skew btn-black" target="_blank" href="{% raw %}{{ Event-URL }}{% endraw %}"><div class="unskew">More info</div></a>
     </div>
   </div>
 </script>
 
 <script id="projects-template" type="text/x-handlebars-template">
-  <div class="col-lg-4">
+  <div class="col-sm-6 col-lg-4 col-item {% raw %}{{ Approved }}{% endraw %}">
     <div class="single-item single-project">
       <a target="_blank" href="{% raw %}{{ Project-URL }}{% endraw %}">
         <div class="image">

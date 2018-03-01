@@ -1,16 +1,16 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-lg-3">
+      <div class="col-sm-6 col-lg-3">
         <ul class="list-unstyled">
           <li><a href="#">About</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="/#events-wrap" {% if page.title == 'Home' %}onclick="scrollToSomething('events-wrap');"{% endif %}>Events</a></li>
+          <li><a href="/#projects-wrap" {% if page.title == 'Home' %}onclick="scrollToSomething('projects-wrap');"{% endif %}>Projects</a></li>
           <li><a href="#">Tutorials</a></li>
           <li><a href="#">Directory</a></li>
         </ul>
       </div>
-      <div class="col-md-6 col-lg-3">
+      <div class="col-sm-6 col-lg-3">
         <ul class="fa-ul">
           <li><i class="fa-li fa fa-map-marker"></i>1 Thicket Street, Newlands<br>Cape Town 7725</li>
           <li><i class="fa-li fa fa-envelope"></i><a href="mailto:community@openup.org.za">community@openup.org.za</a></li>
