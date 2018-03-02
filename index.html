@@ -8,16 +8,6 @@ extra_js:
 - script.js
 - content.js
 ---
-<style type="text/css">
-  p.red{
-    background:red
-  }
-  p.blue{
-    background:blue
-  }
-
-</style>
-
 <article class="home">
   <div class="jumbotron jumbotron-fluid hero">
     <div class="container">
@@ -56,57 +46,59 @@ extra_js:
   </div>
 </article>
 
+{% raw %}
 <script id="events-template" type="text/x-handlebars-template">
-  <div class="col-sm-6 col-lg-4 col-item {% raw %}{{ Approved }}{% endraw %}">
+  <div class="col-sm-6 col-md-4 col-item {{ Approved }}">
     <div class="single-item">
-      <a target="_blank" href="{% raw %}{{ Event-URL }}{% endraw %}">
+      <a target="_blank" href="{{ Event-URL }}">
         <div class="image">
-          <img src="{% raw %}{{ Image-URL }}{% endraw %}">
+          <img src="{{ Image-URL }}">
         </div>
       </a>
       <div class="name">
-        {% raw %}{{ Title }}{% endraw %}
+        {{ Title }}
       </div>
       <div class="location">
-        {% raw %}{{ Venue }}{% endraw %}, {% raw %}{{ City }}{% endraw %}
+        {{ Venue }}, {{ City }}
       </div>
-      <time class="date" datetime="{% raw %}{{ Date }}{% endraw %}">
-        {% raw %}{{ Date }}{% endraw %}
+      <time class="date" datetime="{{ Date }}">
+        {{ Date }}
       </time>
       <div class="divider">|</div>
-      <time class="time" datetime="{% raw %}{{ Start-time }}{% endraw %}">
-        {% raw %}{{ Start-time }}{% endraw %}
+      <time class="time" datetime="{{ Start-time }}">
+        {{ Start-time }}
       </time>
       -
-      <time class="time" datetime="{% raw %}{{ End-time }}{% endraw %}">
-        {% raw %}{{ End-time }}{% endraw %}
+      <time class="time" datetime="{{ End-time }}">
+        {{ End-time }}
       </time>
       <div class="description">
-        {% raw %}{{ Description }}{% endraw %}
+        {{ Description }}
       </div>
-      <a class="btn btn-skew btn-black" target="_blank" href="{% raw %}{{ Event-URL }}{% endraw %}"><div class="unskew">More info</div></a>
+      <a class="btn btn-skew btn-black" target="_blank" href="{{ Event-URL }}"><div class="unskew">More info</div></a>
     </div>
   </div>
 </script>
 
 <script id="projects-template" type="text/x-handlebars-template">
-  <div class="col-sm-6 col-lg-4 col-item {% raw %}{{ Approved }}{% endraw %}">
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
     <div class="single-item single-project">
-      <a target="_blank" href="{% raw %}{{ Project-URL }}{% endraw %}">
+      <a target="_blank" href="{{ Project-URL }}">
         <div class="image">
-          <img src="{% raw %}{{ Screenshot-URL }}{% endraw %}">
+          <img src="{{ Screenshot-URL }}">
         </div>
       </a>
       <div class="name">
-        {% raw %}{{ Title }}{% endraw %}
+        {{ Title }}
       </div>
       <div class="creator">
-        Made by <a target="_blank" href="{% raw %}{{ Creator-URL }}{% endraw %}">{% raw %}{{ Creator }}{% endraw %}</a>
+        Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
       </div>
       <div class="description">
-        {% raw %}{{ Description }}{% endraw %}
+        {{ Description }}
       </div>
-      <a class="btn btn-skew btn-black" target="_blank" href="{% raw %}{{ Project-URL }}{% endraw %}"><div class="unskew">Explore project</div></a>
+      <a class="btn btn-skew btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
     </div>
   </div>
 </script>
+{% endraw %}

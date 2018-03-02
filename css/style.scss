@@ -177,10 +177,11 @@ nav {
 .btn {
   border-radius: 0;
   text-transform: uppercase;
+  letter-spacing: 0.025em;
   &.btn-black {
     color: #fff;
-    background-color: $dark;
-    border-color: $dark;
+    background-color: $black;
+    border-color: $black;
     &:hover {
       background-color: $black;
       border-color: $black;

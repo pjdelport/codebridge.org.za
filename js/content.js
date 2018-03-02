@@ -5,7 +5,7 @@ function loadEvents() {
   $(document).ready(function() {
     Tabletop.init( { key: eventsDoc,
                      callback: showEvents,
-                     orderby: 'order',
+                     orderby: 'featured',
                      parseNumbers: false } );
   });
 
@@ -25,12 +25,11 @@ function loadEvents() {
     });
 
     $("#events .col-item.approved").each(function() {
-      $(this).append( "<p>"+ $(this).index() +"</p>" )
-      console.log( $(this).index() );
-      if ( $(this).index() < 4 ) {
+      if ( $(this).index() < 6 ) {
         $(this).addClass("visible");
       }
     });
+
   };
 
 };
@@ -42,7 +41,7 @@ function loadProjects() {
   $(document).ready(function() {
     Tabletop.init( { key: projectsDoc,
                      callback: showProjects,
-                     orderby: 'order',
+                     orderby: 'featured',
                      parseNumbers: false } );
   });
 
@@ -56,7 +55,7 @@ function loadProjects() {
     });
 
     $("#projects .col-item.approved").each(function() {
-      if ( $(this).index() < 4 ) {
+      if ( $(this).index() < 6 ) {
         $(this).addClass("visible");
       }
     });
