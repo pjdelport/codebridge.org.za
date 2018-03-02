@@ -46,9 +46,10 @@ extra_js:
   </div>
 </article>
 
-{% raw %}
+
+{% raw %} <!-- raw prevents jekyll from messing up handlebars -->
 <script id="events-template" type="text/x-handlebars-template">
-  <div class="col-sm-6 col-md-4 col-item {{ Approved }}">
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
     <div class="single-item">
       <a target="_blank" href="{{ Event-URL }}">
         <div class="image">
@@ -65,11 +66,11 @@ extra_js:
         {{ Date }}
       </time>
       <div class="divider">|</div>
-      <time class="time" datetime="{{ Start-time }}">
+      <time class="time start" datetime="{{ Start-time }}">
         {{ Start-time }}
       </time>
       -
-      <time class="time" datetime="{{ End-time }}">
+      <time class="time end" datetime="{{ End-time }}">
         {{ End-time }}
       </time>
       <div class="description">

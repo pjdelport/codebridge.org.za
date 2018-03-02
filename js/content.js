@@ -3,10 +3,12 @@ function loadEvents() {
   var eventsDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1pKqTjHASAlj92vz6Qz5zs/pubhtml';
 
   $(document).ready(function() {
-    Tabletop.init( { key: eventsDoc,
-                     callback: showEvents,
-                     orderby: 'featured',
-                     parseNumbers: false } );
+    Tabletop.init({
+      key: eventsDoc,
+      callback: showEvents,
+      orderby: 'featured',
+      parseNumbers: false
+    });
   });
 
   function showEvents(data, tabletop) {
@@ -24,6 +26,20 @@ function loadEvents() {
       $(this).text(cleanTime);
     });
 
+    $("#events .col-item").each(function() {
+      var eventDate = $(this).find("time.date").text(),
+          eventTime = $(this).find("time.start").text(),
+          fullDate = (eventDate.trim() + " " + eventTime.trim()),
+          parsedDate = Date.parse(fullDate),
+          now = Date.now();
+      console.log(fullDate);
+      console.log(Date.parse(fullDate));
+      if (parsedDate < now) {
+        $(this).remove();
+      };
+    });
+
+
     $("#events .col-item.approved").each(function() {
       if ( $(this).index() < 6 ) {
         $(this).addClass("visible");
@@ -39,10 +55,12 @@ function loadProjects() {
   var projectsDoc = 'https://docs.google.com/spreadsheets/d/1HJBxoYSVZyPrMuXLa5rrk0_5FcMUA9I48B6gltXpbA4/pubhtml';
 
   $(document).ready(function() {
-    Tabletop.init( { key: projectsDoc,
-                     callback: showProjects,
-                     orderby: 'featured',
-                     parseNumbers: false } );
+    Tabletop.init({
+      key: projectsDoc,
+      callback: showProjects,
+      orderby: 'featured',
+      parseNumbers: false
+    });
   });
 
   function showProjects(data, tabletop) {
