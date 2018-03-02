@@ -5,6 +5,7 @@ function loadEvents() {
   $(document).ready(function() {
     Tabletop.init( { key: eventsDoc,
                      callback: showEvents,
+                     orderby: 'order',
                      parseNumbers: false } );
   });
 
@@ -23,8 +24,15 @@ function loadEvents() {
       $(this).text(cleanTime);
     });
 
-    var str = "12345.00";
+    $("#events .col-item.approved").each(function() {
+      $(this).append( "<p>"+ $(this).index() +"</p>" )
+      console.log( $(this).index() );
+      if ( $(this).index() < 4 ) {
+        $(this).addClass("visible");
+      }
+    });
   };
+
 };
 
 // Projects
@@ -34,6 +42,7 @@ function loadProjects() {
   $(document).ready(function() {
     Tabletop.init( { key: projectsDoc,
                      callback: showProjects,
+                     orderby: 'order',
                      parseNumbers: false } );
   });
 
@@ -46,7 +55,11 @@ function loadProjects() {
       $("#projects").append(html);
     });
 
-    $(".loading-projects").hide();
+    $("#projects .col-item.approved").each(function() {
+      if ( $(this).index() < 4 ) {
+        $(this).addClass("visible");
+      }
+    });
   };
 };
 

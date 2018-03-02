@@ -120,7 +120,7 @@ a {
     }
     .col-item {
       display: none;
-      &.approved {
+      &.visible {
         display: block;
       }
       .single-item {

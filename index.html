@@ -8,6 +8,16 @@ extra_js:
 - script.js
 - content.js
 ---
+<style type="text/css">
+  p.red{
+    background:red
+  }
+  p.blue{
+    background:blue
+  }
+
+</style>
+
 <article class="home">
   <div class="jumbotron jumbotron-fluid hero">
     <div class="container">
@@ -96,6 +106,7 @@ extra_js:
       <div class="description">
         {% raw %}{{ Description }}{% endraw %}
       </div>
+      <a class="btn btn-skew btn-black" target="_blank" href="{% raw %}{{ Project-URL }}{% endraw %}"><div class="unskew">Explore project</div></a>
     </div>
   </div>
 </script>
