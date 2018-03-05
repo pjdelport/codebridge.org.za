@@ -1,38 +1,38 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.png" type="image/x-icon" />
-  <link href='https://codebridge.org.za/feed.xml' rel='alternate' type='application/atom+xml'>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.og_description }}{% endif %}">
 
-  <title>{{ site.title | escape }}{% if page.title %} | {{ page.title | escape }}{% endif %}</title>
-  <meta name="description" content="{{ site.description }}" />
+    <!-- OPEN-GRAPH -->
+    <meta property="og:title" content="{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | prepend: site.url }}" />
+    <meta property="og:image" content="{% if page.image %}{{page.image | prepend: site.url}}{% else %}{{ 'images/header.jpg' | prepend: site.url }}{% endif %}">
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.og_description }}{% endif %}" />
+    <meta property="og:site_name" content="{code}bridge" />
+    <meta property="place:location:latitude" content="{{ site.og_latitude }}" />
+    <meta property="place:location:longitude" content="{{ site.og_longitude }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="{{ site.twitter_username }}" />
+    <meta name="twitter:creator" content="{{ site.twitter_username }}" />
+    <meta name="twitter:title" content="{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt }}{% else %}{{ site.og_description }}{% endif %}">
+    <meta name="twitter:url" content="{{ page.url | prepend: site.url }}" />
+    <meta name="twitter:image" content="{% if page.image %}{{page.image | prepend: site.url}}{% else %}{{ 'images/header.jpg' | prepend: site.url }}{% endif %}">
 
-  <!-- Twitter Card data -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@codebridge">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}">
-  <meta name="twitter:description" content="{{ site.description }}">
-  <meta name="twitter:creator" content="@codebridge">
-  <meta name="twitter:image" content="{{ site.url }}{{ site.logo }}">
+    <link href="{{ 'favicon.ico' | prepend: site.baseurl }}" rel="shortcut icon" />
+    <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
 
-  <!-- Open Graph data -->
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}" />
-  <meta property="og:type" content="{% if page.layout == 'article' %}article{% else %}website{% endif %}" />
-  <meta property="og:url" content="https://codebridge.org.za{{ page.url }}" />
-  <meta property="og:image" content="{{ site.url }}{{ site.logo }}" />
-  <meta property="og:description" content="{{ site.description }}" />
-  <meta property="og:site_name" content="{{ site.title }}" />
-
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
-
-  {% for css in page.extra_stylesheets %}
-    <link rel="stylesheet" href="{{ css }}"></script>
-  {% endfor %}
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
+    <!-- FONTS -->
+    <link href="http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap-3.3.5.min.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
 </head>
