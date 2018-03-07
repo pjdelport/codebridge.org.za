@@ -33,7 +33,6 @@ extra_js:
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Events</h2>
       <div id="events" class="row">
-
       </div>
     </div>
   </div>
@@ -61,6 +60,10 @@ extra_js:
       <a target="_blank" href="{{ Event-URL }}">
         <div class="image">
           <img src="{{ Image-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="100,7 100,100 75,100"/>
+            <polyline points="74,100 100,6"/>
+          </svg>
         </div>
       </a>
       <div class="name">
@@ -94,6 +97,10 @@ extra_js:
       <a target="_blank" href="{{ Project-URL }}">
         <div class="image">
           <img src="{{ Screenshot-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="100,7 100,100 75,100"/>
+            <polyline points="74,100 100,6"/>
+          </svg>
         </div>
       </a>
       <div class="name">
@@ -115,6 +122,10 @@ extra_js:
     <div class="single-item single-tutorial">
       <div class="video-wrapper">
         <iframe src="https://www.youtube.com/embed/{{ Youtube-URL }}" allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0"></iframe>
+        <svg class="bite" viewBox="0 0 100 100">
+          <polygon points="100,7 100,100 75,100"/>
+          <polyline points="75,100 100,7"/>
+        </svg>
       </div>
       <div class="name">
         {{ Title }}

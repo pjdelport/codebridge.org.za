@@ -116,6 +116,14 @@ a {
         .image, .video-wrapper {
           border: 3px solid black;
         }
+        .bite {
+          polygon {
+            fill: $orange;
+          }
+          polyline {
+            stroke: $black;
+          }
+        }
       }
     }
     &:nth-of-type(even) {
@@ -127,6 +135,14 @@ a {
       .single-item {
         .image {
           border: 3px solid $orange;
+        }
+        .bite {
+          polygon {
+            fill: $white;
+          }
+          polyline {
+            stroke: $orange;
+          }
         }
       }
     }
@@ -140,10 +156,23 @@ a {
       }
       .single-item {
         margin-bottom: 60px;
+        padding-bottom: 40px;
+        position: relative;
+        height: 90%;
         .image, .video-wrapper {
           background-color: #fff;
+          position: relative;
           img {
             width: 100%;
+          }
+        }
+        .bite {
+          position: absolute;
+          bottom: -3px;
+          right: -3px;
+          height: 60%;
+          polyline {
+            stroke-width: 3px;
           }
         }
         .name {
@@ -157,7 +186,8 @@ a {
           margin-top: 10px;
         }
         .btn {
-          margin-top: 10px;
+          position: absolute;
+          bottom: 0;
         }
       }
     }
