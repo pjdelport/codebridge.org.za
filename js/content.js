@@ -32,8 +32,6 @@ function loadEvents() {
           fullDate = (eventDate.trim() + " " + eventTime.trim()),
           parsedDate = Date.parse(fullDate),
           now = Date.now();
-      console.log(fullDate);
-      console.log(Date.parse(fullDate));
       if (parsedDate < now) {
         $(this).remove();
       };
@@ -57,22 +55,47 @@ function loadProjects() {
   $(document).ready(function() {
     Tabletop.init({
       key: projectsDoc,
-      callback: showProjects,
+      callback: showNewProjects,
       orderby: 'featured',
       parseNumbers: false
     });
   });
 
-  function showProjects(data, tabletop) {
-    var source = $("#projects-template").html();
+  function showNewProjects(data, tabletop) {
+    var source = $("#new-projects-template").html();
     var template = Handlebars.compile(source);
 
     $.each( tabletop.sheets("Projects").all(), function(i, detail) {
       var html = template(detail);
-      $("#projects").append(html);
+      $("#new-projects").append(html);
     });
 
-    $("#projects .col-item.approved").each(function() {
+    $("#new-projects .col-item.approved").each(function() {
+      if ( $(this).index() < 6 ) {
+        $(this).addClass("visible");
+      }
+    });
+  };
+
+  $(document).ready(function() {
+    Tabletop.init({
+      key: projectsDoc,
+      callback: showRunningProjects,
+      orderby: 'featured',
+      parseNumbers: false
+    });
+  });
+
+  function showRunningProjects(data, tabletop) {
+    var source = $("#running-projects-template").html();
+    var template = Handlebars.compile(source);
+
+    $.each( tabletop.sheets("Projects").all(), function(i, detail) {
+      var html = template(detail);
+      $("#running-projects").append(html);
+    });
+
+    $("#running-projects .col-item.approved").each(function() {
       if ( $(this).index() < 6 ) {
         $(this).addClass("visible");
       }

@@ -41,13 +41,25 @@ extra_js:
     </div>
   </div>
 
-  <div id="projects-wrap" class="jumbotron jumbotron-fluid list">
+  <div id="new-projects-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Join a project</h2>
-      <div id="projects" class="row"></div>
+      <div id="new-projects" class="row"></div>
 
       <div class="add">
         <h4 class="add-cta display-5"><div class="slash">|</div>Looking for people who can join your project?</h4>
+        <a class="btn btn-skew btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
+      </div>
+    </div>
+  </div>
+
+  <div id="running-projects-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>Contribute to a project</h2>
+      <div id="running-projects" class="row"></div>
+
+      <div class="add">
+        <h4 class="add-cta display-5"><div class="slash">|</div>Have a cool open source project you want to show the world?</h4>
         <a class="btn btn-skew btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
       </div>
     </div>
@@ -169,7 +181,8 @@ extra_js:
   </div>
 </script>
 
-<script id="projects-template" type="text/x-handlebars-template">
+<script id="new-projects-template" type="text/x-handlebars-template">
+  {{#if Collaboration}}
   <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
     <div class="single-item single-project">
       <a target="_blank" href="{{ Project-URL }}">
@@ -193,6 +206,35 @@ extra_js:
       <a class="btn btn-skew btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
     </div>
   </div>
+  {{/if}}
+</script>
+
+<script id="running-projects-template" type="text/x-handlebars-template">
+  {{#unless Collaboration}}
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item single-project">
+      <a target="_blank" href="{{ Project-URL }}">
+        <div class="image">
+          <img src="{{ Screenshot-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="100,7 100,100 75,100"/>
+            <polyline points="74,100 100,6"/>
+          </svg>
+        </div>
+      </a>
+      <div class="name">
+        {{ Title }}
+      </div>
+      <div class="creator">
+        Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+      </div>
+      <div class="description">
+        {{ Description }}
+      </div>
+      <a class="btn btn-skew btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
+    </div>
+  </div>
+  {{/unless}}
 </script>
 
 <script id="tutorials-template" type="text/x-handlebars-template">
