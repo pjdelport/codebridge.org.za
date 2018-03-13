@@ -1,3 +1,34 @@
+// People
+function loadPeople() {
+  var peopleDoc = 'https://docs.google.com/spreadsheets/d/1JQtFf2awzeYJlE1YffHTCz__gyU7TTXP41nVgkuN0MI/pubhtml';
+
+  $(document).ready(function() {
+    Tabletop.init({
+      key: peopleDoc,
+      callback: showPeople,
+      orderby: 'featured',
+      parseNumbers: false
+    });
+  });
+
+  function showPeople(data, tabletop) {
+    var source = $("#people-template").html();
+    var template = Handlebars.compile(source);
+
+    $.each( tabletop.sheets("People").all(), function(i, detail) {
+      var html = template(detail);
+      $("#people").append(html);
+    });
+
+    $("#people .col-item.approved").each(function() {
+      if ( $(this).index() < 6 ) {
+        $(this).addClass("visible");
+      }
+    });
+  };
+
+};
+
 // Events
 function loadEvents() {
   var eventsDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1pKqTjHASAlj92vz6Qz5zs/pubhtml';
@@ -169,6 +200,7 @@ function loadTutorials() {
   };
 };
 
+loadPeople();
 loadEvents();
 loadProjects();
 loadTutorials();

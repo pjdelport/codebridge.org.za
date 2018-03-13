@@ -29,6 +29,18 @@ extra_js:
     </div>
   </div>
 
+  <div id="people-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>People</h2>
+      <div id="people" class="row"></div>
+
+      <div class="add">
+        <h4 class="add-cta display-5"><div class="slash">|</div>Interested in civic tech?</h4>
+        <a class="btn btn-skew btn-black" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform"><div class="unskew">Add yourself</div></a>
+      </div>
+    </div>
+  </div>
+
   <div id="events-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Events</h2>
@@ -144,6 +156,36 @@ extra_js:
 
 
 {% raw %} <!-- raw prevents jekyll from messing up handlebars -->
+<script id="people-template" type="text/x-handlebars-template">
+  <div class="col-xs-12 col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+          <a target="_blank" href="{{ Website-URL }}">
+          <div class="image">
+            <img src="{{ Photo-URL }}">
+            <svg class="bite" viewBox="0 0 100 100">
+              <polygon points="100,7 100,100 75,100"/>
+              <polyline points="74,100 100,6"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="name">
+          {{ Name }}
+        </div>
+        <div class="province">
+          {{ Province }}
+        </div>
+        <div class="muni">
+          {{ Municipality }}
+        </div>
+        <a class="btn btn-skew btn-black" target="_blank" href="{{ Website-URL }}"><div class="unskew">More info</div></a>
+      </div>
+    </div>
+  </div>
+</script>
+
 <script id="events-template" type="text/x-handlebars-template">
   <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
     <div class="single-item">
