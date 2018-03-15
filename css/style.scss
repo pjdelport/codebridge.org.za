@@ -119,8 +119,6 @@ a {
         .bite {
           polygon {
             fill: $orange;
-          }
-          polyline {
             stroke: $black;
           }
         }
@@ -139,8 +137,6 @@ a {
         .bite {
           polygon {
             fill: $white;
-          }
-          polyline {
             stroke: $orange;
           }
         }
@@ -170,9 +166,11 @@ a {
           position: absolute;
           bottom: -3px;
           right: -3px;
-          height: 60%;
-          polyline {
+          height: calc(100% + 6px);
+          polygon {
             stroke-width: 3px;
+            vector-effect: non-scaling-stroke;
+            shape-rendering: geometricPrecision;
           }
         }
         .name {
@@ -205,6 +203,13 @@ a {
   .name {
     font-size: 1.25rem;
     line-height: 1.25rem;
+  }
+  a.btn-black {
+    position: relative;
+    margin-top: 10px;
+  }
+  .single-item {
+    margin-bottom: 30px;
   }
 }
 
