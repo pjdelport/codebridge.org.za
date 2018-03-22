@@ -149,7 +149,7 @@ a {
       display: none;
       @media (min-width: 576px) {
         .content {
-          padding-right: 25px;
+          padding-right: 50px;
         }
         &:nth-of-type(odd) {
           padding-right: 0;
@@ -234,6 +234,10 @@ a {
   }
   .single-item {
     margin-bottom: 30px;
+  }
+  .col-item {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
