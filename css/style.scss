@@ -147,6 +147,30 @@ a {
     }
     .col-item {
       display: none;
+      @media (min-width: 576px) {
+        .content {
+          padding-right: 25px;
+        }
+        &:nth-of-type(odd) {
+          padding-right: 0;
+        }
+        &:nth-of-type(even) {
+          padding-left: 0;
+          margin-left: -3px;
+        }
+      }
+      @media (min-width: 992px) {
+        &:nth-of-type(3n + 1) {
+          padding-right: 0;
+        }
+        &:nth-of-type(3n + 2) {
+          padding-left: 0;
+          margin-left: -3px;
+        }
+        &:nth-of-type(3n + 3) {
+          margin-left: -33px;
+        }
+      }
       &.visible {
         display: block;
       }
