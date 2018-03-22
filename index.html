@@ -176,7 +176,9 @@ extra_js:
         <div class="muni">
           {{ Municipality }}
         </div>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Website-URL }}"><div class="unskew">More info</div></a>
+        <div class="buttons">
+          <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Website-URL }}"><div class="unskew">More info</div></a>
+        </div>
       </div>
     </div>
   </div>
@@ -215,38 +217,11 @@ extra_js:
           {{ Description }}
         </div>
       </div>
-      <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Event-URL }}"><div class="unskew">Attend</div></a>
-    </div>
-  </div>
-</script>
-
-<script id="new-projects-template" type="text/x-handlebars-template">
-  {{#if Collaboration}}
-  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
-    <div class="single-item single-project">
-      <a target="_blank" href="{{ Project-URL }}">
-        <div class="image">
-          <img src="{{ Screenshot-URL }}">
-          <svg class="bite" viewBox="0 0 100 100">
-            <polygon points="84,110 110,110 110,13"/>
-          </svg>
-        </div>
-      </a>
-      <div class="content">
-        <div class="name">
-          {{ Title }}
-        </div>
-        <div class="creator">
-          Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
-        </div>
-        <div class="description">
-          {{ Description }}
-        </div>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Event-URL }}"><div class="unskew">Attend</div></a>
       </div>
-      <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
     </div>
   </div>
-  {{/if}}
 </script>
 
 <script id="running-projects-template" type="text/x-handlebars-template">
@@ -272,12 +247,46 @@ extra_js:
           {{ Description }}
         </div>
       </div>
-      <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Source</div></a>
+      </div>
     </div>
   </div>
   {{/unless}}
 </script>
 
+<script id="new-projects-template" type="text/x-handlebars-template">
+  {{#if Collaboration}}
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item single-project">
+      <a target="_blank" href="{{ Project-URL }}">
+        <div class="image">
+          <img src="{{ Screenshot-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="84,110 110,110 110,13"/>
+          </svg>
+        </div>
+      </a>
+      <div class="content">
+        <div class="name">
+          {{ Title }}
+        </div>
+        <div class="creator">
+          Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+        </div>
+        <div class="description">
+          {{ Description }}
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Contribute</div></a>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</script>
 <script id="tutorials-template" type="text/x-handlebars-template">
   <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
     <div class="single-item single-tutorial">
@@ -298,7 +307,9 @@ extra_js:
           {{ Description }}
         </div>
       </div>
-      <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
+      </div>
     </div>
   </div>
 </script>
