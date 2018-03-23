@@ -18,8 +18,10 @@ function loadProjects() {
       $("#projects").append(html);
     });
 
-    $('#search-highlight').hideseek({
-      highlight: true
+    $('#search-projects').hideseek({
+      highlight: true,
+      ignore_accents: true,
+      nodata: 'No projects found'
     });
 
   };

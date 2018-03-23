@@ -7,12 +7,26 @@ extra_js:
 - hideseek.min.js
 - projects.js
 ---
-<input id="search-highlight" name="search-highlight" placeholder="Start typing here" type="text" data-list=".highlight_list" autocomplete="off">
+<article class="projects">
 
-<article class="projects container">
-  <div id="projects" class="row highlight_list">
+  <section class="jumbotron jumbotron-fluid hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-6">
+          <h3 class="display-4"><div class="slash">|</div>Projects</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </div>
+  <section class="content">
+    <div class="container">
+      <input class="search-box" id="search-projects" name="search-projects" placeholder="Search for projects" type="text" data-list=".projects-list" autocomplete="off">
+      <div id="projects" class="row projects-list">
+      </div>
+    </div>
+  </section>
+
 </article>
 
 
