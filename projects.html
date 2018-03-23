@@ -1,0 +1,49 @@
+---
+title: Home
+layout: base
+extra_js:
+- tabletop.min.js
+- handlebars-v4.0.11.js
+- hideseek.min.js
+- projects.js
+---
+<input id="search-highlight" name="search-highlight" placeholder="Start typing here" type="text" data-list=".highlight_list" autocomplete="off">
+
+<article class="projects container">
+  <div id="projects" class="row highlight_list">
+
+  </div>
+</article>
+
+
+{% raw %} <!-- raw prevents jekyll from messing up handlebars -->
+<script id="projects-template" type="text/x-handlebars-template">
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item single-project">
+      <a target="_blank" href="{{ Project-URL }}">
+        <div class="image">
+          <img src="{{ Screenshot-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="84,110 110,110 110,13"/>
+          </svg>
+        </div>
+      </a>
+      <div class="content">
+        <div class="name">
+          {{ Title }}
+        </div>
+        <div class="creator">
+          Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+        </div>
+        <div class="description">
+          {{ Description }}
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Source</div></a>
+      </div>
+    </div>
+  </div>
+</script>
+{% endraw %}
