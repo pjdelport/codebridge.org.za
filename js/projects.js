@@ -18,11 +18,14 @@ function loadProjects() {
       $("#projects").append(html);
     });
 
-    $('#search-projects').hideseek({
+    $("#search-projects").hideseek({
       highlight: true,
       ignore_accents: true,
       nodata: 'No projects found'
     });
+
+    $(".content .loading").hide();
+    $(".search-box").show();
 
   };
 };
