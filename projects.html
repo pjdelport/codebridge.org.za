@@ -25,7 +25,12 @@ extra_js:
         <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
         <span class="sr-only">Loading...</span>
       </div>
-      <input class="search-box" id="search-projects" name="search-projects" placeholder="Search for projects" type="text" data-list=".projects-list" autocomplete="off">
+      <div class="search-box-wrap">
+        <input class="search-box" id="search-projects" name="search-projects" placeholder="Search for projects" type="text" data-list=".projects-list" autocomplete="off">
+        <svg class="bite" viewBox="0 0 100 100">
+          <polygon points="60,110 110,106 110,-84"/>
+        </svg>
+      </div>
       <div id="projects" class="row projects-list">
       </div>
     </div>

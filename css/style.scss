@@ -298,13 +298,28 @@ article.projects, article.people {
     .loading {
       text-align: center;
     }
-    input.search-box {
-      margin-bottom: 2rem;
-      width: 100%;
-      padding: 0.5rem;
-      font-size: 1.25rem;
-      border: 3px solid $orange;
-      display: none;
+    .search-box-wrap {
+      position: relative;
+      input.search-box {
+        margin-bottom: 2rem;
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1.25rem;
+        border: 3px solid $orange;
+        display: none;
+      }
+      .bite {
+        position: absolute;
+        right: 0;
+        height: calc(100% - 2rem);
+        polygon {
+          fill: $white;
+          stroke: $orange;
+          stroke-width: 3px;
+          vector-effect: non-scaling-stroke;
+          shape-rendering: geometricPrecision;
+        }
+      }
     }
     .single-item {
       margin-bottom: 60px;
