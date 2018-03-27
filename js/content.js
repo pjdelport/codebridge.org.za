@@ -1,10 +1,11 @@
+var contentDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1pKqTjHASAlj92vz6Qz5zs/pubhtml';
+
 // People
 function loadPeople() {
-  var peopleDoc = 'https://docs.google.com/spreadsheets/d/1JQtFf2awzeYJlE1YffHTCz__gyU7TTXP41nVgkuN0MI/pubhtml';
 
   $(document).ready(function() {
     Tabletop.init({
-      key: peopleDoc,
+      key: contentDoc,
       callback: showPeople,
       orderby: 'featured',
       parseNumbers: false
@@ -25,17 +26,17 @@ function loadPeople() {
         $(this).addClass("visible");
       }
     });
+
+    $("#loading-people").hide();
   };
 
 };
 
 // Events
 function loadEvents() {
-  var eventsDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1pKqTjHASAlj92vz6Qz5zs/pubhtml';
-
   $(document).ready(function() {
     Tabletop.init({
-      key: eventsDoc,
+      key: contentDoc,
       callback: showEvents,
       orderby: 'featured',
       parseNumbers: false
@@ -55,6 +56,8 @@ function loadEvents() {
       var time = $(this).text();
       cleanTime = time.trim().slice(0, -3);
       $(this).text(cleanTime);
+
+    $("#loading-events").hide();
     });
 
     $("#events .col-item").each(function() {
@@ -81,11 +84,9 @@ function loadEvents() {
 
 // Projects
 function loadProjects() {
-  var projectsDoc = 'https://docs.google.com/spreadsheets/d/1HJBxoYSVZyPrMuXLa5rrk0_5FcMUA9I48B6gltXpbA4/pubhtml';
-
   $(document).ready(function() {
     Tabletop.init({
-      key: projectsDoc,
+      key: contentDoc,
       callback: showNewProjects,
       orderby: 'featured',
       parseNumbers: false
@@ -101,16 +102,19 @@ function loadProjects() {
       $("#new-projects").append(html);
     });
 
+    $("#loading-new-projects").hide();
+
     $("#new-projects .col-item.approved").each(function() {
       if ( $(this).index() < 6 ) {
         $(this).addClass("visible");
       }
+
     });
   };
 
   $(document).ready(function() {
     Tabletop.init({
-      key: projectsDoc,
+      key: contentDoc,
       callback: showRunningProjects,
       orderby: 'featured',
       parseNumbers: false
@@ -126,6 +130,8 @@ function loadProjects() {
       $("#running-projects").append(html);
     });
 
+    $("#loading-running-projects").hide();
+
     $("#running-projects .col-item.approved").each(function() {
       if ( $(this).index() < 6 ) {
         $(this).addClass("visible");
@@ -136,11 +142,9 @@ function loadProjects() {
 
 // Tutorials
 function loadTutorials() {
-  var tutorialsDoc = 'https://docs.google.com/spreadsheets/d/1k3B8vgoYOUqrMwxUaGgCFIPua6gRBoraBQwdQlStMLc/pubhtml';
-
   $(document).ready(function() {
     Tabletop.init({
-      key: tutorialsDoc,
+      key: contentDoc,
       callback: showTutorials,
       orderby: 'featured',
       parseNumbers: false
@@ -155,6 +159,8 @@ function loadTutorials() {
       var html = template(detail);
       $("#tutorials").append(html);
     });
+
+    $("#loading-tutorials").hide();
 
     $("#tutorials .col-item.approved").each(function() {
       if ( $(this).index() < 6 ) {

@@ -2,8 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.png" type="image/x-icon" />
-  <link href='https://codebridge.org.za/feed.xml' rel='alternate' type='application/atom+xml'>
+  <link rel="icon" href="/favicon.png" type="image/x-icon">
 
   <title>{{ site.title | escape }}{% if page.title %} | {{ page.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ site.description }}" />
@@ -30,7 +29,7 @@
   <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}">
 
   {% for css in page.extra_stylesheets %}
-    <link rel="stylesheet" href="{{ css }}"></script>
+    <link rel="stylesheet" href="{{ css }}">
   {% endfor %}
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

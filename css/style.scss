@@ -54,7 +54,6 @@ a {
 .home {
   .hero {
     background-image: url(../img/main-image.png);
-    background-size: cover;
     margin-bottom: 0;
     text-transform: uppercase;
     .display-4 {
@@ -75,6 +74,9 @@ a {
     }
     .col-text {
       padding: 60px;
+      .display-6 {
+        font-weight: bold;
+      }
       @media (min-width: 1200px) {
         padding: 120px 80px;
       }
@@ -239,6 +241,9 @@ a {
     .add-cta, .all-cta {
       font-weight: bold;
       text-transform: uppercase;
+    }
+    .slash {
+      color: $orange !important;
     }
   }
   #people {

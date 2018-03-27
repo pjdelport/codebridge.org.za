@@ -10,7 +10,7 @@ extra_js:
   <div class="jumbotron jumbotron-fluid hero">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-lg-6">
+        <div class="col-md-10 col-lg-8">
           <h3 class="display-4">A community of people who want to do good things with data and technology</h3>
           <a class="btn btn-dark btn-black btn-skew" href="#"><div class="unskew">Read more</div></a>
         </div>
@@ -30,11 +30,15 @@ extra_js:
   <div id="people-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>People</h2>
+      <div id="loading-people">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
       <div id="people" class="row"></div>
     </div>
     <footer class="section-footer">
       <div class="all container">
-        <h4 class="all-cta display-5"><div class="slash">|</div>There are people interested in civic technology in your area</h4>
+        <h4 class="all-cta display-5"><div class="slash">|</div>There are people in your area interested in civic technology</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="people.html"><div class="unskew">Show all people</div></a>
       </div>
       <div class="add container">
@@ -47,6 +51,10 @@ extra_js:
   <div id="events-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Events</h2>
+      <div id="loading-events">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
       <div id="events" class="row"></div>
     </div>
     <footer class="section-footer">
@@ -60,6 +68,10 @@ extra_js:
   <div id="running-projects-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Civic technology</h2>
+      <div id="loading-running-projects">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
       <div id="running-projects" class="row"></div>
     </div>
     <footer class="section-footer">
@@ -78,6 +90,10 @@ extra_js:
   <div id="new-projects-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Contribute to a project</h2>
+      <div id="loading-new-projects">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
       <div id="new-projects" class="row"></div>
     </div>
     <footer class="section-footer">
@@ -95,6 +111,10 @@ extra_js:
   <div id="tutorials-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Tutorials</h2>
+      <div id="loading-tutorials">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
       <div id="tutorials" class="row"></div>
     </div>
     <footer class="section-footer">
@@ -112,12 +132,14 @@ extra_js:
       <div id="labs" class="row">
         <div class="col-sm-6 col-lg-4 col-item visible">
           <div class="single-item single-lab">
-            <div class="image">
-              <img src="img/generic-logo.png">
-              <svg class="bite" viewBox="0 0 100 100">
-                <polygon points="84,110 110,110 110,13"/>
-              </svg>
-            </div>
+            <a target="_blank" href="mailto:community@openup.org.za">
+              <div class="image">
+                <img src="img/cape-town.jpg">
+                <svg class="bite" viewBox="0 0 100 100">
+                  <polygon points="84,110 110,110 110,13"/>
+                </svg>
+              </div>
+            </a>
             <div class="name">
               Cape Town
             </div>
@@ -125,17 +147,27 @@ extra_js:
               1 Thicket Street<br>
               Newlands 7725<br>
             </div>
-            <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:capetown@codebridge.org.za"><div class="unskew">Get in touch</div></a>
+            <div class="email">
+              <a href="mailto:community@openup.org.za">community@openup.org.za</a>
+            </div>
+            <div class="phone">
+              <a href="tel:+27216716306">021 671 6306</a>
+            </div>
+            <div class="buttons">
+              <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:community@openup.org.za"><div class="unskew">Get in touch</div></a>
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 col-item visible">
           <div class="single-item single-lab">
-            <div class="image">
-              <img src="img/durban.jpg">
-              <svg class="bite" viewBox="0 0 100 100">
-                <polygon points="84,110 110,110 110,13"/>
-              </svg>
-            </div>
+            <a target="_blank" href="mailto:info@opendata.durban">
+              <div class="image">
+                <img src="img/durban.jpg">
+                <svg class="bite" viewBox="0 0 100 100">
+                  <polygon points="84,110 110,110 110,13"/>
+                </svg>
+              </div>
+            </a>
             <div class="name">
               Durban
             </div>
@@ -143,24 +175,33 @@ extra_js:
               153a Helen Jospeh Road<br>
               Glenwood<br>
             </div>
-            <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:durban@codebridge.org.za"><div class="unskew">Get in touch</div></a>
+            <div class="email">
+              <a href="mailto:info@opendata.durban">info@opendata.durban</a>
+            </div>
+            <div class="buttons">
+              <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:info@opendata.durban"><div class="unskew">Get in touch</div></a>
+            </div>
           </div>
         </div>
         <div class="col-sm-6 col-lg-4 col-item visible">
           <div class="single-item single-lab">
-            <div class="image">
-              <img src="img/newlab.svg">
-              <svg class="bite" viewBox="0 0 100 100">
-                <polygon points="84,110 110,110 110,13"/>
-              </svg>
-            </div>
+            <a target="_blank" href="mailto:community@openup.org.za">
+              <div class="image">
+                <img src="img/newlab.svg">
+                <svg class="bite" viewBox="0 0 100 100">
+                  <polygon points="84,110 110,110 110,13"/>
+                </svg>
+              </div>
+            </a>
             <div class="name">
               A new Codebridge Lab
             </div>
             <div class="address">
               Start your own Codebridge Lab to help support your local community. Get in touch with us to find out how.
             </div>
-            <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:capetown@codebridge.org.za"><div class="unskew">Start</div></a>
+            <div class="buttons">
+              <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:community@openup.org.za"><div class="unskew">Start</div></a>
+            </div>
           </div>
         </div>
       </div>
@@ -171,10 +212,10 @@ extra_js:
 
 {% raw %} <!-- raw prevents jekyll from messing up handlebars -->
 <script id="people-template" type="text/x-handlebars-template">
-  <div class="col-xs-12 col-sm-6 col-lg-4 col-item {{ Approved }}">
+  <div class="col-xs-12 col-sm-6 col-xl-4 col-item {{ Approved }}">
     <div class="single-item row">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <a target="_blank" href="{{ Website-URL }}">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a target="_blank" href="{{ Website-URL }}">
           <div class="image">
             <img src="{{ Photo-URL }}">
             <svg class="bite" viewBox="0 0 100 100">
@@ -183,7 +224,7 @@ extra_js:
           </div>
         </a>
       </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <div class="name">
           {{ Name }}
         </div>
