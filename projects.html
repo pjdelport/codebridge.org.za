@@ -56,7 +56,10 @@ extra_js:
           {{ Title }}
         </div>
         <div class="creator">
+          {{#if Creator}}
           Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+          {{/if}}
+          &nbsp;
         </div>
         <div class="description">
           {{ Description }}
@@ -64,7 +67,9 @@ extra_js:
       </div>
       <div class="buttons">
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
+        {{#if Source-URL}}
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Source</div></a>
+        {{/if}}
       </div>
     </div>
   </div>
