@@ -23,7 +23,7 @@ extra_js:
 
     </div>
     <div class="col-lg-6 col-text">
-      <h3 class="display-6">We are a civic tech organisation that brings together activists, journalists, data analysts, designers, programmers, and the creative community to develope innovations and alternate ways to address some of society's problems</h3>
+      <h3 class="display-6">We are a civic tech organisation that brings together activists, journalists, data analysts, designers, programmers, and the creative community to develop innovations and alternate ways to address some of society's problems</h3>
     </div>
   </div>
 
@@ -37,10 +37,10 @@ extra_js:
       <div id="people" class="row"></div>
     </div>
     <footer class="section-footer">
-      <div class="all container">
+      <!-- <div class="all container">
         <h4 class="all-cta display-5"><div class="slash">|</div>There are people in your area interested in civic technology</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="people.html"><div class="unskew">Show all people</div></a>
-      </div>
+      </div> -->
       <div class="add container">
         <h4 class="add-cta display-5"><div class="slash">|</div>Interested in civic tech?</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform"><div class="unskew">Add yourself</div></a>
@@ -76,8 +76,8 @@ extra_js:
     </div>
     <footer class="section-footer">
       <div class="all container">
-        <h4 class="all-cta display-5"><div class="slash">|</div>Plenty of projects are looking for contributors</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="projects.html"><div class="unskew">Show all projects</div></a>
+        <h4 class="all-cta display-5"><div class="slash">|</div>There's a lot more civic technology for you to check out</h4>
+        <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
       </div>
       <div class="add container">
         <h4 class="add-cta display-5"><div class="slash">|</div>Have a cool open source project you want to show the world?</h4>
@@ -98,8 +98,8 @@ extra_js:
     </div>
     <footer class="section-footer">
       <div class="all container">
-        <h4 class="all-cta display-5"><div class="slash">|</div>There's a lot more civic technology for you to check out</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="projects.html"><div class="unskew">Show all projects</div></a>
+        <h4 class="all-cta display-5"><div class="slash">|</div>Plenty of projects are looking for contributors</h4>
+        <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
       </div>
       <div class="add container">
         <h4 class="add-cta display-5"><div class="slash">|</div>Looking for people who can join your project?</h4>
@@ -173,7 +173,7 @@ extra_js:
             </div>
             <div class="address">
               153a Helen Jospeh Road<br>
-              Glenwood<br>
+              Glenwood 4001<br>
             </div>
             <div class="email">
               <a href="mailto:info@opendata.durban">info@opendata.durban</a>
@@ -298,11 +298,12 @@ extra_js:
         <div class="name">
           {{ Title }}
         </div>
-        {{#if Creator}}
         <div class="creator">
+          {{#if Creator}}
           Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+          {{/if}}
+          &nbsp;
         </div>
-        {{/if}}
         <div class="description">
           {{ Description }}
         </div>
@@ -335,7 +336,10 @@ extra_js:
           {{ Title }}
         </div>
         <div class="creator">
+          {{#if Creator}}
           Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+          {{/if}}
+          &nbsp;
         </div>
         <div class="description">
           {{ Description }}
@@ -343,7 +347,9 @@ extra_js:
       </div>
       <div class="buttons">
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
+        {{#if Source-URL}}
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Contribute</div></a>
+        {{/if}}
       </div>
     </div>
   </div>
@@ -363,7 +369,10 @@ extra_js:
           {{ Title }}
         </div>
         <div class="creator">
+          {{#if Creator}}
           Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+          {{/if}}
+          &nbsp;
         </div>
         <div class="description">
           {{ Description }}

@@ -5,6 +5,7 @@ function loadProjects() {
     Tabletop.init({
       key: contentDoc,
       callback: showProjects,
+      orderby: 'title',
       parseNumbers: false
     });
   });
@@ -24,7 +25,7 @@ function loadProjects() {
       nodata: 'No projects found'
     });
 
-    $(".content .loading").hide();
+    $(".project-content .loading").hide();
     $(".search-box").show();
 
   };
