@@ -1,0 +1,77 @@
+---
+title: Home
+layout: base
+extra_js:
+- tabletop.min.js
+- handlebars-v4.0.11.js
+- hideseek.min.js
+- projects.js
+---
+<article class="projects">
+
+  <section class="jumbotron jumbotron-fluid hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-6">
+          <h3 class="display-4"><div class="slash">|</div>Projects</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-content">
+    <div class="container">
+      <div class="loading">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="search-box-wrap">
+        <input class="search-box" id="search-projects" name="search-projects" placeholder="Search for projects" type="text" data-list=".projects-list" autocomplete="off">
+        <svg class="bite" viewBox="0 0 100 100">
+          <polygon points="60,110 106,110 106,-84"/>
+        </svg>
+      </div>
+      <div id="projects" class="row projects-list">
+      </div>
+    </div>
+  </section>
+
+</article>
+
+
+{% raw %} <!-- raw prevents jekyll from messing up handlebars -->
+<script id="projects-template" type="text/x-handlebars-template">
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item single-project">
+      <a target="_blank" href="{{ Project-URL }}">
+        <div class="image">
+          <img src="{{ Screenshot-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="84,110 110,110 110,13"/>
+          </svg>
+        </div>
+      </a>
+      <div class="content">
+        <div class="name">
+          {{ Title }}
+        </div>
+        <div class="creator">
+          {{#if Creator}}
+          Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+          {{/if}}
+          &nbsp;
+        </div>
+        <div class="description">
+          {{ Description }}
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
+        {{#if Source-URL}}
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Source</div></a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</script>
+{% endraw %}

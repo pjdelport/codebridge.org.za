@@ -1,43 +1,387 @@
 ---
-layout: default
+title: Home
+layout: base
+extra_js:
+- tabletop.min.js
+- handlebars-v4.0.11.js
+- content.js
 ---
-<section class="home">
-  <div class="container">
-    <div class="row"> 
-      <div class="col-sm-6">
-        <h2>What is {code}bridge?</h2>
-        <p>We are a civic tech incubator, but we are also a great deal more than that.</p>
-        <p>Incubators generally exist to find and develop technology start-ups. {code}bridge takes it a step further, by drawing from our community. We foster creative engagement between those who understand the problems, typically civil society and government, and those who have the technological skills that can help solve them.</p>
-        <p>Our mission is therefore to bridge the gap between grassroots activism, technology and data.</p>
-        <p>The {code}bridge philosophy aims to bring together activists, technologists, journalists, data analysts, designers, programmers and others, to create opportunities for innovations and alternative ways to address some of society's challenges.</p>
-        <p>In short, we want to use civic technology to improve lives through efficiency and transparency, connecting citizens to service.</p>
-        <img src="/images/outside.jpg">
-      </div>
-      <div class="col-sm-6">
-        <h3>Community evenings</h3>
-        <p>Every other week, we host a community evening on Thursday night. Community evenings are a time and place where you can work on your projects, get help from others, or join others if you're keen to try something but don't have your own thing going yet.</p>
-        <p>The focus is on Civic Technology but that means more than just techies can play a part - Civic Tech means technology used for the benefit of society. e.g. building solutions to water scarcity, supporting education with tech, building a website for running Stokvels, whatever need you see where tech can help!</p>
-        <h3>Data literacy training</h3>
-        <h3>How we plan to achieve this</h3>
-        <ul>
-          <li>Incubation services
-            <ul>
-              <li>Training and tailored bootcamps</li>
-              <li>Mentorship</li>
-              <li>Business strategy</li>
-              <li>Funding assistance</li>
-              <li>Working space</li>
-            </ul>
-          </li>
-          <li>Events run to encourage learning, the generation of new ideas and the formation of civic tech partnerships and collaborations - particularly with community partners who are on the ground and have a good understanding of their problem spaces.</li>
-          <li>Community and <a href="/partners">partnerships</a></li>
-        </ul>
-        <h3>How to get involved</h3>
-        <p>We want to develop civic technology start-ups and entrepreneurs who operate in aid of public good. Together we are looking to identify problems and solve them.</p>
-
-        <p>Can you use your skills to make your community better?</p>
-        <a href="/contact" class="btn btn-primary" role="button">Get in touch with us!</a>
+<article class="home">
+  <div class="jumbotron jumbotron-fluid hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8">
+          <h3 class="display-4">A community of people who want to do good things with data and technology</h3>
+          <a class="btn btn-dark btn-black btn-skew" href="#"><div class="unskew">Read more</div></a>
+        </div>
       </div>
     </div>
   </div>
-</section>
+
+  <div class="sub-hero row">
+    <div class="col-lg-6 col-image">
+
+    </div>
+    <div class="col-lg-6 col-text">
+      <h3 class="display-6">We are a civic tech organisation that brings together activists, journalists, data analysts, designers, programmers, and the creative community to develop innovations and alternate ways to address some of society's problems</h3>
+    </div>
+  </div>
+
+  <div id="people-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>People</h2>
+      <div id="loading-people">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div id="people" class="row"></div>
+    </div>
+    <footer class="section-footer">
+      <!-- <div class="all container">
+        <h4 class="all-cta display-5"><div class="slash">|</div>There are people in your area interested in civic technology</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="people.html"><div class="unskew">Show all people</div></a>
+      </div> -->
+      <div class="add container">
+        <h4 class="add-cta display-5"><div class="slash">|</div>Interested in civic tech?</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform"><div class="unskew">Add yourself</div></a>
+      </div>
+    </footer>
+  </div>
+
+  <div id="events-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>Events</h2>
+      <div id="loading-events">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div id="events" class="row"></div>
+    </div>
+    <footer class="section-footer">
+      <div class="add container">
+        <h4 class="add-cta display-5"><div class="slash">|</div>Hosting a civic tech related event?</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSda9KAXCUHcbB2MshYMTqfGBo6n1zx7v7SzmTvLsKtRF4Af8g/viewform"><div class="unskew">Add an event</div></a>
+      </div>
+    </footer>
+  </div>
+
+  <div id="running-projects-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>Civic technology</h2>
+      <div id="loading-running-projects">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div id="running-projects" class="row"></div>
+    </div>
+    <footer class="section-footer">
+      <div class="all container">
+        <h4 class="all-cta display-5"><div class="slash">|</div>There's a lot more civic technology for you to check out</h4>
+        <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
+      </div>
+      <div class="add container">
+        <h4 class="add-cta display-5"><div class="slash">|</div>Have a cool open source project you want to show the world?</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
+      </div>
+    </footer>
+    </div>
+  </div>
+
+  <div id="new-projects-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>Contribute to a project</h2>
+      <div id="loading-new-projects">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div id="new-projects" class="row"></div>
+    </div>
+    <footer class="section-footer">
+      <div class="all container">
+        <h4 class="all-cta display-5"><div class="slash">|</div>Plenty of projects are looking for contributors</h4>
+        <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
+      </div>
+      <div class="add container">
+        <h4 class="add-cta display-5"><div class="slash">|</div>Looking for people who can join your project?</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
+      </div>
+    </footer>
+  </div>
+
+  <div id="tutorials-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>Tutorials</h2>
+      <div id="loading-tutorials">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div id="tutorials" class="row"></div>
+    </div>
+    <footer class="section-footer">
+      <div class="add container">
+        <h4 class="add-cta display-5"><div class="slash">|</div>Do you have an interesting tutorial you want to share?</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScgeXwLKMfZDLT9hSwI1NrOwt-_Ef--OQIAXsLc7qP2RzzR3g/viewform"><div class="unskew">Add a tutorial</div></a>
+      </div>
+    </footer>
+    </div>
+  </div>
+
+  <div id="labs-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>Codebridge Labs</h2>
+      <div id="labs" class="row">
+        <div class="col-sm-6 col-lg-4 col-item visible">
+          <div class="single-item single-lab">
+            <a target="_blank" href="mailto:community@openup.org.za">
+              <div class="image">
+                <img src="img/cape-town.jpg">
+                <svg class="bite" viewBox="0 0 100 100">
+                  <polygon points="84,110 110,110 110,13"/>
+                </svg>
+              </div>
+            </a>
+            <div class="name">
+              Cape Town
+            </div>
+            <div class="address">
+              1 Thicket Street<br>
+              Newlands 7725<br>
+            </div>
+            <div class="email">
+              <a href="mailto:community@openup.org.za">community@openup.org.za</a>
+            </div>
+            <div class="phone">
+              <a href="tel:+27216716306">021 671 6306</a>
+            </div>
+            <div class="buttons">
+              <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:community@openup.org.za"><div class="unskew">Get in touch</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-item visible">
+          <div class="single-item single-lab">
+            <a target="_blank" href="mailto:info@opendata.durban">
+              <div class="image">
+                <img src="img/durban.jpg">
+                <svg class="bite" viewBox="0 0 100 100">
+                  <polygon points="84,110 110,110 110,13"/>
+                </svg>
+              </div>
+            </a>
+            <div class="name">
+              Durban
+            </div>
+            <div class="address">
+              153a Helen Jospeh Road<br>
+              Glenwood 4001<br>
+            </div>
+            <div class="email">
+              <a href="mailto:info@opendata.durban">info@opendata.durban</a>
+            </div>
+            <div class="buttons">
+              <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:info@opendata.durban"><div class="unskew">Get in touch</div></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-4 col-item visible">
+          <div class="single-item single-lab">
+            <a target="_blank" href="mailto:community@openup.org.za">
+              <div class="image">
+                <img src="img/newlab.svg">
+                <svg class="bite" viewBox="0 0 100 100">
+                  <polygon points="84,110 110,110 110,13"/>
+                </svg>
+              </div>
+            </a>
+            <div class="name">
+              A new Codebridge Lab
+            </div>
+            <div class="address">
+              Start your own Codebridge Lab to help support your local community. Get in touch with us to find out how.
+            </div>
+            <div class="buttons">
+              <a class="btn btn-skew btn-sm btn-black" target="_blank" href="mailto:community@openup.org.za"><div class="unskew">Start</div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+{% raw %} <!-- raw prevents jekyll from messing up handlebars -->
+<script id="people-template" type="text/x-handlebars-template">
+  <div class="col-xs-12 col-sm-6 col-xl-4 col-item {{ Approved }}">
+    <div class="single-item row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <a target="_blank" href="{{ Website-URL }}">
+          <div class="image">
+            <img src="{{ Photo-URL }}">
+            <svg class="bite" viewBox="0 0 100 100">
+              <polygon points="84,110 110,110 110,13"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="name">
+          {{ Name }}
+        </div>
+        <div class="province">
+          {{ Province }}
+        </div>
+        <div class="muni">
+          {{ Municipality }}
+        </div>
+        <div class="buttons">
+          <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Website-URL }}"><div class="unskew">More info</div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="events-template" type="text/x-handlebars-template">
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item">
+      <a target="_blank" href="{{ Event-URL }}">
+        <div class="image">
+          <img src="{{ Image-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="84,110 110,110 110,13"/>
+          </svg>
+        </div>
+      </a>
+      <div class="content">
+        <div class="name">
+          {{ Title }}
+        </div>
+        <div class="location">
+          {{ Venue }}, {{ City }}
+        </div>
+        <time class="date" datetime="{{ Date }}">
+          {{ Date }}
+        </time>
+        <div class="divider">|</div>
+        <time class="time start" datetime="{{ Start-time }}">
+          {{ Start-time }}
+        </time>
+        -
+        <time class="time end" datetime="{{ End-time }}">
+          {{ End-time }}
+        </time>
+        <div class="description">
+          {{ Description }}
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Event-URL }}"><div class="unskew">Attend</div></a>
+      </div>
+    </div>
+  </div>
+</script>
+
+<script id="running-projects-template" type="text/x-handlebars-template">
+  {{#unless Collaboration}}
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item single-project">
+      <a target="_blank" href="{{ Project-URL }}">
+        <div class="image">
+          <img src="{{ Screenshot-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="84,110 110,110 110,13"/>
+          </svg>
+        </div>
+      </a>
+      <div class="content">
+        <div class="name">
+          {{ Title }}
+        </div>
+        <div class="creator">
+          {{#if Creator}}
+          Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+          {{/if}}
+          &nbsp;
+        </div>
+        <div class="description">
+          {{ Description }}
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
+        {{#if Source-URL}}
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Source</div></a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  {{/unless}}
+</script>
+
+<script id="new-projects-template" type="text/x-handlebars-template">
+  {{#if Collaboration}}
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item single-project">
+      <a target="_blank" href="{{ Project-URL }}">
+        <div class="image">
+          <img src="{{ Screenshot-URL }}">
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="84,110 110,110 110,13"/>
+          </svg>
+        </div>
+      </a>
+      <div class="content">
+        <div class="name">
+          {{ Title }}
+        </div>
+        <div class="creator">
+          {{#if Creator}}
+          Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+          {{/if}}
+          &nbsp;
+        </div>
+        <div class="description">
+          {{ Description }}
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
+        {{#if Source-URL}}
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Contribute</div></a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</script>
+<script id="tutorials-template" type="text/x-handlebars-template">
+  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
+    <div class="single-item single-tutorial">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/{{ Youtube-URL }}" allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0"></iframe>
+        <svg class="bite" viewBox="0 0 100 100">
+          <polygon points="84,110 110,110 110,13"/>
+        </svg>
+      </div>
+      <div class="content">
+        <div class="name">
+          {{ Title }}
+        </div>
+        <div class="creator">
+          {{#if Creator}}
+          Made by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
+          {{/if}}
+          &nbsp;
+        </div>
+        <div class="description">
+          {{ Description }}
+        </div>
+      </div>
+      <div class="buttons">
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
+      </div>
+    </div>
+  </div>
+</script>
+{% endraw %}

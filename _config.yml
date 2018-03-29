@@ -1,34 +1,51 @@
-# METADATA
-title: "{code}bridge"
-email: community@code4sa.org
-description: We're a civic tech incubator with a mission to bridge the gap between grassroots activism, technology and data.
-baseurl: "/"
-url: "http://www.codebridge.org.za"
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# OPEN GRAPH
-## OG Description must be 125 characters or less
-og_description: We're a civic tech incubator with a mission to bridge the gap between grassroots activism, technology and data.
-og_latitude: -33.976608
-og_longitude: 18.46662
-twitter_username: "@codebridge"
-github_username: codebridge-za
-facebook_page: codebridge
+# Site settings
+name: Codebridge
+description:
+url: https://codebridge.org.za
 
-# BUILD SETTINGS
-permalink: /:categories/:year-:month-:day/:title.htm
+title: Codebridge
+email:
+url: https://codebridge.org.za
+description:
+twitter:
+  username: codebridge-za
+logo: /img/logo.png
 
-# EXCLUDE
-exclude: [CNAME, Vagrantfile, README.md]
-
-# RESOURCES USED
-## Header image - https://unsplash.com/
-
-##my collections
 collections:
-  allevents:
+  tools:
     output: true
-  storytelling:
+  team:
     output: true
+  articles:
+    output: true
+  types:
+    output: true
+    permalink: /articles/:name.html
+  themes:
+    output: true
+  academy:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image:
+
+sass:
+  style: compressed
+
+# Build settings
+markdown: kramdown
+exclude: [vendor]
 
 gems:
-  - jekyll-feed
+  - jekyll-sitemap
