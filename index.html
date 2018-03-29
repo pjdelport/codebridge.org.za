@@ -356,12 +356,17 @@ extra_js:
 <script id="tutorials-template" type="text/x-handlebars-template">
   <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
     <div class="single-item single-tutorial">
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/{{ Youtube-URL }}" allow="autoplay; encrypted-media" allowfullscreen="" frameborder="0"></iframe>
-        <svg class="bite" viewBox="0 0 100 100">
-          <polygon points="84,110 110,110 110,13"/>
-        </svg>
-      </div>
+      <a target="_blank" href="https://www.youtube.com/watch?v={{ Youtube-URL }}">
+        <div class="image">
+          <i class="fa fa-fw fa-play" aria-hidden="true"></i>
+          <div class="tutorial-image-wrap">
+            <img src="https://i1.ytimg.com/vi/{{ Youtube-URL }}/hqdefault.jpg">
+          </div>
+          <svg class="bite" viewBox="0 0 100 100">
+            <polygon points="84,110 110,110 110,13"/>
+          </svg>
+        </div>
+      </a>
       <div class="content">
         <div class="name">
           {{ Title }}
