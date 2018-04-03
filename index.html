@@ -19,7 +19,7 @@ extra_js:
   </div>
 
   <div class="sub-hero row">
-    <div class="col-lg-6 col-image">
+    <div class="col-lg-6 col-image d-none d-lg-block">
 
     </div>
     <div class="col-lg-6 col-text">
@@ -38,11 +38,11 @@ extra_js:
     </div>
     <footer class="section-footer">
       <!-- <div class="all container">
-        <h4 class="all-cta display-5"><div class="slash">|</div>There are people in your area interested in civic technology</h4>
+        <h4 class="all-cta"><div class="slash">|</div>There are people in your area interested in civic technology</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="people.html"><div class="unskew">Show all people</div></a>
       </div> -->
       <div class="add container">
-        <h4 class="add-cta display-5"><div class="slash">|</div>Interested in civic tech?</h4>
+        <h4 class="add-cta"><div class="slash">|</div>Interested in civic tech?</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform"><div class="unskew">Add yourself</div></a>
       </div>
     </footer>
@@ -59,7 +59,7 @@ extra_js:
     </div>
     <footer class="section-footer">
       <div class="add container">
-        <h4 class="add-cta display-5"><div class="slash">|</div>Hosting a civic tech related event?</h4>
+        <h4 class="add-cta"><div class="slash">|</div>Hosting a civic tech related event?</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSda9KAXCUHcbB2MshYMTqfGBo6n1zx7v7SzmTvLsKtRF4Af8g/viewform"><div class="unskew">Add an event</div></a>
       </div>
     </footer>
@@ -76,11 +76,11 @@ extra_js:
     </div>
     <footer class="section-footer">
       <div class="all container">
-        <h4 class="all-cta display-5"><div class="slash">|</div>There's a lot more civic technology for you to check out</h4>
+        <h4 class="all-cta"><div class="slash">|</div>There's a lot more civic technology for you to check out</h4>
         <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
       </div>
       <div class="add container">
-        <h4 class="add-cta display-5"><div class="slash">|</div>Have a cool open source project you want to show the world?</h4>
+        <h4 class="add-cta"><div class="slash">|</div>Have a cool open source project you want to show the world?</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
       </div>
     </footer>
@@ -97,11 +97,11 @@ extra_js:
     </div>
     <footer class="section-footer">
       <div class="all container">
-        <h4 class="all-cta display-5"><div class="slash">|</div>Plenty of projects are looking for contributors</h4>
+        <h4 class="all-cta"><div class="slash">|</div>Plenty of projects are looking for contributors</h4>
         <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
       </div>
       <div class="add container">
-        <h4 class="add-cta display-5"><div class="slash">|</div>Looking for people who can join your project?</h4>
+        <h4 class="add-cta"><div class="slash">|</div>Looking for people who can join your project?</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
       </div>
     </footer>
@@ -118,7 +118,7 @@ extra_js:
     </div>
     <footer class="section-footer">
       <div class="add container">
-        <h4 class="add-cta display-5"><div class="slash">|</div>Do you have an interesting tutorial you want to share?</h4>
+        <h4 class="add-cta"><div class="slash">|</div>Do you have an interesting tutorial you want to share?</h4>
         <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScgeXwLKMfZDLT9hSwI1NrOwt-_Ef--OQIAXsLc7qP2RzzR3g/viewform"><div class="unskew">Add a tutorial</div></a>
       </div>
     </footer>
@@ -209,9 +209,9 @@ extra_js:
 
 {% raw %} <!-- raw prevents jekyll from messing up handlebars -->
 <script id="people-template" type="text/x-handlebars-template">
-  <div class="col-xs-12 col-sm-6 col-xl-4 col-item {{ Approved }}">
+  <div class="col-12 col-sm-6 col-xl-4 col-item {{ Approved }}">
     <div class="single-item row">
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
         <a target="_blank" href="{{ Website-URL }}">
           <div class="image">
             <img src="{{ Photo-URL }}">
@@ -221,7 +221,7 @@ extra_js:
           </div>
         </a>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
         <div class="name">
           {{ Name }}
         </div>
