@@ -551,6 +551,9 @@ nav {
            -o-transform: skew(15deg);
     }
   }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 // footer
