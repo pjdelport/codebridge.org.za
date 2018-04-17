@@ -150,7 +150,11 @@ a {
     .divider {
       margin: 0 10px;
     }
+    .row.no-gutters {
+      margin-left: 3px;
+    }
     .single-item {
+      margin-left: -3px;
       .image {
         transition: opacity .15s ease-in-out;
         &:hover {
@@ -212,34 +216,8 @@ a {
     .col-item {
       display: none;
       @media (min-width: 576px) {
-        &:nth-of-type(odd) {
-          padding-right: 0;
-        }
-        &:nth-of-type(even) {
-          padding-left: 0;
-          margin-left: -3px;
-        }
         .content {
           padding-right: 20px;
-        }
-      }
-      @media (min-width: 992px) {
-        &:nth-of-type(3n + 1) {
-          padding-right: 0;
-          padding-left: 15px;
-        }
-        &:nth-of-type(3n + 2) {
-          padding-left: 0;
-          padding-right: 15px;
-          margin-left: -3px;
-        }
-        &:nth-of-type(3n + 3) {
-          margin-left: -33px;
-          padding-left: 15px;
-          padding-right: 0;
-        }
-        .content {
-          padding-right: 50px;
         }
       }
       &.visible {
@@ -304,6 +282,9 @@ a {
     }
   }
   #people {
+    .image {
+      margin-right: 15px;
+    }
     .name {
       font-size: 1.25rem;
       line-height: 1.25rem;
@@ -314,6 +295,7 @@ a {
     }
     .single-item {
       margin-bottom: 30px;
+      margin-left: 0;
     }
     .col-item {
       padding-left: 15px;
@@ -400,7 +382,7 @@ article.projects, article.people {
       }
       .bite {
         position: absolute;
-        right: 0;
+        right: -6px;
         height: calc(100% - 2rem);
         polygon {
           fill: $white;
@@ -412,8 +394,12 @@ article.projects, article.people {
       }
     }
   }
+  .row.no-gutters {
+    margin-left: 3px;
+  }
   .col-item {
     .single-item {
+      margin-left: -3px;
       margin-bottom: 60px;
       padding-bottom: 40px;
       position: relative;
@@ -457,34 +443,8 @@ article.projects, article.people {
       }
     }
     @media (min-width: 576px) {
-      &:nth-of-type(odd) {
-        padding-right: 0;
-      }
-      &:nth-of-type(even) {
-        padding-left: 0;
-        margin-left: -3px;
-      }
       .content {
         padding-right: 20px;
-      }
-    }
-    @media (min-width: 992px) {
-      &:nth-of-type(3n + 1) {
-        padding-right: 0;
-        padding-left: 15px;
-      }
-      &:nth-of-type(3n + 2) {
-        padding-left: 0;
-        padding-right: 15px;
-        margin-left: -3px;
-      }
-      &:nth-of-type(3n + 3) {
-        margin-left: -33px;
-        padding-left: 15px;
-        padding-right: 0;
-      }
-      .content {
-        padding-right: 50px;
       }
     }
   }
