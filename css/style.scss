@@ -346,6 +346,18 @@ a {
   }
 }
 
+.intro-text {
+  font-size: 20px;
+}
+  
+.margin-medium {
+  margin: 10px;
+}
+  
+.padding-none {
+  padding: 0;
+}
+
 // project.html and people.html
 article.projects, article.people {
   .jumbotron {

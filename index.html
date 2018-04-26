@@ -10,8 +10,15 @@ extra_js:
   <div class="jumbotron jumbotron-fluid hero">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-lg-8">
-          <h3 class="display-4">A community of people who want to do good things with data and technology</h3>
+        <div class="col-md-10 col-lg-7">
+          <h3 class="display-4">An open community at the intersection of civic-tech and social change.</h3>
+          <a
+            class="btn btn-dark btn-black btn-skew btn-lg"
+            href="#get-involved"
+            onclick="scrollToSomething('get-involved');"
+          >
+            <div class="unskew">Join us</div>
+          </a>	
         </div>
       </div>
     </div>
@@ -22,27 +29,75 @@ extra_js:
 
     </div>
     <div class="col-lg-6 col-text">
-      <h3 class="display-6">We are a civic tech organisation that brings together activists, journalists, data analysts, designers, programmers, and the creative community to develop innovations and alternate ways to address some of society's problems</h3>
+        <h3 class="display-6">Can anyone join?</h3>
+
+        <p class="intro-text">Yes! We are a community of programmers, activists, data analysts, designers, human rights lawyers, government officials, journalists, visual artists, storytellers and other professions who collaborate on social change projects.</p>
+        <p class="intro-text">We use civic tech to develop innovations and alternate ways to address some of society's problems. </p>
     </div>
   </div>
 
-  <div id="people-wrap" class="jumbotron jumbotron-fluid list">
+  <div id="get-involved" class="jumbotron jumbotron-fluid list">
     <div class="container">
-      <h2 class="list-title display-4"><div class="slash">|</div>People</h2>
-      <div id="loading-people">
+      <h2 class="list-title display-4"><div class="slash">|</div>GET INVOLVED</h2>
+      <ul class="padding-none">
+        <li class="margin-medium">
+          <a 
+            class="btn btn-dark btn-black btn-skew"
+            onclick="scrollToSomething('running-projects-wrap');"
+            href="#running-projects-wrap"
+          >
+            <div class="unskew">Showcase your project</div>
+          </a>
+        </li>
+
+        <li class="margin-medium">
+          <a 
+            class="btn btn-dark btn-black btn-skew"
+            onclick="scrollToSomething('events-wrap');"
+            href="#events-wrap"
+          >
+            <div class="unskew">Attend our community evening</div>
+          </a>
+        </li>
+        <li class="margin-medium">
+          <a 
+            class="btn btn-dark btn-black btn-skew"
+            onclick="scrollToSomething('events-wrap');"
+            href="#events-wrap"
+          >
+            <div class="unskew">Start your own event</div>
+          </a>
+        </li>
+        <li class="margin-medium">
+          <a 
+            class="btn btn-dark btn-black btn-skew"
+            onclick="scrollToSomething('people-wrap');"
+            href="#people-wrap"
+          >
+            <div class="unskew">Network with members</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="running-projects-wrap" class="jumbotron jumbotron-fluid list">
+    <div class="container">
+      <h2 class="list-title display-4"><div class="slash">|</div>Projects</h2>
+      <div id="loading-running-projects">
         <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
         <span class="sr-only">Loading...</span>
       </div>
-      <div id="people" class="row"></div>
+      <div id="running-projects" class="row no-gutters"></div>
     </div>
     <footer class="section-footer">
-      <!-- <div class="all container">
-        <h4 class="all-cta"><div class="slash">|</div>There are people in your area interested in civic technology</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="people.html"><div class="unskew">Show all people</div></a>
-      </div> -->
+      <div class="all container">
+        <h4 class="all-cta"><div class="slash">|</div>There's a lot more civic technology for you to check out</h4>
+        <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
+      </div>
       <div class="add container">
-        <h4 class="add-cta"><div class="slash">|</div>Interested in civic tech?</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform"><div class="unskew">Add yourself</div></a>
+        <h4 class="add-cta"><div class="slash">|</div>Have a cool open source project you want to show the world?</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
       </div>
     </footer>
   </div>
@@ -64,23 +119,23 @@ extra_js:
     </footer>
   </div>
 
-  <div id="running-projects-wrap" class="jumbotron jumbotron-fluid list">
+  <div id="people-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
-      <h2 class="list-title display-4"><div class="slash">|</div>Civic technology</h2>
-      <div id="loading-running-projects">
+      <h2 class="list-title display-4"><div class="slash">|</div>People</h2>
+      <div id="loading-people">
         <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
         <span class="sr-only">Loading...</span>
       </div>
-      <div id="running-projects" class="row no-gutters"></div>
+      <div id="people" class="row"></div>
     </div>
     <footer class="section-footer">
-      <div class="all container">
-        <h4 class="all-cta"><div class="slash">|</div>There's a lot more civic technology for you to check out</h4>
-        <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
-      </div>
+      <!-- <div class="all container">
+        <h4 class="all-cta"><div class="slash">|</div>There are people in your area interested in civic technology</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="people.html"><div class="unskew">Show all people</div></a>
+      </div> -->
       <div class="add container">
-        <h4 class="add-cta"><div class="slash">|</div>Have a cool open source project you want to show the world?</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
+        <h4 class="add-cta"><div class="slash">|</div>Interested in civic tech?</h4>
+        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform"><div class="unskew">Add yourself</div></a>
       </div>
     </footer>
   </div>
