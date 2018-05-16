@@ -96,7 +96,6 @@ a {
   .hero {
     background-image: url(../img/main-image.png);
     margin-bottom: 0;
-    text-transform: uppercase;
     .display-4 {
       font-weight: bold;
     }
@@ -134,7 +133,6 @@ a {
   .list {
     margin-top: -1px;
     .list-title {
-      text-transform: uppercase;
       font-weight: bold;
     }
     .slash, .divider {
@@ -146,6 +144,7 @@ a {
     }
     .slash {
       margin-left: 5px;
+      margin-right: 15px;
     }
     .divider {
       margin: 0 10px;
@@ -275,38 +274,34 @@ a {
     }
     .add-cta, .all-cta {
       font-weight: bold;
-      text-transform: uppercase;
     }
     .slash {
       color: $orange !important;
     }
   }
-  #people {
-    .image {
-      margin-right: 15px;
+  #people-wrap {
+    #people {
+      .person {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        img {
+          width: 80px;
+          height: 80px;
+          border-radius: 500px;
+          border: 2px solid $dark;
+        }
+      }
     }
-    .name {
-      font-size: 1.25rem;
-      line-height: 1.25rem;
-    }
-    a.btn-black {
-      position: relative;
-      margin-top: 10px;
-    }
-    .single-item {
-      margin-bottom: 30px;
-      margin-left: 0;
-    }
-    .col-item {
-      padding-left: 15px;
-      padding-right: 15px;
-      margin-left: 0;
-    }
-    .buttons {
-      bottom: 30px;
-      @media (max-width: 768px) {
-        bottom: 0;
-        position: relative;
+    .btn-wrap {
+      text-align: center;
+      margin-top: 3rem;
+      .btn {
+        border-radius: 4px;
+        background-color: $dark;
+        color: $white;
+        padding: 0.5rem 3rem;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.15);
       }
     }
   }
@@ -349,11 +344,11 @@ a {
 .intro-text {
   font-size: 20px;
 }
-  
+
 .margin-medium {
   margin: 10px;
 }
-  
+
 .padding-none {
   padding: 0;
 }
@@ -363,7 +358,6 @@ article.projects, article.people {
   .jumbotron {
     background-color: $orange;
     color: $white;
-    text-transform: uppercase;
     .display-4 {
       font-weight: bold;
     }
@@ -498,7 +492,6 @@ nav {
 // buttons
 .btn {
   border-radius: 0;
-  text-transform: uppercase;
   letter-spacing: 0.025em;
   &.btn-black {
     color: #fff;

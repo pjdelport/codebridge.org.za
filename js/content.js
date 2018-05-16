@@ -2,13 +2,11 @@ var contentDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1
 
 // People
 function loadPeople() {
-
   $(document).ready(function() {
     Tabletop.init({
       key: contentDoc,
-      callback: showPeople,
       orderby: 'featured',
-      parseNumbers: false
+      callback: showPeople,
     });
   });
 
@@ -16,20 +14,38 @@ function loadPeople() {
     var source = $("#people-template").html();
     var template = Handlebars.compile(source);
 
+    console.log(data);
+
+    var allPeople = data.People.elements;
+    var cities = [];
+
+    $(allPeople).each(function() {
+      cities.push(this.Municipality);
+    })
+
+    var uniqueCities = $.uniqueSort(cities);
+
+    $(uniqueCities).each(function() {
+      safeCity = this.replace(/\s+/g, '');
+      $("#people").append("<div city='" + this + "'><h2>" + this + "</h2></div>")
+    })
+
+    console.log(uniqueCities);
+
     $.each( tabletop.sheets("People").all(), function(i, detail) {
       var html = template(detail);
       $("#people").append(html);
     });
 
-    $("#people .col-item.approved").each(function() {
-      if ( $(this).index() < 6 ) {
-        $(this).addClass("visible");
-      }
+    $("#people .person.approved").each(function() {
+      $(this).addClass("visible");
+      var personCity = $(this).attr("city");
+      console.log(personCity);
+      $(this).detach().appendTo("div[city='" + personCity + "']");
     });
 
     $("#loading-people").hide();
   };
-
 };
 
 // Events
