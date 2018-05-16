@@ -116,6 +116,9 @@ a {
     }
     .col-text {
       padding: 2rem;
+      .display-6 {
+        font-weight: bold;
+      }
       @media (min-width: 992px) {
         padding-right: 0;
         margin-left: 50px;
