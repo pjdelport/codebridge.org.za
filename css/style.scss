@@ -115,19 +115,16 @@ a {
            -o-transform: skew(-15deg);
     }
     .col-text {
-      padding: 4rem;
-      @media (max-width: 768px) {
-        padding: 3rem;
-      }
-      @media (max-width: 576px) {
-        padding: 2rem;
-      }
-      @media (min-width: 1200px) {
-        padding: 8rem 5rem;
+      padding: 2rem;
+      @media (min-width: 992px) {
         padding-right: 0;
+        margin-left: 50px;
       }
-      .display-6 {
-        font-weight: bold;
+      @media (min-width: 1800px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
       }
     }
   }
@@ -349,11 +346,11 @@ a {
 .intro-text {
   font-size: 20px;
 }
-  
+
 .margin-medium {
   margin: 10px;
 }
-  
+
 .padding-none {
   padding: 0;
 }
