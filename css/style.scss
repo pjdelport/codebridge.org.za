@@ -113,6 +113,9 @@ a {
       -webkit-transform: skew(-15deg);
          -moz-transform: skew(-15deg);
            -o-transform: skew(-15deg);
+      @media (min-width: 1800px) {
+        background-position-y: bottom -3rem;
+      }
     }
     .col-text {
       padding: 2rem;
@@ -126,8 +129,6 @@ a {
       @media (min-width: 1800px) {
         padding-top: 3rem;
         padding-bottom: 3rem;
-        flex: 0 0 33.33%;
-        max-width: 33.33%;
       }
     }
   }
