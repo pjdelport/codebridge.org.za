@@ -113,21 +113,22 @@ a {
       -webkit-transform: skew(-15deg);
          -moz-transform: skew(-15deg);
            -o-transform: skew(-15deg);
+      @media (min-width: 1800px) {
+        background-position-y: bottom -3rem;
+      }
     }
     .col-text {
-      padding: 4rem;
-      @media (max-width: 768px) {
-        padding: 3rem;
-      }
-      @media (max-width: 576px) {
-        padding: 2rem;
-      }
-      @media (min-width: 1200px) {
-        padding: 8rem 5rem;
-        padding-right: 0;
-      }
+      padding: 2rem;
       .display-6 {
         font-weight: bold;
+      }
+      @media (min-width: 992px) {
+        padding-right: 0;
+        margin-left: 50px;
+      }
+      @media (min-width: 1800px) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
       }
     }
   }
@@ -349,11 +350,11 @@ a {
 .intro-text {
   font-size: 20px;
 }
-  
+
 .margin-medium {
   margin: 10px;
 }
-  
+
 .padding-none {
   padding: 0;
 }
