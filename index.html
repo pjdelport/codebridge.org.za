@@ -39,7 +39,7 @@ extra_js:
   <div id="get-involved" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Get involved</h2>
-      <a class="btn" onclick="scrollToSomething('running-projects-wrap');" href="#running-projects-wrap">
+      <a class="btn" onclick="scrollToSomething('projects-wrap');" href="#projects-wrap">
         Showcase your project
       </a>
       <a class="btn" onclick="scrollToSomething('events-wrap');" href="#events-wrap">
@@ -54,25 +54,17 @@ extra_js:
     </div>
   </div>
 
-  <div id="running-projects-wrap" class="jumbotron jumbotron-fluid list">
+  <div id="projects-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Projects</h2>
-      <div id="loading-running-projects">
+      <div id="loading-projects">
         <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
         <span class="sr-only">Loading...</span>
       </div>
-      <div id="running-projects" class="row no-gutters"></div>
+      <div id="projects"></div>
+      <a class="btn" href="projects.html">Show all projects</a>
+      <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform">Add a project</a>
     </div>
-    <footer class="section-footer">
-      <div class="all container">
-        <h4 class="all-cta"><div class="slash">|</div>There's a lot more civic technology for you to check out</h4>
-        <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
-      </div>
-      <div class="add container">
-        <h4 class="add-cta"><div class="slash">|</div>Have a cool open source project you want to show the world?</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
-      </div>
-    </footer>
   </div>
 
   <div id="events-wrap" class="jumbotron jumbotron-fluid list">
@@ -101,31 +93,10 @@ extra_js:
       </div>
       <div id="people"></div>
       <div class="btn-wrap">
-        <a class="btn" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform">Add yourself</a>
+        <a class="btn btn-dark" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform">Add yourself</a>
       </div>
       </div>
     </div>
-  </div>
-
-  <div id="new-projects-wrap" class="jumbotron jumbotron-fluid list">
-    <div class="container">
-      <h2 class="list-title display-4"><div class="slash">|</div>Contribute to a project</h2>
-      <div id="loading-new-projects">
-        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
-        <span class="sr-only">Loading...</span>
-      </div>
-      <div id="new-projects" class="row no-gutters"></div>
-    </div>
-    <footer class="section-footer">
-      <div class="all container">
-        <h4 class="all-cta"><div class="slash">|</div>Plenty of projects are looking for contributors</h4>
-        <a class="btn btn-skew btn-sm btn-black" href="projects.html"><div class="unskew">Show all projects</div></a>
-      </div>
-      <div class="add container">
-        <h4 class="add-cta"><div class="slash">|</div>Looking for people who can join your project?</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform"><div class="unskew">Add a project</div></a>
-      </div>
-    </footer>
   </div>
 
   <div id="tutorials-wrap" class="jumbotron jumbotron-fluid list">
@@ -229,13 +200,21 @@ extra_js:
 </article>
 
 {% raw %} <!-- raw prevents jekyll from messing up handlebars -->
-<script id="people-template" type="text/x-handlebars-template">
-  <div class="person {{ Approved }}" city="{{ Municipality }}">
-    <a target="_blank" href="{{ Website-URL }}">
-      <div class="image">
-        <img src="{{ Photo-URL }}" title="{{ Name }}">
+<script id="projects-template" type="text/x-handlebars-template">
+  <div class="single-item single-project">
+    <div class="row">
+      <div class="col-md-8">
+        <h2 class="item-title">{{ Title }}</h2>
+        {{#if Creator}}<div class="item-creator">Created by <a href="{{ Creator-URL }}" target="blank">{{ Creator }}</a></div>{{/if}}
+        <div class="description">{{ Description }}</div>
+        <a class="btn btn-gray" href="{{ Project-URL }}" target="_blank">View</a>
       </div>
-    </a>
+      <div class="col-md-4 hidden-sm-down">
+        <a href="{{ Project-URL }}" target="_blank">
+          <img src="{{ Screenshot-URL }}">
+        </a>
+      </div>
+    </div>
   </div>
 </script>
 
@@ -279,78 +258,14 @@ extra_js:
   </div>
 </script>
 
-<script id="running-projects-template" type="text/x-handlebars-template">
-  {{#unless Collaboration}}
-  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
-    <div class="single-item single-project">
-      <a target="_blank" href="{{ Project-URL }}">
-        <div class="image">
-          <img src="{{ Screenshot-URL }}">
-          <svg class="bite" viewBox="0 0 100 100">
-            <polygon points="84,110 110,110 110,13"/>
-          </svg>
-        </div>
-      </a>
-      <div class="content">
-        <div class="name">
-          {{ Title }}
-        </div>
-        <div class="creator">
-          {{#if Creator}}
-          Created by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
-          {{/if}}
-          &nbsp;
-        </div>
-        <div class="description">
-          {{ Description }}
-        </div>
+<script id="people-template" type="text/x-handlebars-template">
+  <div class="person {{ Approved }}" city="{{ Municipality }}">
+    <a target="_blank" href="{{ Website-URL }}">
+      <div class="image">
+        <img src="{{ Photo-URL }}" title="{{ Name }}">
       </div>
-      <div class="buttons">
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
-        {{#if Source-URL}}
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Source</div></a>
-        {{/if}}
-      </div>
-    </div>
+    </a>
   </div>
-  {{/unless}}
-</script>
-
-<script id="new-projects-template" type="text/x-handlebars-template">
-  {{#if Collaboration}}
-  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
-    <div class="single-item single-project">
-      <a target="_blank" href="{{ Project-URL }}">
-        <div class="image">
-          <img src="{{ Screenshot-URL }}">
-          <svg class="bite" viewBox="0 0 100 100">
-            <polygon points="84,110 110,110 110,13"/>
-          </svg>
-        </div>
-      </a>
-      <div class="content">
-        <div class="name">
-          {{ Title }}
-        </div>
-        <div class="creator">
-          {{#if Creator}}
-          Created by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
-          {{/if}}
-          &nbsp;
-        </div>
-        <div class="description">
-          {{ Description }}
-        </div>
-      </div>
-      <div class="buttons">
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore</div></a>
-        {{#if Source-URL}}
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Source-URL }}"><div class="unskew">Contribute</div></a>
-        {{/if}}
-      </div>
-    </div>
-  </div>
-  {{/if}}
 </script>
 
 <script id="tutorials-template" type="text/x-handlebars-template">
