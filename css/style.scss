@@ -527,6 +527,7 @@ nav {
 .btn {
   border-radius: 0;
   letter-spacing: 0.025em;
+  white-space: normal;
   &.btn-black {
     color: #fff;
     background-color: $black;
