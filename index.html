@@ -38,7 +38,7 @@ extra_js:
 
   <div id="get-involved" class="jumbotron jumbotron-fluid list">
     <div class="container">
-      <h2 class="list-title display-4"><div class="slash">|</div>GET INVOLVED</h2>
+      <h2 class="list-title display-4"><div class="slash">|</div>Get involved</h2>
       <ul class="padding-none">
         <li class="margin-medium">
           <a
@@ -126,18 +126,12 @@ extra_js:
         <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
         <span class="sr-only">Loading...</span>
       </div>
-      <div id="people" class="row"></div>
-    </div>
-    <footer class="section-footer">
-      <!-- <div class="all container">
-        <h4 class="all-cta"><div class="slash">|</div>There are people in your area interested in civic technology</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="people.html"><div class="unskew">Show all people</div></a>
-      </div> -->
-      <div class="add container">
-        <h4 class="add-cta"><div class="slash">|</div>Interested in civic tech?</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform"><div class="unskew">Add yourself</div></a>
+      <div id="people"></div>
+      <div class="btn-wrap">
+        <a class="btn" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform">Add yourself</a>
       </div>
-    </footer>
+      </div>
+    </div>
   </div>
 
   <div id="new-projects-wrap" class="jumbotron jumbotron-fluid list">
@@ -263,33 +257,12 @@ extra_js:
 
 {% raw %} <!-- raw prevents jekyll from messing up handlebars -->
 <script id="people-template" type="text/x-handlebars-template">
-  <div class="col-12 col-sm-6 col-xl-4 col-item {{ Approved }}">
-    <div class="single-item row no-gutters">
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-        <a target="_blank" href="{{ Website-URL }}">
-          <div class="image">
-            <img src="{{ Photo-URL }}">
-            <svg class="bite" viewBox="0 0 100 100">
-              <polygon points="84,110 110,110 110,13"/>
-            </svg>
-          </div>
-        </a>
+  <div class="person {{ Approved }}" city="{{ Municipality }}">
+    <a target="_blank" href="{{ Website-URL }}">
+      <div class="image">
+        <img src="{{ Photo-URL }}" title="{{ Name }}">
       </div>
-      <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-        <div class="name">
-          {{ Name }}
-        </div>
-        <div class="province">
-          {{ Province }}
-        </div>
-        <div class="muni">
-          {{ Municipality }}
-        </div>
-        <div class="buttons">
-          <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Website-URL }}"><div class="unskew">More info</div></a>
-        </div>
-      </div>
-    </div>
+    </a>
   </div>
 </script>
 
