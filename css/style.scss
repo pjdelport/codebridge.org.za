@@ -131,6 +131,28 @@ a {
       }
     }
   }
+  #get-involved {
+    .btn {
+      border-radius: 4px;
+      background-color: $dark;
+      color: $white;
+      padding: 1rem 2rem;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.15);
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      width: calc(50% - 1.25rem);
+      &:nth-of-type(odd) {
+        margin-right: 0.75rem;
+      }
+      &:hover {
+        background-color: $black;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
   .list {
     margin-top: -1px;
     .list-title {
