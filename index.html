@@ -258,11 +258,9 @@ extra_js:
 {% raw %} <!-- raw prevents jekyll from messing up handlebars -->
 <script id="people-template" type="text/x-handlebars-template">
   <div class="person {{ Approved }}" city="{{ Municipality }}">
-    {{ test }}
-    {{ full_name }}
     <a target="_blank" href="{{ Website-URL }}">
       <div class="image">
-        <img src="{{ Photo-URL }}">
+        <img src="{{ Photo-URL }}" title="{{ Name }}">
       </div>
     </a>
   </div>

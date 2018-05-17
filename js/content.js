@@ -5,7 +5,7 @@ function loadPeople() {
   $(document).ready(function() {
     Tabletop.init({
       key: contentDoc,
-      orderby: 'featured',
+      orderby: 'municipality',
       callback: showPeople,
     });
   });
@@ -27,7 +27,7 @@ function loadPeople() {
 
     $(uniqueCities).each(function() {
       safeCity = this.replace(/\s+/g, '');
-      $("#people").append("<div city='" + this + "'><h2>" + this + "</h2></div>")
+      $("#people").append("<div class='city-list' city-list='" + this + "'><h2>" + this + "</h2></div>")
     })
 
     console.log(uniqueCities);
@@ -40,8 +40,7 @@ function loadPeople() {
     $("#people .person.approved").each(function() {
       $(this).addClass("visible");
       var personCity = $(this).attr("city");
-      console.log(personCity);
-      $(this).detach().appendTo("div[city='" + personCity + "']");
+      $(this).detach().appendTo("div[city-list='" + personCity + "']");
     });
 
     $("#loading-people").hide();

@@ -290,7 +290,18 @@ a {
           height: 80px;
           border-radius: 500px;
           border: 2px solid $dark;
+          @media (max-width: 576px) {
+            width: 60px;
+            height: 60px;
+          }
         }
+      }
+    }
+    .city-list {
+      h2 {
+        font-weight: bold;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
       }
     }
     .btn-wrap {
