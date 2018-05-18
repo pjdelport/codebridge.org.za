@@ -109,6 +109,8 @@ function loadProjects() {
     var source = $("#projects-template").html();
     var template = Handlebars.compile(source);
 
+    $("#project-count").text(data.Projects.elements.length);
+
     $.each( tabletop.sheets("Projects").all(), function(i, detail) {
       var html = template(detail);
       $("#projects").append(html);

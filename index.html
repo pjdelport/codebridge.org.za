@@ -62,8 +62,10 @@ extra_js:
         <span class="sr-only">Loading...</span>
       </div>
       <div id="projects"></div>
-      <a class="btn" href="projects.html">Show all projects</a>
-      <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform">Add a project</a>
+      <div class="text-align-center list-actions">
+        <a class="btn btn-light" href="projects.html">Show all projects (<span id="project-count"></span>)</a>
+        <a class="btn btn-dark" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSd18hzEGz-I8b7HmMIJuQfYBL0MaTa3PGxvnesLNUMk1gt-3A/viewform">Add a project</a>
+      </div>
     </div>
   </div>
 
@@ -203,13 +205,14 @@ extra_js:
 <script id="projects-template" type="text/x-handlebars-template">
   <div class="single-item single-project">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-6 col-lg-8">
         <h2 class="item-title">{{ Title }}</h2>
         {{#if Creator}}<div class="item-creator">Created by <a href="{{ Creator-URL }}" target="blank">{{ Creator }}</a></div>{{/if}}
-        <div class="description">{{ Description }}</div>
+        <div class="item-description">{{ Description }}</div>
         <a class="btn btn-gray" href="{{ Project-URL }}" target="_blank">View</a>
+        {{#if Source-URL}}<a class="btn btn-gray" href="{{ Source-URL }}" target="_blank">Source</a>{{/if}}
       </div>
-      <div class="col-md-4 hidden-sm-down">
+      <div class="col-md-6 col-lg-4 d-none d-md-block">
         <a href="{{ Project-URL }}" target="_blank">
           <img src="{{ Screenshot-URL }}">
         </a>
@@ -219,40 +222,20 @@ extra_js:
 </script>
 
 <script id="events-template" type="text/x-handlebars-template">
-  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
-    <div class="single-item">
-      <a target="_blank" href="{{ Event-URL }}">
-        <div class="image">
-          <img src="{{ Image-URL }}">
-          <svg class="bite" viewBox="0 0 100 100">
-            <polygon points="84,110 110,110 110,13"/>
-          </svg>
-        </div>
-      </a>
-      <div class="content">
-        <div class="name">
-          {{ Title }}
-        </div>
-        <div class="location">
-          {{ Venue }}, {{ City }}
-        </div>
-        <time class="date" datetime="{{ Date }}">
-          {{ Date }}
-        </time>
-        <div class="divider">|</div>
-        <time class="time start" datetime="{{ Start-time }}">
-          {{ Start-time }}
-        </time>
-        -
-        <time class="time end" datetime="{{ End-time }}">
-          {{ End-time }}
-        </time>
-        <div class="description">
-          {{ Description }}
-        </div>
+  <div class="single-item single-event">
+    <div class="row">
+      <div class="col-md-6 col-lg-8">
+        <h2 class="item-title">{{ Title }}</h2>
+        <div class="item-description">{{ Description }}</div>
+        <time class="item0date" datetime="{{ Date }}">{{ Date }}</time>
+        <div class="item-location">{{ Venue }}, {{ City }}</div>
+        <div class="item-address">{{ Address }}</div>
+        <a class="btn btn-gray" href="{{ Event-URL }}" target="_blank">Attend</a>
       </div>
-      <div class="buttons">
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Event-URL }}"><div class="unskew">Attend</div></a>
+      <div class="col-md-6 col-lg-4 d-none d-md-block">
+        <a href="{{ Event-URL }}" target="_blank">
+          <img src="{{ Image-URL }}">
+        </a>
       </div>
     </div>
   </div>
