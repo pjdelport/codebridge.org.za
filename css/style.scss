@@ -213,6 +213,12 @@ a {
       .item-description {
         margin-bottom: 1.5rem;
       }
+      .item-date, .item-location {
+        margin-bottom: 0.25rem;
+      }
+      .item-address {
+        margin-bottom: 1rem;
+      }
       .btn {
         margin-right: 1rem;
         @media (max-width: 576px) {

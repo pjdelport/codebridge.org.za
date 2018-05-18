@@ -68,9 +68,9 @@ function loadEvents() {
       var time = $(this).text();
       cleanTime = time.trim().slice(0, -3);
       $(this).text(cleanTime);
+    });
 
     $("#loading-events").hide();
-    });
 
     $("#events .col-item").each(function() {
       var eventDate = $(this).find("time.date").text(),
@@ -82,14 +82,6 @@ function loadEvents() {
         $(this).remove();
       };
     });
-
-
-    $("#events .col-item.approved").each(function() {
-      if ( $(this).index() < 6 ) {
-        $(this).addClass("visible");
-      }
-    });
-
   };
 };
 
