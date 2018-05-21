@@ -92,9 +92,8 @@ extra_js:
         <span class="sr-only">Loading...</span>
       </div>
       <div id="people"></div>
-      <div class="btn-wrap">
+      <div class="text-align-center list-actions">
         <a class="btn btn-dark" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform">Add yourself</a>
-      </div>
       </div>
     </div>
   </div>
@@ -108,17 +107,35 @@ extra_js:
       </div>
       <div id="tutorials" class="row no-gutters"></div>
     </div>
-    <footer class="section-footer">
-      <div class="add container">
-        <h4 class="add-cta"><div class="slash">|</div>Do you have an interesting tutorial you want to share?</h4>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScgeXwLKMfZDLT9hSwI1NrOwt-_Ef--OQIAXsLc7qP2RzzR3g/viewform"><div class="unskew">Add a tutorial</div></a>
-      </div>
-    </footer>
+    <div class="text-align-center list-actions">
+      <a class="btn btn-dark" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScgeXwLKMfZDLT9hSwI1NrOwt-_Ef--OQIAXsLc7qP2RzzR3g/viewform">Add a tutorial</a>
+    </div>
   </div>
 
   <div id="labs-wrap" class="jumbotron jumbotron-fluid list">
     <div class="container">
       <h2 class="list-title display-4"><div class="slash">|</div>Codebridge Labs</h2>
+
+      <div class="single-item single-lab">
+        <div class="row">
+          <div class="col-md-6 col-lg-8">
+            <h2 class="item-title">Cape Town</h2>
+            <div class="item-street">1 Thicket Street</div>
+            <div class="item-suburb">Newlands 7725</div>
+            <div class="item-email"><a href="mailto:community@openup.org.za">community@openup.org.za</a></div>
+            <div class="item-phone"><a href="tel:+27216716306">021 671 6306</a></div>
+          </div>
+          <div class="col-md-6 col-lg-4 d-none d-md-block">
+            <a href="mailto:community@openup.org.za" target="_blank">
+              <img src="img/cape-town.jpg">
+            </a>
+          </div>
+        </div>
+        <div class="item-actions">
+          <a class="btn btn-gray" href="mailto:community@openup.org.za" target="_blank">Get in touch</a>
+        </div>
+      </div>
+
       <div id="labs" class="row no-gutters">
         <div class="col-sm-6 col-lg-4 col-item visible">
           <div class="single-item single-lab">
@@ -207,14 +224,16 @@ extra_js:
         <h2 class="item-title">{{ Title }}</h2>
         {{#if Creator}}<div class="item-creator">Created by <a href="{{ Creator-URL }}" target="blank">{{ Creator }}</a></div>{{/if}}
         <div class="item-description">{{ Description }}</div>
-        <a class="btn btn-gray" href="{{ Project-URL }}" target="_blank">View</a>
-        {{#if Source-URL}}<a class="btn btn-gray" href="{{ Source-URL }}" target="_blank">Source</a>{{/if}}
       </div>
       <div class="col-md-6 col-lg-4 d-none d-md-block">
         <a href="{{ Project-URL }}" target="_blank">
           <img src="{{ Screenshot-URL }}">
         </a>
       </div>
+    </div>
+    <div class="item-actions">
+      {{#if Source-URL}}<a class="btn btn-gray" href="{{ Source-URL }}" target="_blank">Source</a>{{/if}}
+      <a class="btn btn-gray" href="{{ Project-URL }}" target="_blank">View</a>
     </div>
   </div>
 </script>
@@ -225,16 +244,18 @@ extra_js:
       <div class="col-md-6 col-lg-8">
         <h2 class="item-title">{{ Title }}</h2>
         <div class="item-description">{{ Description }}</div>
-        <div class="item-date"><i class="fa fa-fw fa-calendar-o" aria-hidden="true"></i> <time datetime="{{ Date }}">{{ Date }}</time></div>
+        <div class="item-date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ Date }}">{{ Date }}</time></div>
         <div class="item-location"><i class="fa fa-fw fa-building-o" aria-hidden="true"></i> {{ Venue }}, {{ City }}</div>
         <div class="item-address"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ Address }}</div>
-        <a class="btn btn-gray" href="{{ Event-URL }}" target="_blank">Attend</a>
       </div>
       <div class="col-md-6 col-lg-4 d-none d-md-block">
         <a href="{{ Event-URL }}" target="_blank">
           <img src="{{ Image-URL }}">
         </a>
       </div>
+    </div>
+    <div class="item-actions">
+      <a class="btn btn-gray" href="{{ Event-URL }}" target="_blank">Attend</a>
     </div>
   </div>
 </script>
@@ -250,37 +271,22 @@ extra_js:
 </script>
 
 <script id="tutorials-template" type="text/x-handlebars-template">
-  <div class="col-sm-6 col-lg-4 col-item {{ Approved }}">
-    <div class="single-item single-tutorial">
-      <a target="_blank" href="https://www.youtube.com/watch?v={{ Youtube-URL }}">
-        <div class="image">
-          <i class="fa fa-fw fa-play" aria-hidden="true"></i>
-          <div class="tutorial-image-wrap">
-            <img src="https://i1.ytimg.com/vi/{{ Youtube-URL }}/hqdefault.jpg">
-          </div>
-          <svg class="bite" viewBox="0 0 100 100">
-            <polygon points="84,110 110,110 110,13"/>
-          </svg>
-        </div>
-      </a>
-      <div class="content">
-        <div class="name">
-          {{ Title }}
-        </div>
-        <div class="creator">
-          {{#if Creator}}
-          Created by <a target="_blank" href="{{ Creator-URL }}">{{ Creator }}</a>
-          {{/if}}
-          &nbsp;
-        </div>
-        <div class="description">
-          {{ Description }}
-        </div>
+  <div class="single-item single-project">
+    <div class="row">
+      <div class="col-md-6 col-lg-8">
+        <h2 class="item-title">{{ Title }}</h2>
+        {{#if Creator}}<div class="item-creator">Created by <a href="{{ Creator-URL }}" target="blank">{{ Creator }}</a></div>{{/if}}
+        <div class="item-description">{{ Description }}</div>
       </div>
-      <div class="buttons">
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="https://www.youtube.com/watch?v={{ Youtube-URL }}"><div class="unskew">Watch</div></a>
-        <a class="btn btn-skew btn-sm btn-black" target="_blank" href="{{ Project-URL }}"><div class="unskew">Explore project</div></a>
+      <div class="col-md-6 col-lg-4 d-none d-md-block">
+        <a href="https://www.youtube.com/watch?v={{ Youtube-URL }}" target="_blank">
+          <div class="tutorial-image" style="background-image:url(https://i1.ytimg.com/vi/{{ Youtube-URL }}/hqdefault.jpg)"></div>
+        </a>
       </div>
+    </div>
+    <div class="item-actions">
+      <a class="btn btn-gray" href="https://www.youtube.com/watch?v={{ Youtube-URL }}" target="_blank">Watch</a>
+      <a class="btn btn-gray" href="{{ Project-URL }}" target="_blank">Explore project</a>
     </div>
   </div>
 </script>

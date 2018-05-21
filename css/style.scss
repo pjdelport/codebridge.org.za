@@ -200,6 +200,7 @@ a {
       margin-bottom: 2.5rem;
       background-color: $white;
       font-family: $default-font;
+      width: 100%;
       &:nth-of-type(-n+3) {
         display: block;
       }
@@ -235,6 +236,13 @@ a {
         width: 100%;
         border-radius: 4px;
         border: 1px solid $light;
+      }
+      .tutorial-image {
+        width: 100%;
+        border-radius: 4px;
+        padding-bottom: 50%;
+        background-position: center;
+        background-size: cover;
       }
     }
     .list-actions {
@@ -280,40 +288,6 @@ a {
     .btn-wrap {
       text-align: center;
       margin-top: 3rem;
-    }
-  }
-
-  #tutorials {
-    .single-tutorial {
-      .image {
-        width: 100%;
-        padding-top: 50%;
-        position: relative;
-        i {
-          position: absolute;
-          left: 0;
-          right: 0;
-          margin-left: auto;
-          margin-right: auto;
-          width: 50%;
-          top: 30%;
-          color: $black;
-          font-size: 4rem;
-          z-index: 1000;
-        }
-        .tutorial-image-wrap {
-          overflow: hidden;
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          img {
-            position: absolute;
-            top: -25%;
-          }
-        }
-      }
     }
   }
 }
