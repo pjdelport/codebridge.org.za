@@ -352,6 +352,11 @@ article.projects, article.people {
     .list-actions {
       display: none;
     }
+    .single-person {
+      .item-title, .location {
+        margin-bottom: 3px;
+      }
+    }
   }
   mark.highlight {
     padding: 0;
