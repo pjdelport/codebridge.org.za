@@ -22,6 +22,8 @@ function loadPeople() {
       cities.push(this.Municipality);
     })
 
+    $("#people-count").text(data.People.elements.length);
+
     var uniqueCities = $.uniqueSort(cities);
 
     $(uniqueCities).each(function() {
