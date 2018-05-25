@@ -1,0 +1,62 @@
+---
+title: Home
+layout: base
+extra_js:
+- tabletop.min.js
+- handlebars-v4.0.11.js
+- hideseek.min.js
+- people.js
+---
+<article class="people">
+
+  <section class="jumbotron jumbotron-fluid hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-6">
+          <h3 class="display-4"><div class="slash">|</div>People</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="people-content">
+    <div class="container">
+      <div class="loading">
+        <i class="fa fa-fw fa-cog fa-spin fa-3x"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="search-box-wrap">
+        <input class="search-box" id="search-people" name="search-people" placeholder="Search for people" type="text" data-list=".people-list" autocomplete="off">
+      </div>
+      <div id="people" class="people-list list">
+      </div>
+      <div class="text-align-center list-actions">
+        <a class="btn btn-dark" target="_blank" href="https://docs.google.com/a/openup.org.za/forms/d/e/1FAIpQLSfapZSnLjICjY6PM0FrTTnHQKM4H5C1Ex-qyHvn0KHyk32Ong/viewform">Add yourself</a>
+      </div>
+    </div>
+  </section>
+
+</article>
+
+
+{% raw %} <!-- raw prevents jekyll from messing up handlebars -->
+<script id="people-template" type="text/x-handlebars-template">
+  <div class="single-item single-person">
+    <div class="row">
+      <div class="col-md-9">
+        <h2 class="item-title">{{ Name }}</h2>
+        <div class="item-description">{{ Description }}</div>
+      </div>
+      <div class="col-md-3 d-none d-md-block">
+        <a href="{{ Website-URL }}" target="_blank">
+          <img src="{{ Photo-URL }}">
+        </a>
+      </div>
+    </div>
+    <div class="item-actions">
+      <a class="btn btn-gray" href="{{ Website-URL }}" target="_blank">More info</a>
+      <a class="btn btn-dark" href="mailto:{{ Email }}" target="_blank">Contact</a>
+    </div>
+  </div>
+</script>
+{% endraw %}

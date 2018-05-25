@@ -328,7 +328,7 @@ article.projects, article.people {
            -o-transform: skew(-15deg);
     }
   }
-  .project-content {
+  .project-content, .people-content {
     background-color: $light;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -356,6 +356,20 @@ article.projects, article.people {
     padding: 0;
     background-color: $orange;
     color: $white;
+  }
+  @media (min-width: 768px) {
+    .people-list {
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+    }
+    .single-person {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .list-actions {
+      margin-top: 1.5rem;
+    }
   }
 }
 
