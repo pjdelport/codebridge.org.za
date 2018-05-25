@@ -27,6 +27,7 @@ function loadProjects() {
 
     $(".project-content .loading").hide();
     $(".search-box").show();
+    $(".list-actions").show();
 
   };
 };

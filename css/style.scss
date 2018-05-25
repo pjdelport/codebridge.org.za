@@ -161,7 +161,6 @@ a {
     }
   }
   .list {
-    margin-bottom: 0;
     .list-title {
       font-weight: bold;
       margin-bottom: 1.5rem;
@@ -194,69 +193,8 @@ a {
     }
     .single-item {
       display: none;
-      border-radius: 4px;
-      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.15);
-      padding: 2rem;
-      margin-bottom: 2.5rem;
-      background-color: $white;
-      font-family: $default-font;
-      width: 100%;
       &:nth-of-type(-n+3) {
         display: block;
-      }
-      .item-title {
-        font-weight: bold;
-        font-family: "Kollektif", sans-serif;
-      }
-      .item-creator {
-        margin-bottom: 0.5rem;
-      }
-      .item-description {
-        margin-bottom: 1.5rem;
-      }
-      .item-date, .item-location {
-        margin-bottom: 0.25rem;
-      }
-      .item-address {
-        margin-bottom: 1rem;
-      }
-      .btn {
-        margin-right: 1rem;
-        @media (max-width: 576px) {
-          width: 100%;
-        }
-        @media (max-width: 576px) {
-        margin-bottom: 1rem;
-        &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
-      }
-      img {
-        width: 100%;
-        border-radius: 4px;
-        border: 1px solid $light;
-      }
-      .tutorial-image {
-        width: 100%;
-        border-radius: 4px;
-        padding-bottom: 50%;
-        background-position: center;
-        background-size: cover;
-      }
-    }
-    .list-actions {
-      .btn {
-        margin-right: 1rem;
-        @media (max-width: 576px) {
-          width: 100%;
-        }
-        @media (max-width: 576px) {
-        margin-bottom: 1rem;
-        &:last-of-type {
-            margin-bottom: 0;
-          }
-        }
       }
     }
   }
@@ -292,6 +230,73 @@ a {
   }
 }
 
+.list {
+  margin-bottom: 0;
+  .single-item {
+    border-radius: 4px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    background-color: $white;
+    font-family: $default-font;
+    width: 100%;
+    .item-title {
+      font-weight: bold;
+      font-family: "Kollektif", sans-serif;
+    }
+    .item-creator {
+      margin-bottom: 0.5rem;
+    }
+    .item-description {
+      margin-bottom: 1.5rem;
+    }
+    .item-date, .item-location {
+      margin-bottom: 0.25rem;
+    }
+    .item-address {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      margin-right: 1rem;
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+      @media (max-width: 576px) {
+      margin-bottom: 1rem;
+      &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid $light;
+    }
+    .tutorial-image {
+      width: 100%;
+      border-radius: 4px;
+      padding-bottom: 50%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  .list-actions {
+    .btn {
+      margin-right: 1rem;
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+      @media (max-width: 576px) {
+      margin-bottom: 1rem;
+      &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
 .intro-text {
   font-size: 20px;
 }
@@ -309,6 +314,7 @@ article.projects, article.people {
   .jumbotron {
     background-color: $orange;
     color: $white;
+    margin-bottom: 0;
     .display-4 {
       font-weight: bold;
     }
@@ -323,7 +329,9 @@ article.projects, article.people {
     }
   }
   .project-content {
-    margin-bottom: 2rem;
+    background-color: $light;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     .loading {
       text-align: center;
     }
@@ -334,75 +342,14 @@ article.projects, article.people {
         width: 100%;
         padding: 0.5rem;
         font-size: 1.25rem;
-        border: 3px solid $orange;
+        border: none;
         display: none;
-      }
-      .bite {
-        position: absolute;
-        right: -6px;
-        height: calc(100% - 2rem);
-        polygon {
-          fill: $white;
-          stroke: $orange;
-          stroke-width: 3px;
-          vector-effect: non-scaling-stroke;
-          shape-rendering: geometricPrecision;
-        }
+        border-radius: 4px;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.15);
       }
     }
-  }
-  .row.no-gutters {
-    margin-left: 3px;
-  }
-  .col-item {
-    .single-item {
-      margin-left: -3px;
-      margin-bottom: 60px;
-      padding-bottom: 40px;
-      position: relative;
-      height: 90%;
-      .image, .video-wrapper {
-        border: 3px solid $orange;
-        background-color: #fff;
-        position: relative;
-        img {
-          width: 100%;
-        }
-      }
-      .bite {
-        position: absolute;
-        bottom: -3px;
-        right: -3px;
-        height: calc(70% + 6px);
-        polygon {
-          stroke: $orange;
-          fill: $white;
-          stroke-width: 3px;
-          vector-effect: non-scaling-stroke;
-          shape-rendering: geometricPrecision;
-        }
-      }
-      .name {
-        font-size: 2rem;
-        line-height: 2rem;
-        margin-top: 10px;
-        margin-bottom: 10px
-      }
-      .location {
-        font-size: 1.2rem;
-      }
-      .description {
-        margin-top: 10px;
-      }
-      .buttons {
-        position: absolute;
-        bottom: 0;
-      }
-    }
-    @media (min-width: 576px) {
-      .content {
-        padding-right: 20px;
-      }
+    .list-actions {
+      display: none;
     }
   }
   mark.highlight {
