@@ -5,6 +5,7 @@ function loadPeople() {
   $(document).ready(function() {
     Tabletop.init({
       key: contentDoc,
+      wanted: ["People"],
       orderby: 'municipality',
       callback: showPeople,
     });
@@ -14,8 +15,6 @@ function loadPeople() {
     var source = $("#people-template").html();
     var template = Handlebars.compile(source);
 
-    console.log(data);
-
     var allPeople = data.People.elements;
     var cities = [];
 
@@ -23,14 +22,13 @@ function loadPeople() {
       cities.push(this.Municipality);
     })
 
+    $("#people-count").text(data.People.elements.length);
+
     var uniqueCities = $.uniqueSort(cities);
 
     $(uniqueCities).each(function() {
-      safeCity = this.replace(/\s+/g, '');
       $("#people").append("<div class='city-list' city-list='" + this + "'><h2>" + this + "</h2></div>")
     })
-
-    console.log(uniqueCities);
 
     $.each( tabletop.sheets("People").all(), function(i, detail) {
       var html = template(detail);
@@ -52,6 +50,7 @@ function loadEvents() {
   $(document).ready(function() {
     Tabletop.init({
       key: contentDoc,
+      wanted: ["Events"],
       callback: showEvents,
       orderby: 'featured',
       parseNumbers: false
@@ -71,9 +70,9 @@ function loadEvents() {
       var time = $(this).text();
       cleanTime = time.trim().slice(0, -3);
       $(this).text(cleanTime);
+    });
 
     $("#loading-events").hide();
-    });
 
     $("#events .col-item").each(function() {
       var eventDate = $(this).find("time.date").text(),
@@ -85,16 +84,7 @@ function loadEvents() {
         $(this).remove();
       };
     });
-
-
-    $("#events .col-item.approved").each(function() {
-      if ( $(this).index() < 6 ) {
-        $(this).addClass("visible");
-      }
-    });
-
   };
-
 };
 
 // Projects
@@ -102,56 +92,25 @@ function loadProjects() {
   $(document).ready(function() {
     Tabletop.init({
       key: contentDoc,
-      callback: showNewProjects,
+      wanted: ["Projects"],
+      callback: showProjects,
       orderby: 'featured',
       parseNumbers: false
     });
   });
 
-  function showNewProjects(data, tabletop) {
-    var source = $("#new-projects-template").html();
+  function showProjects(data, tabletop) {
+    var source = $("#projects-template").html();
     var template = Handlebars.compile(source);
+
+    $("#project-count").text(data.Projects.elements.length);
 
     $.each( tabletop.sheets("Projects").all(), function(i, detail) {
       var html = template(detail);
-      $("#new-projects").append(html);
+      $("#projects").append(html);
     });
 
-    $("#loading-new-projects").hide();
-
-    $("#new-projects .col-item.approved").each(function() {
-      if ( $(this).index() < 6 ) {
-        $(this).addClass("visible");
-      }
-
-    });
-  };
-
-  $(document).ready(function() {
-    Tabletop.init({
-      key: contentDoc,
-      callback: showRunningProjects,
-      orderby: 'featured',
-      parseNumbers: false
-    });
-  });
-
-  function showRunningProjects(data, tabletop) {
-    var source = $("#running-projects-template").html();
-    var template = Handlebars.compile(source);
-
-    $.each( tabletop.sheets("Projects").all(), function(i, detail) {
-      var html = template(detail);
-      $("#running-projects").append(html);
-    });
-
-    $("#loading-running-projects").hide();
-
-    $("#running-projects .col-item.approved").each(function() {
-      if ( $(this).index() < 6 ) {
-        $(this).addClass("visible");
-      }
-    });
+    $("#loading-projects").hide();
   };
 };
 
@@ -160,6 +119,7 @@ function loadTutorials() {
   $(document).ready(function() {
     Tabletop.init({
       key: contentDoc,
+      wanted: ["Tutorials"],
       callback: showTutorials,
       orderby: 'featured',
       parseNumbers: false

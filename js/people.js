@@ -1,36 +1,36 @@
 var contentDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1pKqTjHASAlj92vz6Qz5zs/pubhtml';
 
-function loadProjects() {
+function loadPeople() {
   $(document).ready(function() {
     Tabletop.init({
       key: contentDoc,
-      wanted: ["Projects"],
-      callback: showProjects,
+      wanted: ["People"],
+      callback: showPeople,
       orderby: 'title',
       parseNumbers: false
     });
   });
 
-  function showProjects(data, tabletop) {
-    var source = $("#projects-template").html();
+  function showPeople(data, tabletop) {
+    var source = $("#people-template").html();
     var template = Handlebars.compile(source);
 
-    $.each( tabletop.sheets("Projects").all(), function(i, detail) {
+    $.each( tabletop.sheets("People").all(), function(i, detail) {
       var html = template(detail);
-      $("#projects").append(html);
+      $("#people").append(html);
     });
 
-    $("#search-projects").hideseek({
+    $("#search-people").hideseek({
       highlight: true,
       ignore_accents: true,
-      nodata: 'No projects found'
+      nodata: 'No people found'
     });
 
-    $(".project-content .loading").hide();
+    $(".people-content .loading").hide();
     $(".search-box").show();
     $(".list-actions").show();
 
   };
 };
 
-loadProjects();
+loadPeople();

@@ -2,9 +2,11 @@
 ---
 $white: #ffffff;
 $light: #f8f9fa;
+$gray: #e0e1e2;
 $dark: #363636;
 $black: #0a0a0a;
 $orange: #fdaf17;
+$default-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
 @font-face {
     font-family: "DejaVu Sans";
@@ -91,6 +93,10 @@ a {
   }
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 // index.html
 .home {
   .hero {
@@ -132,6 +138,7 @@ a {
     }
   }
   #get-involved {
+    margin-bottom: 0;
     .btn {
       border-radius: 4px;
       background-color: $dark;
@@ -154,152 +161,41 @@ a {
     }
   }
   .list {
-    margin-top: -1px;
     .list-title {
       font-weight: bold;
+      margin-bottom: 1.5rem;
     }
-    .slash, .divider {
+    .slash {
       display: inline-block;
-      margin-right: 10px;
+      margin-left: 5px;
+      margin-right: 15px;
       -webkit-transform: skew(-15deg);
          -moz-transform: skew(-15deg);
            -o-transform: skew(-15deg);
     }
-    .slash {
-      margin-left: 5px;
-      margin-right: 15px;
-    }
-    .divider {
-      margin: 0 10px;
-    }
-    .row.no-gutters {
-      margin-left: 3px;
-    }
-    .single-item {
-      margin-left: -3px;
-      .image {
-        transition: opacity .15s ease-in-out;
-        &:hover {
-          opacity: 0.85;
-        }
-      }
-    }
     &:nth-of-type(odd) {
       background-color: $orange;
-      color: #fff;
-      a {
-        color: $black;
-        &:hover {
-          color: $black;
-        }
-      }
-      a.btn-black {
-        color: $white;
-        &:hover {
-          color: $white;
-        }
+      .list-title {
+        color: #fff;
       }
       .slash, .divider {
         color: black;
       }
-      .single-item {
-        .image {
-          border: 3px solid $black;
-        }
-        .bite {
-          polygon {
-            fill: $orange;
-            stroke: $black;
-          }
-        }
-      }
     }
     &:nth-of-type(even) {
-      background-color: #fff;
-      color: black;
+      background-color: $light;
+      .list-title {
+        color: $black;
+      }
       .slash, .divider {
         color: $orange;
       }
-      .single-item {
-        .image {
-          border: 3px solid $orange;
-        }
-        .bite {
-          polygon {
-            fill: $white;
-            stroke: $orange;
-          }
-        }
-      }
     }
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-    .col-item {
+    .single-item {
       display: none;
-      @media (min-width: 576px) {
-        .content {
-          padding-right: 20px;
-        }
-      }
-      &.visible {
+      &:nth-of-type(-n+3) {
         display: block;
       }
-      .single-item {
-        margin-bottom: 60px;
-        padding-bottom: 40px;
-        position: relative;
-        height: 90%;
-        .image, .video-wrapper {
-          background-color: #fff;
-          position: relative;
-          img {
-            width: 100%;
-          }
-        }
-        .bite {
-          position: absolute;
-          bottom: -3px;
-          right: -3px;
-          height: calc(70% + 6px);
-          polygon {
-            stroke-width: 3px;
-            vector-effect: non-scaling-stroke;
-            shape-rendering: geometricPrecision;
-          }
-        }
-        .name {
-          font-size: 2rem;
-          line-height: 2rem;
-          margin-top: 10px;
-          margin-bottom: 10px
-        }
-        .location {
-          font-size: 1.2rem;
-        }
-        .description {
-          margin-top: 10px;
-        }
-        .buttons {
-          position: absolute;
-          bottom: 0;
-        }
-      }
-    }
-  }
-  .section-footer {
-    margin-top: 4rem;
-    margin-bottom: -6rem;
-    padding: 4rem 0;
-    color: $black;
-    .all {
-      margin-bottom: 4rem;
-    }
-    .add-cta, .all-cta {
-      font-weight: bold;
-    }
-    .slash {
-      color: $orange !important;
     }
   }
   #people-wrap {
@@ -321,6 +217,7 @@ a {
       }
     }
     .city-list {
+      margin-bottom: 2rem;
       h2 {
         font-weight: bold;
         margin-top: 2rem;
@@ -330,45 +227,71 @@ a {
     .btn-wrap {
       text-align: center;
       margin-top: 3rem;
-      .btn {
-        border-radius: 4px;
-        background-color: $dark;
-        color: $white;
-        padding: 0.5rem 3rem;
-        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.15);
-      }
     }
   }
+}
 
-  #tutorials {
-    .single-tutorial {
-      .image {
+.list {
+  margin-bottom: 0;
+  .single-item {
+    border-radius: 4px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    background-color: $white;
+    font-family: $default-font;
+    width: 100%;
+    .item-title {
+      font-weight: bold;
+      font-family: "Kollektif", sans-serif;
+    }
+    .item-creator {
+      margin-bottom: 0.5rem;
+    }
+    .item-description {
+      margin-bottom: 1.5rem;
+    }
+    .item-date, .item-location {
+      margin-bottom: 0.25rem;
+    }
+    .item-address {
+      margin-bottom: 1rem;
+    }
+    .btn {
+      margin-right: 1rem;
+      @media (max-width: 576px) {
         width: 100%;
-        padding-top: 50%;
-        position: relative;
-        i {
-          position: absolute;
-          left: 0;
-          right: 0;
-          margin-left: auto;
-          margin-right: auto;
-          width: 50%;
-          top: 30%;
-          color: $black;
-          font-size: 4rem;
-          z-index: 1000;
+      }
+      @media (max-width: 576px) {
+      margin-bottom: 1rem;
+      &:last-of-type {
+          margin-bottom: 0;
         }
-        .tutorial-image-wrap {
-          overflow: hidden;
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          img {
-            position: absolute;
-            top: -25%;
-          }
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 4px;
+      border: 1px solid $light;
+    }
+    .tutorial-image {
+      width: 100%;
+      border-radius: 4px;
+      padding-bottom: 50%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  .list-actions {
+    .btn {
+      margin-right: 1rem;
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+      @media (max-width: 576px) {
+      margin-bottom: 1rem;
+      &:last-of-type {
+          margin-bottom: 0;
         }
       }
     }
@@ -392,6 +315,7 @@ article.projects, article.people {
   .jumbotron {
     background-color: $orange;
     color: $white;
+    margin-bottom: 0;
     .display-4 {
       font-weight: bold;
     }
@@ -405,8 +329,10 @@ article.projects, article.people {
            -o-transform: skew(-15deg);
     }
   }
-  .project-content {
-    margin-bottom: 2rem;
+  .project-content, .people-content {
+    background-color: $light;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     .loading {
       text-align: center;
     }
@@ -417,74 +343,18 @@ article.projects, article.people {
         width: 100%;
         padding: 0.5rem;
         font-size: 1.25rem;
-        border: 3px solid $orange;
+        border: none;
         display: none;
-      }
-      .bite {
-        position: absolute;
-        right: -6px;
-        height: calc(100% - 2rem);
-        polygon {
-          fill: $white;
-          stroke: $orange;
-          stroke-width: 3px;
-          vector-effect: non-scaling-stroke;
-          shape-rendering: geometricPrecision;
-        }
+        border-radius: 4px;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.15);
       }
     }
-  }
-  .row.no-gutters {
-    margin-left: 3px;
-  }
-  .col-item {
-    .single-item {
-      margin-left: -3px;
-      margin-bottom: 60px;
-      padding-bottom: 40px;
-      position: relative;
-      height: 90%;
-      .image, .video-wrapper {
-        border: 3px solid $orange;
-        background-color: #fff;
-        position: relative;
-        img {
-          width: 100%;
-        }
-      }
-      .bite {
-        position: absolute;
-        bottom: -3px;
-        right: -3px;
-        height: calc(70% + 6px);
-        polygon {
-          stroke: $orange;
-          fill: $white;
-          stroke-width: 3px;
-          vector-effect: non-scaling-stroke;
-          shape-rendering: geometricPrecision;
-        }
-      }
-      .name {
-        font-size: 2rem;
-        line-height: 2rem;
-        margin-top: 10px;
-        margin-bottom: 10px
-      }
-      .location {
-        font-size: 1.2rem;
-      }
-      .description {
-        margin-top: 10px;
-      }
-      .buttons {
-        position: absolute;
-        bottom: 0;
-      }
+    .list-actions {
+      display: none;
     }
-    @media (min-width: 576px) {
-      .content {
-        padding-right: 20px;
+    .single-person {
+      .item-title, .location {
+        margin-bottom: 3px;
       }
     }
   }
@@ -492,6 +362,20 @@ article.projects, article.people {
     padding: 0;
     background-color: $orange;
     color: $white;
+  }
+  @media (min-width: 768px) {
+    .people-list {
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+    }
+    .single-person {
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .list-actions {
+      margin-top: 1.5rem;
+    }
   }
 }
 
@@ -525,31 +409,30 @@ nav {
 
 // buttons
 .btn {
-  border-radius: 0;
-  letter-spacing: 0.025em;
   white-space: normal;
-  &.btn-black {
-    color: #fff;
-    background-color: $black;
-    border-color: $black;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  background-color: $gray;
+  color: $dark;
+  padding: 0.5rem 2rem;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  &:hover {
+    background-color: darken($gray, 10%);
+    color: $dark;
+  }
+  &:active {
+    background-color: darken($gray, 10%);
+    color: $dark;
+  }
+  &.btn-dark {
+    color: $light;
+    background-color: $dark;
     &:hover {
-      background-color: $dark;
-      border-color: $dark;
+      background-color: darken($dark, 10%);
     }
     &:active {
-      background-color: $dark;
-      border-color: $dark;
-    }
-  }
-  &.btn-skew {
-    margin-left: 5px;
-    -webkit-transform: skew(-15deg);
-       -moz-transform: skew(-15deg);
-         -o-transform: skew(-15deg);
-    .unskew {
-      -webkit-transform: skew(15deg);
-         -moz-transform: skew(15deg);
-           -o-transform: skew(15deg);
+      background-color: darken($dark, 10%);
     }
   }
   @media (max-width: 768px) {
