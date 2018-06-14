@@ -212,7 +212,8 @@ extra_js:
       <div class="col-md-6 col-lg-8">
         <h2 class="item-title">{{ Title }}</h2>
         <div class="item-description">{{ Description }}</div>
-        <div class="item-date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time datetime="{{ Date }}">{{ Date }}</time></div>
+        <div class="item-date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time class="date" datetime="{{ Date }} {{ Start-time }}">{{ Date }}</time></div>
+        <div class="item-date"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <time class="time" datetime="{{ Date }} {{ Start-time }}">{{ Start-time }}</time></div>
         <div class="item-location"><i class="fa fa-fw fa-building-o" aria-hidden="true"></i> {{ Venue }}, {{ City }}</div>
         <div class="item-address"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ Address }}</div>
       </div>

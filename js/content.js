@@ -74,9 +74,9 @@ function loadEvents() {
 
     $("#loading-events").hide();
 
-    $("#events .col-item").each(function() {
+    $("#events .single-event").each(function() {
       var eventDate = $(this).find("time.date").text(),
-          eventTime = $(this).find("time.start").text(),
+          eventTime = $(this).find("time.time").text(),
           fullDate = (eventDate.trim() + " " + eventTime.trim()),
           parsedDate = Date.parse(fullDate),
           now = Date.now();
