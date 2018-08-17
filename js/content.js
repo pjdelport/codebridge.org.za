@@ -1,4 +1,5 @@
 var contentDoc = 'https://docs.google.com/spreadsheets/d/1Wc7hkoh0T32zDRtcJIVGw1pKqTjHASAlj92vz6Qz5zs/pubhtml';
+var eventDoc = 'https://04ii3d6qql.execute-api.us-east-1.amazonaws.com/default/meetup-api';
 
 // People
 function loadPeople() {
@@ -47,44 +48,57 @@ function loadPeople() {
 
 // Events
 function loadEvents() {
-  $(document).ready(function() {
-    Tabletop.init({
-      key: contentDoc,
-      wanted: ["Events"],
-      callback: showEvents,
-      orderby: 'featured',
-      parseNumbers: false
-    });
-  });
 
-  function showEvents(data, tabletop) {
-    var source = $("#events-template").html();
-    var template = Handlebars.compile(source);
+  fetch(eventDoc)
+    .then((event) => event.json())
+    .then(function(data){
+      var source = $("#events-template").html();
+      var template = Handlebars.compile(source);
+      for (eventDetail of data) {
+        var html = template(eventDetail);
+        $("#events").append(html);
+      }
+      $("#loading-events").hide();
+    })
 
-    $.each( tabletop.sheets("Events").all(), function(i, detail) {
-      var html = template(detail);
-      $("#events").append(html);
-    });
-
-    $("time.time").each(function() {
-      var time = $(this).text();
-      cleanTime = time.trim().slice(0, -3);
-      $(this).text(cleanTime);
-    });
-
-    $("#loading-events").hide();
-
-    $("#events .single-event").each(function() {
-      var eventDate = $(this).find("time.date").text(),
-          eventTime = $(this).find("time.time").text(),
-          fullDate = (eventDate.trim() + " " + eventTime.trim()),
-          parsedDate = Date.parse(fullDate),
-          now = Date.now();
-      if (parsedDate < now) {
-        $(this).remove();
-      };
-    });
-  };
+  // $(document).ready(function() {
+  //   Tabletop.init({
+  //     key: eventDoc,
+  //     wanted: ["Events"],
+  //     callback: showEvents,
+  //     orderby: 'featured',
+  //     parseNumbers: false
+  //   });
+  // });
+  //
+  // function showEvents(data, tabletop) {
+  //   var source = $("#events-template").html();
+  //   var template = Handlebars.compile(source);
+  //
+  //   $.each( tabletop.sheets("Events").all(), function(i, detail) {
+  //     var html = template(detail);
+  //     $("#events").append(html);
+  //   });
+  //
+  //   $("time.time").each(function() {
+  //     var time = $(this).text();
+  //     cleanTime = time.trim().slice(0, -3);
+  //     $(this).text(cleanTime);
+  //   });
+  //
+  //   $("#loading-events").hide();
+  //
+  //   $("#events .single-event").each(function() {
+  //     var eventDate = $(this).find("time.date").text(),
+  //         eventTime = $(this).find("time.time").text(),
+  //         fullDate = (eventDate.trim() + " " + eventTime.trim()),
+  //         parsedDate = Date.parse(fullDate),
+  //         now = Date.now();
+  //     if (parsedDate < now) {
+  //       $(this).remove();
+  //     };
+  //   });
+  // };
 };
 
 // Projects
