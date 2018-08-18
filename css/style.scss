@@ -248,13 +248,38 @@ a {
     .item-creator {
       margin-bottom: 0.5rem;
     }
+    .item-ellipsis {
+      overflow: hidden;
+      position: relative;
+      line-height: 1.5em;
+      max-height: 5.8em;
+      margin-right: 1em;
+      padding-right: 2em;
+    }
+
+    .item-ellipsis:before {
+      content: '[...]';
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+    }
+
+    .item-ellipsis:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 1em;
+      height: 1em;
+      margin-top: 0.2em;
+      background: white;
+    }
     .item-description {
       margin-bottom: 1.5rem;
     }
-    .item-date, .item-location {
+    .item-date, .item-location, .item-address  {
       margin-bottom: 0.25rem;
     }
-    .item-address {
+    .item-attending {
       margin-bottom: 1rem;
     }
     .btn {
