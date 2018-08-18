@@ -57,9 +57,9 @@ function loadEvents() {
       var html = template(eventDetail);
       $("#events").append(html);
     }
-  });
 
-  $("#loading-events").hide();
+    $("#loading-events").hide();
+  });
 
 };
 
