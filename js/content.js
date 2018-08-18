@@ -49,56 +49,18 @@ function loadPeople() {
 // Events
 function loadEvents() {
 
-  fetch(eventDoc)
-    .then((event) => event.json())
-    .then(function(data){
-      var source = $("#events-template").html();
-      var template = Handlebars.compile(source);
-      for (eventDetail of data) {
-        var html = template(eventDetail);
-        $("#events").append(html);
-      }
-      $("#loading-events").hide();
-    })
+  $.getJSON(eventDoc, function(data) {
+    var source = $("#events-template").html();
+    var template = Handlebars.compile(source);
 
-  // $(document).ready(function() {
-  //   Tabletop.init({
-  //     key: eventDoc,
-  //     wanted: ["Events"],
-  //     callback: showEvents,
-  //     orderby: 'featured',
-  //     parseNumbers: false
-  //   });
-  // });
-  //
-  // function showEvents(data, tabletop) {
-  //   var source = $("#events-template").html();
-  //   var template = Handlebars.compile(source);
-  //
-  //   $.each( tabletop.sheets("Events").all(), function(i, detail) {
-  //     var html = template(detail);
-  //     $("#events").append(html);
-  //   });
-  //
-  //   $("time.time").each(function() {
-  //     var time = $(this).text();
-  //     cleanTime = time.trim().slice(0, -3);
-  //     $(this).text(cleanTime);
-  //   });
-  //
-  //   $("#loading-events").hide();
-  //
-  //   $("#events .single-event").each(function() {
-  //     var eventDate = $(this).find("time.date").text(),
-  //         eventTime = $(this).find("time.time").text(),
-  //         fullDate = (eventDate.trim() + " " + eventTime.trim()),
-  //         parsedDate = Date.parse(fullDate),
-  //         now = Date.now();
-  //     if (parsedDate < now) {
-  //       $(this).remove();
-  //     };
-  //   });
-  // };
+    for (eventDetail of data) {
+      var html = template(eventDetail);
+      $("#events").append(html);
+    }
+  });
+
+  $("#loading-events").hide();
+
 };
 
 // Projects

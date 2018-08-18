@@ -190,18 +190,14 @@ extra_js:
 <script id="events-template" type="text/x-handlebars-template">
   <div class="single-item single-event">
     <div class="row">
-      <div class="col-md-6 col-lg-8">
+      <div class="col-12">
         <h2 class="item-title">{{ name }}</h2>
         <div class="item-description">{{ description }}</div>
         <div class="item-date"><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> <time class="date" datetime="{{ Date }} {{ Start-time }}">{{ local_date }}</time></div>
         <div class="item-date"><i class="fa fa-fw fa-clock-o" aria-hidden="true"></i> <time class="time" datetime="{{ Date }} {{ Start-time }}">{{ local_time }}</time></div>
-        <div class="item-location"><i class="fa fa-fw fa-building-o" aria-hidden="true"></i> {{ venue.name }}, {{ venue.city }}</div>
-        <div class="item-address"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{ venue.address_1 }}{{#if venue.address_2}},{{/if}} {{ venue.address_2 }} </div>
-      </div>
-      <div class="col-md-6 col-lg-4 d-none d-md-block">
-        <a href="{{ link }}" target="_blank">
-          <img src="{{ Image-URL }}">
-        </a>
+        <div class="item-location"><i class="fa fa-fw fa-building-o" aria-hidden="true"></i>{{ venue.name }}, {{ venue.city }}</div>
+        <div class="item-address"><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i>{{ venue.address_1 }}{{#if venue.address_2}},{{/if}} {{ venue.address_2 }} </div>
+        <div class="item-attending"><i class="fa fa-fw fa-users" aria-hidden="true"></i>{{ yes_rsvp_count }} attending</div>
       </div>
     </div>
     <div class="item-actions">
