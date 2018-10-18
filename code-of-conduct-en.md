@@ -1,3 +1,5 @@
+# Codebridge Code of Conduct
+
 Codebridge is an open community founded on the principles of hospitality, transparency and mutual aid.
 
 We believe that we are able to use our collective interest in technology and social change in service of others and for the South African greater good.

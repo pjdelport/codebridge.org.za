@@ -1,3 +1,5 @@
+# Codebridge Gedragskode
+
 Codebridge is 'n oop gemeenskap gegrond op die beginsels van gasvryheid, deursigtigheid en wedersydse hulp.
 
 Ons glo dat ons ons gesamentlike belangstelling in tegnologie en sosiale verandering kan gebruik in diens van ander en vir die Suid-Afrikaanse groter goed.
@@ -13,3 +15,5 @@ Ons streef om die bogenoemde beginsels te eerbiedig soos volg:
 - Vind proaktief maniere vir alle individue, ongeag van vaardigheidsvlak, om by te dra tot die bogenoemde.
 - Wees eerlik en bewus van die feit dat tegnologie alleen nie meeste sosiale probleme kan oplos nie.
 - Werk saam met ander organisasies en gemeenskappe wat ons beginsels hierbo deel.
+
+
