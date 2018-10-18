@@ -5,7 +5,7 @@ We believe that we are able to use our collective interest in technology and soc
 We strive to honour the principles above as follows:
 
 - Holding ourselves and the community accountable to the principles of honesty and transparency.
-- Pursuing opportunities for community members to take ownership, co-create and/or guide the shape Codebridge.
+- Pursuing opportunities for community members to take ownership, co-create and/or guide the shape of Codebridge.
 - Recognizing the reality and legacy of various social issues that we face as South Africans in the 21st century.
 - Acknowledging our responsibility to shape technology as a force for inclusion and social good in South Africa.
 - Proactively finding ways for all individuals, regardless of skill level, to contribute to the above.
